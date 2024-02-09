@@ -1,13 +1,18 @@
-# site-Front-End20
+
 # Turma Front-End 20
-#Site desenvolvido pela equipe 3
+
+# Site desenvolvido pela equipe 3
+
 # Participantes:
+
 - Tatiane Souza
 - Hiago
 - Marley
 - Agda
 - Gabriel
+
   # Tecnologias Utilizadas :
+
 
   - HTML
   - CSS
