@@ -6,10 +6,10 @@
 # Participantes:
 
 - Tatiane Souza
-- Hiago
-- Marley
-- Agda
-- Gabriel
+- Hiago Santos
+- Marley Paranhos
+- Agda Cavalcante
+- Gabriel Vieira
 
   # Tecnologias Utilizadas :
 
