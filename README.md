@@ -7,8 +7,8 @@
 
 - Tatiane Souza
 - Hiago
-- Marley
-- Agda
+- Marley Paranhos
+- Agda Calvacante
 - Gabriel
 
   # Tecnologias Utilizadas :
