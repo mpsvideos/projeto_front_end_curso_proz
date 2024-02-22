@@ -38,6 +38,25 @@ nav ul li a:hover {
     color: #ffcc00; 
 }
 
+.container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    color: #c9b716;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+}
 
 @media (max-width: 768px) {
     .container {
