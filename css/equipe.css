@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #d6a00b;
+    background-color: #ff3909;
     text-align: end;
     padding: 20px;
     color: #fff;
@@ -34,7 +34,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00; 
+    color: #b83814; 
 }
 
 
@@ -57,7 +57,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #c9b716;
+    background-color:#ff3900 ;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -69,7 +69,7 @@ footer p {
 }
 
 footer a {
-    color: #ffcc00;
+    color: #b83814;
     text-decoration: none;
     transition: color 0.3s ease;
 }
