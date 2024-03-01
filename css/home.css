@@ -48,6 +48,9 @@ nav ul li a:hover {
     text-align: center;
     
  }
+ 
+ 
+ 
 .container {
     max-width: 1000px;
     margin: 20px auto;
@@ -121,25 +124,55 @@ nav ul li a:hover {
     }
 }
 
-footer {
+
+.footer {
     background-color: #ff3900;
-    color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: auto;
 }
 
-footer p {
-    margin: 10px 0;
+
+.footer span {
+    font-weight: bold;
 }
 
-footer a {
+
+.social-icons i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+.subscribe form {
+    margin-top: 10px;
+}
+
+.subscribe input[type="email"] {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.subscribe button {
+    padding: 8px 16px;
+    background-color: #131212;
     color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-footer a:hover {
-    color:#b83814 ; 
-    
+.subscribe button:hover {
+    background-color: #ff3900;
 }
+
+
+.contact h4 {
+    margin-top: 20px;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
