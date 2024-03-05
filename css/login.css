@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #d6a00b;
+    background-color: #ff3900;
     text-align: end;
     padding: 20px;
     color: #fff;
@@ -81,7 +81,7 @@ form {
 }
 
 footer {
-    background-color: #c9b716;
+    background-color: #ff3900;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -101,4 +101,3 @@ footer a {
 footer a:hover {
     color: #fff;
 }
-
