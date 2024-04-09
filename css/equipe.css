@@ -13,60 +13,62 @@ body {
 }
 
 header {
-    background-color: #ff3909;
-    padding: 10px 20px; /* Ajustando o padding vertical e horizontal */
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #ff3900; 
+    padding: 10px 0; 
+    position: fixed;
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
-.logo img {
-    
-    max-width: 80px; /* Reduzindo o tamanho da logo */
-    height: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li:first-child {
-    margin-left: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #b83814; 
-}
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center; 
+}
+.logo img {
+    height: 5rem; 
+    width: auto; 
+    margin-right: 10px;
 }
 
-.card {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
+.navbar {
+    flex-grow: 1; 
 }
 
+
+.nav-menu {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+
+.nav-item {
+    margin-left: 20px; 
+}
+
+
+.nav-item a {
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: bold; 
+}
+
+
+.nav-item a:hover {
+    color: #ff9100; 
+}
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
     .card {
-        width: calc(50% - 20px);
+        width: calc(50% - 30px);
     }
 }
 
@@ -79,76 +81,158 @@ nav ul li a:hover {
     }
 }
 
-main {
-    margin: 20px auto; /* Adicionando margem para espaçamento */
-    max-width: 1000px; /* Defina a largura máxima desejada */
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.slides {
+.chefes {
+    max-width: 1200px;
+    
+    margin: 4rem auto;
+    padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.slide {
-    flex: 0 0 auto;
-    width: 100%;
-    transition: transform 0.5s ease;
-    position: relative;
-}
+.chef {
 
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.slide-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #b83814;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.slide-btn:hover {
-    background-color: #fff;
-    color: #b83814;
-}
-
-.navigation-bar {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    padding:20px;
     text-align: center;
-    margin-top: 10px;
 }
 
-.manual-btn {
-    width: 15px;
-    height: 15px;
-    display: inline-block;
-    background-color: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
+.chef img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.manual-btn:hover {
-    background-color: #b83814;
+.chef h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.chef p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .chef {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .chef {
+        width: calc(100% - 20px);
+    }
+}
+
+.sobre-equipe {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.sobre-equipe h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sobre-equipe p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .sobre-equipe {
+        padding: 15px;
+    }
+
+    .sobre-equipe h2 {
+        font-size: 22px;
+    }
+
+    .sobre-equipe p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .sobre-equipe {
+        padding: 10px;
+    }
+
+    .sobre-equipe h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .sobre-equipe p {
+        font-size: 13px;
+    }
+}
+
+.about-team {
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-top: 20px; /* Adicionado para criar espaço entre a seção anterior */
+}
+
+.about-team h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-team p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-team {
+        padding: 15px;
+    }
+
+    .about-team h2 {
+        font-size: 36px;
+    }
+
+    .about-team p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .about-team {
+        padding: 10px;
+    }
+
+    .about-team h2 {
+        font-size: 20px;
+    }
+
+    .about-team p {
+        font-size: 13px;
+    }
 }
 
 
 footer {
     width: 100%;
-    color:#ff3909;
+    color: #ffffff;
+    justify-content: center;
 }
 
 .footer-link {
@@ -156,7 +240,7 @@ footer {
 }
 
 #footer_content {
-    background-color: var(--color-neutral-10);
+    background-color:#ff3909;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -178,7 +262,7 @@ footer {
     justify-content: center;
     height: 2.5rem;
     width: 2.5rem;
-    color: var(--color-neutral-40);
+    color:#ffffff;
     border-radius: 50%;
     transition: all 0.4s;
 }
@@ -211,12 +295,12 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: var(--color-neutral-30);
+    color: #ffffff;
     transition: all 0.4s;
 }
 
 .footer-list .footer-link:hover {
-    color: #7f37c9;
+    color: #e76949;
 }
 
 #footer_subscribe {
@@ -226,13 +310,13 @@ footer {
 }
 
 #footer_subscribe p {
-    color: var(--color-neutral-30);
+    color:#ffffff;
 }
 
 #input_group {
     display: flex;
     align-items: center;
-    background-color: var(--color-neutral-0);
+    background-color:#ffffff;
     border-radius: 4px;
 }
 
@@ -243,9 +327,9 @@ footer {
 }
 
 #input_group button {
-    background-color: #7f37c9;
+    background-color: #0f0f0f;
     border: none;
-    color: var(--color-neutral-40);
+    color: #ffffff;
     padding: 0px 1.25rem;
     font-size: 1.125rem;
     height: 100%;
@@ -261,7 +345,7 @@ footer {
 #footer_copyright {
     display: flex;
     justify-content: center;
-    background-color: var(--color-neutral-0);
+    background-color:#0f0f0f;
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
@@ -280,3 +364,6 @@ footer {
         padding: 3rem 2rem;
     }
 }
+
+
+
