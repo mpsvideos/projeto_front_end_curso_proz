@@ -1,32 +1,423 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas</title>
-    <link rel="stylesheet" href="./css/receitas.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receitas</title>
+<link rel="stylesheet" type="text/css" href="./css/receitas.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="equipe.html"> Equipe</a></li>
-                <li><a href="receitas.html">Receitas</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-          </nav> 
-    </header>
-        <main>
-           
-        </main>
-    
-    <section>
 
-    </section>
-    <footer>
-        <p>&copy; 2024  @Grupo3. Todos os direitos reservados.</p>
-    </footer>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/slide/logo1.png" alt="Logo cozinha20">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a href="receitas.html">Receitas</a></li>
+                    <li class="nav-item"><a href="loja.html">Loja</a></li>
+                    <li class="nav-item"><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="receitas-container">
+    <div class="coluna">
+        <div class="receita" id="receita-1">
+            <img src="./img/receitas/bolo choc.jpg" alt="Bolo de Chocolate">
+            <h2>Bolo de Chocolate</h2>
+            <button class="toggle-button">Receita</button>
+            <div class="conteudo">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>3 ovos</li>
+                    <li>1 xícara de farinha de trigo</li>
+                    <li>1 xícara de açúcar</li>
+                    <li>1/2 xícara de chocolate em pó</li>
+                    <li>1 colher de sopa de fermento em pó</li>
+                </ul>
+                <p>Modo de preparo:</p>
+                <ol>
+                    <li>Bata os ovos com o açúcar até obter uma mistura homogênea.</li>
+                    <li>Acrescente a farinha de trigo e o chocolate em pó e misture bem.</li>
+                    <li>Adicione o fermento em pó e misture delicadamente.</li>
+                    <li>Despeje a massa em uma forma untada e leve ao forno preaquecido a 180°C por cerca de 40 minutos.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="receita" id="receita-2">
+            <img src="./img/receitas/strogronof carne.jpg" alt="Strogonoff">
+            <h2>Strogonoff</h2>
+            <button class="toggle-button">Receita</button>
+            <div class="conteudo">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>500g de carne (filé mignon, alcatra, ou outra de sua preferência)</li>
+                    <li>1 cebola picada</li>
+                    <li>2 dentes de alho picados</li>
+                    <li>1 lata de creme de leite</li>
+                    <li>1 lata de molho de tomate</li>
+                    <li>1 colher de sopa de ketchup</li>
+                    <li>1 colher de sopa de mostarda</li>
+                    <li>Sal e pimenta a gosto</li>
+                    <li>Óleo para refogar</li>
+                </ul>
+                <p>Modo de preparo:</p>
+                <ol>
+                    <li>Corte a carne em tiras finas.</li>
+                    <li>Em uma panela, doure a cebola e o alho no óleo.</li>
+                    <li>Acrescente a carne e deixe dourar.</li>
+                    <li>Adicione o molho de tomate, o ketchup e a mostarda. Misture bem.</li>
+                    <li>Cozinhe em fogo baixo por cerca de 5 minutos.</li>
+                    <li>Desligue o fogo e misture o creme de leite.</li>
+                    <li>Tempere com sal e pimenta a gosto e sirva.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="receita" id="receita-3">
+            <img src="./img/receitas/pudim.jpg" alt="Pudim">
+            <h2>Pudim</h2>
+            <button class="toggle-button">Receita</button>
+            <div class="conteudo">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>1 lata de leite condensado</li>
+                    <li>1 lata de leite (medida da lata de leite condensado)</li>
+                    <li>3 ovos</li>
+                    <li>1 xícara de açúcar</li>
+                </ul>
+                <p>Modo de preparo:</p>
+                <ol>
+                    <li>Misture o leite condensado, o leite e os ovos no liquidificador.</li>
+                    <li>Em uma forma própria para pudim, derreta o açúcar até ficar dourado.</li>
+                    <li>Despeje a mistura do liquidificador na forma e cubra com papel alumínio.</li>
+                    <li>Leve ao forno em banho-maria por cerca de 1 hora.</li>
+                    <li>Deixe esfriar e leve à geladeira por algumas horas antes de desenformar.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="coluna">
+        <div class="receita" id="receita-4">
+            <img src="./img/receitas/mousse-de-maracuja.jpg" alt="Musse de Maracujá">
+            <h2>Musse de Maracujá</h2>
+            <button class="toggle-button">Receita</button>
+            <div class="conteudo">
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>1 lata de leite condensado</li>
+                    <li>1 lata de creme de leite</li>
+                    <li>1 xícara de suco concentrado de maracujá</li>
+                    <li>1 pacote de gelatina incolor</li>
+                    <li>Polpa de 1 maracujá (opcional para decorar)</li>
+                </ul>
+                <p>Modo de preparo:</p>
+                <ol>
+                    <li>Misture o leite condensado, o creme de leite e o suco de maracujá no liquidificador.</li>
+                    <li>Hidrate a gelatina conforme instruções da embalagem e adicione à mistura no liquidificador.</li>
+                    <li>Bata tudo por alguns minutos.</li>
+                    <li>Despeje em taças individuais e leve à geladeira por pelo menos 4 horas.</li>
+                    <li>Decore com a polpa de maracujá antes de servir, se desejar.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="receita" id="receita-5">
+            <img src="./img/receitas/lasanha de frango.jpg" alt="Lasanha de Frango">
+            <h2
+
+              <h2>Lasanha de Frango</h2>
+                  <button class="toggle-button">Receita</button>
+                  <div class="conteudo">
+                      <p>Ingredientes:</p>
+                      <ul>
+                          <li>500g de massa para lasanha pré-cozida</li>
+                          <li>500g de peito de frango desfiado</li>
+                          <li>1 cebola picada</li>
+                          <li>2 dentes de alho picados</li>
+                          <li>1 lata de molho de tomate</li>
+                          <li>1 lata de creme de leite</li>
+                          <li>200g de queijo mussarela ralado</li>
+                          <li>Sal e pimenta a gosto</li>
+                          <li>Óleo para refogar</li>
+                      </ul>
+                      <p>Modo de preparo:</p>
+                      <ol>
+                          <li>Em uma panela, refogue a cebola e o alho no óleo até dourarem.</li>
+                          <li>Acrescente o frango desfiado e tempere com sal e pimenta a gosto.</li>
+                          <li>Adicione o molho de tomate e cozinhe por alguns minutos.</li>
+                          <li>Em um refratário, monte a lasanha intercalando camadas de massa, frango refogado e creme de leite.</li>
+                          <li>Finalize com queijo mussarela ralado.</li>
+                          <li>Leve ao forno preaquecido a 180°C por cerca de 30 minutos, ou até gratinar.</li>
+                      </ol>
+                  </div>
+              </div>
+
+              <div class="receita" id="receita-6">
+                  <img src="./img/receitas/sorvete napolitano.jpg" alt="Sorvete Napolitano">
+                  <h2>Sorvete Napolitano</h2>
+                  <button class="toggle-button"> Receita</button>
+                  <div class="conteudo">
+                      <p>Ingredientes:</p>
+                      <ul>
+                          <li>1 lata de leite condensado</li>
+                          <li>2 latas de creme de leite</li>
+                          <li>1 xícara de leite</li>
+                          <li>1 colher de sopa de essência de baunilha</li>
+                          <li>3 colheres de sopa de chocolate em pó</li>
+                          <li>5 morangos</li>
+                      </ul>
+                      <p>Modo de preparo:</p>
+                      <ol>
+                          <li>Bata no liquidificador o leite condensado, 1 lata de creme de leite e o leite.</li>
+                          <li>Coloque em um refratário e leve ao congelador por 1 hora.</li>
+                          <li>Misture a outra lata de creme de leite com a essência de baunilha e coloque sobre a primeira camada já congelada.</li>
+                          <li>Leve novamente ao congelador por 1 hora.</li>
+                          <li>Misture o chocolate em pó com água até formar uma calda e coloque sobre a segunda camada.</li>
+                          <li>Leve ao congelador novamente por 1 hora.</li>
+                          <li>Por último, coloque os morangos cortados sobre a terceira camada e leve ao congelador até firmar.</li>
+                      </ol>
+                  </div>
+              </div>
+
+              <div class="receita" id="receita-7">
+                  <img src="./img/receitas/torta de sardinha.jpg" alt="Torta Salgada de Sardinha">
+                  <h2>Torta Salgada de Sardinha</h2>
+                  <button class="toggle-button">Receita</button>
+                  <div class="conteudo">
+                      <p>Ingredientes:</p>
+                      <ul>
+                          <li>1 lata de sardinha em óleo</li>
+                          <li>1 cebola picada</li>
+                          <li>2 tomates picados</li>
+                          <li>1 lata de milho verde</li>
+                          <li>1 lata de ervilha</li>
+                          <li>1 xícara de azeitonas picadas</li>
+                          <li>2 ovos</li>
+                          <li>1 xícara de leite</li>
+                          <li>1/2 xícara de óleo</li>
+                          <li>2 xícaras de farinha de trigo</li>
+                          <li>1 colher de sopa de fermento em pó</li>
+                          <li>Sal e temperos a gosto</li>
+                      </ul>
+                      <p>Modo de preparo:</p>
+                      <ol>
+                          <li>Em uma tigela, misture os ovos, o leite e o óleo.</li>
+                          <li>Adicione a farinha de trigo, o fermento em pó, o sal e os temperos a gosto e misture até obter uma massa homogênea.</li>
+                          <li>Acrescente a sardinha, a cebola, o tomate, o milho verde, a ervilha e as azeitonas.</li>
+                          <li>Misture bem e despeje a massa em uma forma untada.</li>
+                          <li>Leve ao forno preaquecido a 180°C por cerca de 40 minutos, ou até dourar.</li>
+                          <li>Retire do forno, espere esfriar e sirva.</li>
+                      </ol>
+                  </div>
+              </div>
+
+              <div class="receita" id="receita-8">
+                  <img src="./img/receitas/salmão com molho de ervas.jpg" alt="Salmão Grelhado com Ervas">
+                  <h2>Salmão Grelhado com Ervas</h2>
+                  <button class="toggle-button">Receita</button>
+                  <div class="conteudo">
+                      <p>Ingredientes:</p>
+                      <ul>
+                          <li>4 filés de salmão</li>
+                          <li>2 colheres de sopa de azeite</li>
+                          <li>1 dente de alho picado</li>
+                          <li>Suco de 1 limão</li>
+                          <li>Sal e pimenta a gosto</li>
+                          <li>Ervas frescas a gosto (salsinha, cebolinha, coentro)
+
+                            <li>Coloque em um refratário e leve ao congelador por 1 hora.</li>
+                                                <li>Misture a outra lata de creme de leite com a essência de baunilha e coloque sobre a primeira camada já congelada.</li>
+                                                <li>Leve novamente ao congelador por 1 hora.</li>
+                                                <li>Misture o chocolate em pó com água até formar uma calda e coloque sobre a segunda camada.</li>
+                                                <li>Leve ao congelador novamente por 1 hora.</li>
+                                                <li>Por último, coloque os morangos cortados sobre a terceira camada e leve ao congelador até firmar.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+                                    <div class="receita" id="receita-10">
+                                        <img src="./img/receitas/maxresdefault.jpg" alt="Cocada">
+                                        <h2>Cocada</h2>
+                                        <button class="toggle-button">Receita</button>
+                                        <div class="conteudo">
+                                            <p>Ingredientes:</p>
+                                            <ul>
+                                                <li>500g de coco ralado fresco</li>
+                                                <li>500g de açúcar</li>
+                                                <li>1 colher de sopa de manteiga</li>
+                                                <li>1 lata de leite condensado</li>
+                                            </ul>
+                                            <p>Modo de preparo:</p>
+                                            <ol>
+                                                <li>Em uma panela, misture todos os ingredientes.</li>
+                                                <li>Leve ao fogo baixo, mexendo sempre, até que a mistura comece a desgrudar do fundo da panela.</li>
+                                                <li>Despeje em uma forma untada com manteiga e deixe esfriar.</li>
+                                                <li>Corte em quadradinhos e sirva.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+                                    <div class="receita" id="receita-11">
+                                        <img src="./img/receitas/maionese de limão.jpg" alt="Maionese de Limão">
+                                        <h2>Maionese de Limão</h2>
+                                        <button class="toggle-button">Receita</button>
+                                        <div class="conteudo">
+                                            <p>Ingredientes:</p>
+                                            <ul>
+                                                <li>1 ovo</li>
+                                                <li>250ml de óleo</li>
+                                                <li>Suco de 1 limão</li>
+                                                <li>Sal a gosto</li>
+                                            </ul>
+                                            <p>Modo de preparo:</p>
+                                            <ol>
+                                                <li>Em um liquidificador, bata o ovo e vá adicionando o óleo em fio, sem parar de bater, até obter uma mistura cremosa.</li>
+                                                <li>Adicione o suco de limão e o sal, e bata por mais alguns segundos.</li>
+                                                <li>Transfira para um recipiente e leve à geladeira por pelo menos 1 hora antes de servir.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+                                    <div class="receita" id="receita-12">
+                                        <img src="./receitas/ensopado de frango.jpg" alt="Ensopado de Frango">
+                                        <h2>Ensopado de Frango</h2>
+                                        <button class="toggle-button">Receita</button>
+                                        <div class="conteudo">
+                                            <p>Ingredientes:</p>
+                                            <ul>
+                                                <li>1 kg de peito de frango em cubos</li>
+                                                <li>2 colheres de sopa de óleo</li>
+                                                <li>1 cebola picada</li>
+                                                <li>3 dentes de alho picados</li>
+                                                <li>2 tomates picados</li>
+                                                <li>1 cenoura em rodelas</li>
+                                                <li>1 pimentão verde em tiras</li>
+                                                <li>1 xícara de ervilhas frescas</li>
+                                                <li>Sal, pimenta e temperos a gosto</li>
+                                                <li>Água quente o suficiente para cobrir os ingredientes</li>
+                                            </ul>
+                                            <p>Modo de preparo:</p>
+                                            <ol>
+                                                <li>Em uma panela de pressão, aqueça o óleo e doure o frango.</li>
+                                                <li>Adicione a cebola e o alho e refogue até dourarem.</li>
+                                                <li>Acrescente os tomates, a cenoura, o pimentão, as ervilhas e os temperos.</li>
+                                                <li>Adicione água quente suficiente para cobrir os ingredientes.</li>
+                                                <li>Deixe cozinhar na pressão por cerca de 15 minutos.</li>
+                                                <li>Desligue o fogo, espere sair toda a pressão e sirva quente.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+  <div class="receita" id="receita-12">
+      <img src="./img/receitas/feijão tropeiro.jpg" alt="Feijão Tropeiro">
+      <h2>Feijão Tropeiro</h2>
+      <button class="toggle-button">Receita</button>
+      <div class="conteudo">
+          <p>Ingredientes:</p>
+          <ul>
+              <li>2 xícaras de feijão cozido</li>
+              <li>200g de bacon em cubos</li>
+              <li>200g de linguiça calabresa em rodelas</li>
+              <li>1 cebola picada</li>
+              <li>3 dentes de alho picados</li>
+              <li>2 ovos cozidos e picados</li>
+              <li>1 xícara de farinha de mandioca</li>
+              <li>Sal, pimenta e cheiro-verde a gosto</li>
+          </ul>
+          <p>Modo de preparo:</p>
+          <ol>
+              <li>Em uma panela, frite o bacon até dourar.</li>
+              <li>Adicione a linguiça calabresa e frite até dourar.</li>
+              <li>Acrescente a cebola e o alho e refogue até dourarem.</li>
+              <li>Adicione o feijão cozido e misture bem.</li>
+              <li>Em seguida, adicione os ovos picados e misture novamente.</li>
+              <li>Por último, adicione a farinha de mandioca aos poucos, mexendo sempre, até que tudo esteja bem incorporado e a farinha esteja levemente tostada.</li>
+              <li>Tempere com sal, pimenta e cheiro-verde a gosto e sirva quente.</li>
+          </ol>
+      </div>
+  </div>
+
+                            <script src="script.js"></script>
+                            <footer>
+                                <div id="footer_content">
+                                    <div id="footer_contacts">
+                                        <h1>Cozinha20</h1>
+                                        <p>As melhores receitas na sua mão.</p>
+                        
+                                        <div id="footer_social_media">
+                                            <a href="#" class="footer-link" id="instagram">
+                                                <i class="fa-brands fa-instagram">I</i>
+                                            </a>
+                        
+                                            <a href="#" class="footer-link" id="facebook">
+                                                <i class="fa-brands fa-facebook-f">F</i>
+                                            </a>
+                        
+                                            <a href="#" class="footer-link" id="whatsapp">
+                                                <i class="fa-brands fa-whatsapp">W</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <ul class="footer-list">
+                                        <li>
+                                            <h3>Contatos</h3>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="footer-link">whatsapp</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="footer-link">Facebook</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="footer-link">Instagram</a>
+                                        </li>
+                                    </ul>
+                        
+                                    <ul class="footer-list">
+                                        <li>
+                                            <h3>Serviços</h3>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="footer-link">Receitas</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="footer-link">Loja</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="footer-link">Diversos</a>
+                                        </li>
+                                    </ul>
+                        
+                                    <div id="footer_subscribe">
+                                        <h3>Subscribe</h3>
+                        
+                                        <p>
+                                            Deixe seu e-mail para receber atualizações.
+                                        </p>
+                        
+                                        <div id="input_group">
+                                            <input type="email" id="email">
+                                            <button>
+                                                <i class="fa-regular fa-envelope"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div id="footer_copyright">
+                                    @2024 Direitos reservados ao grupo3
+                                </div>
+                            </footer>                    
 </body>
 </html>

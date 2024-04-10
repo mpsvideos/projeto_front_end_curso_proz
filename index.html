@@ -3,56 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culinária Front</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Nossa Equipe</title>
     <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-
-        <header>
-            <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="equipe.html">Equipe</a></li>
-                <li><a href="receitas.html">Receitas</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
+   
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/slide/logo1.png" alt="Logo cozinha20">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a href="receitas.html">Receitas</a></li>
+                    <li class="nav-item"><a href="loja.html">Loja</a></li>
+                    <li class="nav-item"><a href="login.html">Login</a></li>
+                </ul>
             </nav>
-        </header>
-
+        </div>
+    </header>
     <main>
-        <div class="slide">
-            <img src="./img/pizza receitas.jpg" alt="capa do site">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" class="radio-btn">
+                <input type="radio" name="radio-btn" id="radio2" class="radio-btn">
+                <input type="radio" name="radio-btn" id="radio3" class="radio-btn">
+    
+                <div class="slide slide-first">
+                    <img src="./img/slide/moqueca de camarão.jpg" alt="Risoto de Cogumelos">
+                    <a href="#" class="slide-btn"></a>
+                </div>
+    
+                <div class="slide">
+                    <img src="./img/slide/Escondidinho-de-aipim.jpg" alt="Salmão Molho de Ervas">
+                    <a href="#" class="slide-btn"></a>
+                </div>
+    
+                <div class="slide">
+                    <img src="./img/slide/strogonoff-de-carne.jpg" alt="Receitas Saudáveis">
+                    <a href="#" class="slide-btn"></a>
+                </div>
+            </div>
+            <div class="navigation-bar">
+                <label class="manual-btn" for="radio1"></label>
+                <label class="manual-btn" for="radio2"></label>
+                <label class="manual-btn" for="radio3"></label>
+            </div>
         </div> 
     </main>
-        
+    
     <section>
+        <h2 class="titulo">Receitas mais visitadas do mês:</h2>
         <div class="container">
             <div class="card">
-                <img src="./img/Risoto-de-Cogumelos.jpg" alt="">
-              <h2>Risoto de Cogumelos Selvagens</h2>
-              <p>Uma receita deliciosa e reconfortante, perfeita para qualquer ocasião.</p>
-              <a href="receitas.html">Ver Receita</a>
+                <img src="./img/slide/Risoto-de-Cogumelos.jpg" alt="Risoto de Cogumelos">
+                <h2>Risoto de Cogumelos Selvagens</h2>
+                <p>Uma receita deliciosa e reconfortante, perfeita para qualquer ocasião.</p>
+                <a href="receitas.html">Ver Receita</a>
             </div>
             <div class="card">
-                <img src="./img/salada de quinoa.jpg" alt="">
-              <h2>Salada de Quinoa com Abacate e Tomate</h2>
-              <p>Uma salada refrescante e nutritiva, repleta de sabores frescos e saudáveis.</p>
-              <a href="receitas.html">Ver Receita</a>
+                <img src="./img/slide/salada de quinoa.jpg" alt="Salada de Quinoa">
+                <h2>Salada de Quinoa com Abacate e Tomate</h2>
+                <p>Uma salada refrescante e nutritiva, repleta de sabores frescos e saudáveis.</p>
+                <a href="receitas.html">Ver Receita</a>
             </div>
             <div class="card">
-                <img src="./img/salmão molho de ervas.jpg" alt="">
-
-              <h2>Salmão Grelhado com Molho de Ervas Frescas</h2>
-              <p>Um prato delicioso e saudável, perfeito para uma refeição leve e saborosa.</p>
-              <a href="receitas.html">Ver Receita</a>
+                <img src="./img/slide/salmão molho de ervas.jpg" alt="Salmão Molho de Ervas">
+                <h2>Salmão Grelhado com Molho de Ervas Frescas</h2>
+                <p>Um prato delicioso e saudável, perfeito para uma refeição leve e saborosa.</p>
+                <a href="receitas.html">Ver Receita</a>
+            </div>
+        </div>
     </section>
-
     <footer>
-        <p>&copy; 2024  @Grupo3. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Cozinha20</h1>
+                <p>As melhores receitas na sua mão.</p>
+    
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram">I</i>
+                    </a>
+    
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f">F</i>
+                    </a>
+    
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp">W</i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>Contatos</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">whatsapp</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Facebook</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Instagram</a>
+                </li>
+            </ul>
+    
+            <ul class="footer-list">
+                <li>
+                    <h3>Serviços</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Receitas</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Loja</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Diversos</a>
+                </li>
+            </ul>
+    
+            <div id="footer_subscribe">
+                <h3>Subscribe</h3>
+    
+                <p>
+                    Deixe seu e-mail para receber atualizações.
+                </p>
+    
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="footer_copyright">
+            @2024 Direitos reservados ao grupo3
+        </div>
+    </footer>                    
+    </body>
+    </html>
