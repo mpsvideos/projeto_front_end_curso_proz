@@ -5,12 +5,7 @@
 }
 
 body {
-    background-image: url("/img/imagem_culinaria_png.png");
-    background-size: 600px;
-    background-repeat: no-repeat;
-    background-position: 100px;
-    background-position-x: 100px;
-    background-position-y: 20px;
+    background-color: #e7dec4;
     font-family: "Open Sans", sans-serif;
     min-height: 100vh;
     display: flex;
@@ -18,79 +13,141 @@ body {
 }
 
 header {
-    background-color: #ff3900;
-    text-align: end;
-    padding: 20px;
-    color: #fff;
+    background-color: #ff3900; 
+    padding: 10px 0; 
+    position: fixed;
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ffcc00; 
-}
 
 .container {
-    width: 1800px;
-    height: 300px;
-    margin: 80px;
-    padding: 20px;
-    display: flexbox;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center; 
+}
+.logo img {
+    height: 5rem; 
+    width: auto; 
+    margin-right: 10px;
 }
 
-form {
-    text-align: center;
-    margin: 30px;
-    color: black;
-    font-size: 18px;
-    display: flexbox;
-    flex-direction: column;
+.navbar {
+    flex-grow: 1; 
 }
 
-button {
-    margin: 20px;
-    width: 90px;
-    height: 40px;
+
+.nav-menu {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: flex-end; 
 }
 
-input {
-    height: 30px;
-    font-size: 30px;
-}
-label {
-    text-align: left;
+
+.nav-item {
+    margin-left: 20px; 
 }
 
-.card {
-    background-color: #BBCCBB;
-    font-size: 22px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
+
+.nav-item a {
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: bold; 
+}
+
+
+.nav-item a:hover {
+    color: #ff9100; 
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    .card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+/*css form*/
+.form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
     padding: 30px;
-    width: 600px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 750px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff3909;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #c55c05;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 30px auto;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+
+/*css do footer*/
+
 footer {
     width: 100%;
     color: #ffffff;
-    justify-content: center;
 }
 
 .footer-link {
@@ -222,19 +279,3 @@ footer {
         padding: 3rem 2rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
