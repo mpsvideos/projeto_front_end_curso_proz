@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa Equipe</title>
+    <title>Cozinha  20</title>
     <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
@@ -25,58 +25,92 @@
         </div>
     </header>
     <main>
-        <div class="slider">
-            <div class="slides">
-                <input type="radio" name="radio-btn" id="radio1" class="radio-btn">
-                <input type="radio" name="radio-btn" id="radio2" class="radio-btn">
-                <input type="radio" name="radio-btn" id="radio3" class="radio-btn">
-    
-                <div class="slide slide-first">
-                    <img src="./img/slide/moqueca de camarão.jpg" alt="Risoto de Cogumelos">
-                    <a href="#" class="slide-btn"></a>
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="./img/slide/Escondidinho-de-aipim.jpg" alt="Escondidinho-de-aipim">
+                    <div class="carousel-text">
+                        <h2>Escondidinho de aipim</h2>
+                         <a href="loja.html">Ver mais</a>
+                    </div>
                 </div>
-    
-                <div class="slide">
-                    <img src="./img/slide/Escondidinho-de-aipim.jpg" alt="Salmão Molho de Ervas">
-                    <a href="#" class="slide-btn"></a>
+                <div class="carousel-slide">
+                    <img src="./img/receitas/maxresdefault.jpg" alt="cocada">
+                    <div class="carousel-text">
+                        <h2>Cocada cremosa</h2>
+                         <a href="loja.html">Ver mais</a>
+                    </div>
                 </div>
-    
-                <div class="slide">
-                    <img src="./img/slide/strogonoff-de-carne.jpg" alt="Receitas Saudáveis">
-                    <a href="#" class="slide-btn"></a>
-                </div>
-            </div>
-            <div class="navigation-bar">
-                <label class="manual-btn" for="radio1"></label>
-                <label class="manual-btn" for="radio2"></label>
-                <label class="manual-btn" for="radio3"></label>
-            </div>
-        </div> 
+                <div class="carousel-slide">
+                    <img src="./img/receitas/pudim.jpg" alt="pudim">
+                    <div class="carousel-text">
+                        <h2>Pudim</h2>
+                        <a href="loja.html">Ver mais</a>
+                    </div>
+                
+            </div>         
+        </section>   
     </main>
-    
+    <section class="receitas-visitada">
+        <div>
+            <h2>Receitas mais vistas:</h2>
+        </div>
+     </section>
     <section>
-        <h2 class="titulo">Receitas mais visitadas do mês:</h2>
-        <div class="container">
+             <div class="container">
             <div class="card">
-                <img src="./img/slide/Risoto-de-Cogumelos.jpg" alt="Risoto de Cogumelos">
-                <h2>Risoto de Cogumelos Selvagens</h2>
+                <img src="img/receitas/salmão com molho de ervas.jpg" alt="Salmão ao molho de ervas">
+                <h2>Salmão ao molho de ervas</h2>
                 <p>Uma receita deliciosa e reconfortante, perfeita para qualquer ocasião.</p>
                 <a href="receitas.html">Ver Receita</a>
             </div>
             <div class="card">
-                <img src="./img/slide/salada de quinoa.jpg" alt="Salada de Quinoa">
-                <h2>Salada de Quinoa com Abacate e Tomate</h2>
+                <img src="./img/receitas/lasanha de frango.jpg" alt="lasanha de frango">
+                <h2>Lasanha de frango</h2>
                 <p>Uma salada refrescante e nutritiva, repleta de sabores frescos e saudáveis.</p>
                 <a href="receitas.html">Ver Receita</a>
             </div>
             <div class="card">
-                <img src="./img/slide/salmão molho de ervas.jpg" alt="Salmão Molho de Ervas">
-                <h2>Salmão Grelhado com Molho de Ervas Frescas</h2>
+                <img src="./img/receitas/strogronof carne.jpg" alt="Srogronoff de carne">
+                <h2>Strogronoff de carne</h2>
                 <p>Um prato delicioso e saudável, perfeito para uma refeição leve e saborosa.</p>
                 <a href="receitas.html">Ver Receita</a>
             </div>
         </div>
     </section>
+    
+    <section class="util">
+        <div>
+            <h2>Entre e delicie-se!</h2>
+        </div>
+     </section>
+    <section>
+    
+    <div class="conteudo">
+         <article>
+            
+            <h2>Cozinha 20</h2>
+            <p>Aqui está uma receita rápida e fácil de pizza caseira para você experimentar:</p>
+            <ul>
+                <li>Pré-aqueça o forno a 220°C.</li>
+                <li>Estique a massa de pizza em uma assadeira.</li>
+                <li>Adicione molho de tomate, queijo e seus ingredientes favoritos.</li>
+                <li>Asse no forno por 12-15 minutos ou até que a crosta esteja dourada.</li>
+                <li>Sirva quente e aproveite!</li>
+            </ul>
+            
+            <button id="toggleButton">Saiba mais</button> 
+        </article>
+        <div class="video-container">
+            <video id="video" controls>
+                <source src="./20240329_2335201.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+</section>
+
+
     <footer>
         <div id="footer_content">
             <div id="footer_contacts">
@@ -85,15 +119,15 @@
     
                 <div id="footer_social_media">
                     <a href="#" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram">I</i>
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
     
                     <a href="#" class="footer-link" id="facebook">
-                        <i class="fa-brands fa-facebook-f">F</i>
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a>
     
                     <a href="#" class="footer-link" id="whatsapp">
-                        <i class="fa-brands fa-whatsapp">W</i>
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
