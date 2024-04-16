@@ -4,10 +4,6 @@ let usuarioInput = document.getElementById("usuario");
 let usuarioLabel = document.querySelector('label[for="usuario"]');
 let usuarioHelper = document.getElementById("usuario-helper");
 
-console.log(usuarioInput)
-console.log(usuarioLabel)
-console.log(usuarioHelper)
-
 // funções gerais
 function togglePopup(input, label) {
     // mostrar popup de campo obrigatório
@@ -38,7 +34,7 @@ function estilizarInputIncorreto(input, helper) {
 };
 
 // validar valor do input usuário
-usuarioInput.addEventListener("change", (e) => {
+usuarioInput.addEventListener("blur", (e) => {
     let valorUsuario = e.target.value;
 
     if (valorUsuario.length < 6) {
@@ -84,11 +80,11 @@ let inputsCorretos = {
 
 // botão login
 btnSubmit.addEventListener("click", (e) => {
-    if (inputsCorretos.username == false ||
+    if (inputsCorretos.usuario == false ||
          inputsCorretos.senha == false) {
          e.preventDefault();
          alert("Favor preencher todos os campos!");
-     } else {
+    } else {
          alert("Login realizado com sucesso!");
-     }
+    }
  })
