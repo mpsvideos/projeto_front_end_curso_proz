@@ -97,9 +97,9 @@ togglePopup(telInput, telLabel);
 telInput.addEventListener("blur", (e) => {
     let valorTelefone = e.target.value;
 
-    if (valorTelefone.length < 17) {
-        // adicionar estilos dinâmicos se o valor tiver menos de 17 caracteres
-        telHelper.innerText = "Favor inserir um número de telefone válido. Exemplo: +55 31 99999-8877"
+    if (valorTelefone.length < 14) {
+        // adicionar estilos dinâmicos se o valor tiver menos de 14 caracteres
+        telHelper.innerText = "Favor inserir um número de telefone válido. Exemplo: +5531999998877"
         estilizarInputIncorreto(telInput, telHelper);
         inputsCadastroCorretos.tel = false;
     } else {
@@ -168,17 +168,13 @@ togglePopup(contraSenhaCadastroInput, contraSenhaCadastroLabel);
 // // validar valor do input contra-senha
 contraSenhaCadastroInput.addEventListener("blur", (e) => {
     let valorContraSenha = e.target.value;
-    let valorSenha = e.target.value;
+    let valorSenha = senhaCadastroInput.value;
 
     if (valorContraSenha == valorSenha) {
         // adicionar estilo dinâmico se o valor estiver correto
         estilizarInputCorreto(contraSenhaCadastroInput, contraSenhaCadastroHelper);
         inputsCadastroCorretos.contrasenha = true;
-    }
-
-
-    // verificar essa condição
-    if (valorContraSenha == "") {
+    } else if (valorContraSenha == "") {
         // adicionar estilos dinâmicos se o valor for nulo ou menor que 6
         contraSenhaCadastroHelper.innerText = "Confirme a senha"
         estilizarInputIncorreto(contraSenhaCadastroInput, contraSenhaCadastroHelper);
@@ -195,7 +191,7 @@ contraSenhaCadastroInput.addEventListener("blur", (e) => {
 let btnCadastrar = document.querySelector('input[type="submit"]');
 let inputsCadastroCorretos = {
     nome: false,
-    genero: false,
+    // genero: false,
     email: false,
     tel: false,
     endereco: false,
@@ -204,17 +200,17 @@ let inputsCadastroCorretos = {
 };
 
 // // botão cadastrar
-// btnCadastrar.addEventListener("click", (e) => {
-//     if (inputsCorretos.nome == false ||
-//         inputsCorretos.genero == false ||
-//         inputsCorretos.email == false ||
-//         inputsCorretos.tel == false ||
-//         inputsCorretos.endereco == false ||
-//         inputsCorretos.senha == false ||
-//         inputsCorretos.contrasenha == false) {
-//         e.preventDefault();
-//         alert("Favor preencher todos os campos!");
-//     } else {
-//         alert("Login realizado com sucesso!");
-//     }
-// })
+btnCadastrar.addEventListener("click", (e) => {
+    if (inputsCadastroCorretos.nome == false ||
+        // inputsCadastroCorretos.genero == false ||
+        inputsCadastroCorretos.email == false ||
+        inputsCadastroCorretos.tel == false ||
+        inputsCadastroCorretos.endereco == false ||
+        inputsCadastroCorretos.senha == false ||
+        inputsCadastroCorretos.contrasenha == false) {
+        e.preventDefault();
+        alert("Favor preencher todos os campos!");
+    } else {
+        alert("Cadastro realizado com sucesso!");
+    }
+})
