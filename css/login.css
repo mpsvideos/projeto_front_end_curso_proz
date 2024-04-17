@@ -10,6 +10,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    background-image: url("/img/login/bg_1.jpg"); /* imagem de fundo */
+    background-repeat: no-repeat; /* para evitar repetição */
+    background-size: cover; /* para cobrir todo o corpo */
+    background-position: center ; /* para centralizar a imagem */
 }
 
 header {
@@ -82,12 +87,14 @@ header {
 }
 /*css form*/
 .form {
-    max-width: 600px;
-    margin: 80px auto;
+    max-width: 400px;
+    margin: 150px auto;
+    margin-bottom: 60px;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 85%;
 }
 
 h2 {
@@ -113,7 +120,7 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     background-color: #ff3909;
     color: #fff;
