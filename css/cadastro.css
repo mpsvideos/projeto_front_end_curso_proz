@@ -10,6 +10,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    background-image: url("/img/cadastro/bg_1.jpg"); /* imagem de fundo */
+    background-repeat: no-repeat; /* para evitar repetição */
+    background-size: cover; /* para cobrir todo o corpo */
+    background-position: center ; /* para centralizar a imagem */
 }
 
 header {
@@ -82,12 +87,14 @@ header {
 }
 /*css form*/
 .form {
-    max-width: 600px;
-    margin: 80px auto;
+    max-width: 400px;
+    margin: 150px auto;
+    margin-bottom: 60px;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 85%;
 }
 
 h2 {
@@ -138,7 +145,7 @@ input[type="submit"]:hover {
 }
 
 /* estilos dinâmicos */
-.required-popup::after {
+/* .required-popup::after {
     content: "*Campo obrigatório";
     position: absolute;
     top: 0;
@@ -149,7 +156,7 @@ input[type="submit"]:hover {
     width: auto;
     display: block;
     background-color: #202020;
-  }
+  } */
 
   .helper-text {
     display: none;
@@ -324,4 +331,3 @@ footer {
         padding: 3rem 2rem;
     }
 }
-
