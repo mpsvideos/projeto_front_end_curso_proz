@@ -41,11 +41,11 @@ nomeInput.addEventListener("blur", (e) => {
         // adicionar estilos dinâmicos se o valor tiver menos de 15 caracteres
         nomeHelper.innerText = "Favor inserir seu nome completo"
         estilizarInputIncorreto(nomeInput, nomeHelper);
-        inputsCorretos.nome = false;
+        inputsCadastroCorretos.nome = false;
     } else {
         // adicionar estilo dinâmico se o valor estiver correto
         estilizarInputCorreto(nomeInput, nomeHelper);
-        inputsCorretos.nome = true;
+        inputsCadastroCorretos.nome = true;
     }
 });
 
@@ -76,12 +76,12 @@ emailInput.addEventListener("blur", (e) => {
     if (valorEmail.includes("@") && valorEmail.includes(".com")) {
         // adicionar estilo dinâmico se o valor estiver correto
         estilizarInputCorreto(emailInput, emailHelper);
-        inputsCorretos.email = true;
+        inputsCadastroCorretos.email = true;
     } else {       
         // adicionar estilos dinâmicos se o valor tiver menos de 3 caracteres
         emailHelper.innerText = "Favor inserir um email válido"
         estilizarInputIncorreto(emailInput, emailHelper);
-        inputsCorretos.email = false;
+        inputsCadastroCorretos.email = false;
     }
 });
 
@@ -101,11 +101,11 @@ telInput.addEventListener("blur", (e) => {
         // adicionar estilos dinâmicos se o valor tiver menos de 17 caracteres
         telHelper.innerText = "Favor inserir um número de telefone válido. Exemplo: +55 31 99999-8877"
         estilizarInputIncorreto(telInput, telHelper);
-        inputsCorretos.tel = false;
+        inputsCadastroCorretos.tel = false;
     } else {
         // adicionar estilo dinâmico se o valor estiver correto
         estilizarInputCorreto(telInput, telHelper);
-        inputsCorretos.tel = true;
+        inputsCadastroCorretos.tel = true;
     }
 });
 
@@ -125,10 +125,96 @@ enderecoInput.addEventListener("blur", (e) => {
         // adicionar estilos dinâmicos se o valor for nulo
         enderecoHelper.innerText = "O preenchimento desse campo é obrigatório"
         estilizarInputIncorreto(enderecoInput, enderecoHelper);
-        inputsCorretos.endereco = false;
+        inputsCadastroCorretos.endereco = false;
     } else {
         // adicionar estilo dinâmico se o valor estiver correto
         estilizarInputCorreto(enderecoInput, enderecoHelper);
-        inputsCorretos.tel = true;
+        inputsCadastroCorretos.endereco = true;
     }
 });
+
+// capturando elementos no DOM
+// senha
+let senhaCadastroInput = document.getElementById("senha");
+let senhaCadastroLabel = document.querySelector('label[for="senha"]');
+let senhaCadastroHelper = document.getElementById("senha-helper");
+
+togglePopup(senhaCadastroInput, senhaCadastroLabel);
+
+// // validar valor do input senha
+senhaCadastroInput.addEventListener("blur", (e) => {
+    let valorSenha = e.target.value;
+
+    if (valorSenha == "" || valorSenha.length < 6) {
+        // adicionar estilos dinâmicos se o valor for nulo ou menor que 6
+        senhaCadastroHelper.innerText = "Digite uma senha válida, ela deve ter no mínimo seis caracteres"
+        estilizarInputIncorreto(senhaCadastroInput, senhaCadastroHelper);
+        inputsCadastroCorretos.senha = false;
+    } else {
+        // adicionar estilo dinâmico se o valor estiver correto
+        estilizarInputCorreto(senhaCadastroInput, senhaCadastroHelper);
+        inputsCadastroCorretos.senha = true;
+    }
+});
+
+// capturando elementos no DOM
+// contra-senha
+let contraSenhaCadastroInput = document.getElementById("contra-senha");
+let contraSenhaCadastroLabel = document.querySelector('label[for="contra-senha"]');
+let contraSenhaCadastroHelper = document.getElementById("contra-senha-helper");
+
+togglePopup(contraSenhaCadastroInput, contraSenhaCadastroLabel);
+
+// // validar valor do input contra-senha
+contraSenhaCadastroInput.addEventListener("blur", (e) => {
+    let valorContraSenha = e.target.value;
+    let valorSenha = e.target.value;
+
+    if (valorContraSenha == valorSenha) {
+        // adicionar estilo dinâmico se o valor estiver correto
+        estilizarInputCorreto(contraSenhaCadastroInput, contraSenhaCadastroHelper);
+        inputsCadastroCorretos.contrasenha = true;
+    }
+
+
+    // verificar essa condição
+    if (valorContraSenha == "") {
+        // adicionar estilos dinâmicos se o valor for nulo ou menor que 6
+        contraSenhaCadastroHelper.innerText = "Confirme a senha"
+        estilizarInputIncorreto(contraSenhaCadastroInput, contraSenhaCadastroHelper);
+        inputsCadastroCorretos.contrasenha = false;
+    } else {
+        // adicionar estilos dinâmicos se a senha e contra-senha forem diferentes
+        contraSenhaCadastroHelper.innerText = "As senhas precisam ser iguais"
+        estilizarInputIncorreto(contraSenhaCadastroInput, contraSenhaCadastroHelper);
+        inputsCadastroCorretos.contrasenha = false;
+    }
+});
+
+// evitar envio do formulário
+let btnCadastrar = document.querySelector('input[type="submit"]');
+let inputsCadastroCorretos = {
+    nome: false,
+    genero: false,
+    email: false,
+    tel: false,
+    endereco: false,
+    senha: false,
+    contrasenha: false
+};
+
+// // botão cadastrar
+// btnCadastrar.addEventListener("click", (e) => {
+//     if (inputsCorretos.nome == false ||
+//         inputsCorretos.genero == false ||
+//         inputsCorretos.email == false ||
+//         inputsCorretos.tel == false ||
+//         inputsCorretos.endereco == false ||
+//         inputsCorretos.senha == false ||
+//         inputsCorretos.contrasenha == false) {
+//         e.preventDefault();
+//         alert("Favor preencher todos os campos!");
+//     } else {
+//         alert("Login realizado com sucesso!");
+//     }
+// })

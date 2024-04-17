@@ -41,11 +41,11 @@ usuarioInput.addEventListener("blur", (e) => {
         // adicionar estilos dinâmicos se o valor tiver menos de 6 caracteres
         usuarioHelper.innerText = "O nome de usuário precisa ter no mínimo 6 caracteres"
         estilizarInputIncorreto(usuarioInput, usuarioHelper);
-        inputsCorretos.usuario = false;
+        inputsCadastroCorretos.usuario = false;
     } else {
         // adicionar estilo dinâmico se o valor estiver correto
         estilizarInputCorreto(usuarioInput, usuarioHelper);
-        inputsCorretos.usuario = true;
+        inputsCadastroCorretos.usuario = true;
     }
 });
 
@@ -64,10 +64,10 @@ senhaInput.addEventListener("blur", (e) => {
     if (valorSenha.length < 6) {
         senhaHelper.innerText = "Digite uma senha válida, ela deve ter no mínimo seis caracteres"
         estilizarInputIncorreto(senhaInput, senhaHelper);
-        inputsCorretos.senha = false;
+        inputsCadastroCorretos.senha = false;
     } else {
         estilizarInputCorreto(senhaInput, senhaHelper);
-        inputsCorretos.senha = true;
+        inputsCadastroCorretos.senha = true;
     };
 });
 
@@ -80,11 +80,11 @@ let inputsCorretos = {
 
 // botão login
 btnSubmit.addEventListener("click", (e) => {
-    if (inputsCorretos.usuario == false ||
-         inputsCorretos.senha == false) {
+    if (inputsCadastroCorretos.usuario == false ||
+         inputsCadastroCorretos.senha == false) {
          e.preventDefault();
          alert("Favor preencher todos os campos!");
     } else {
          alert("Login realizado com sucesso!");
     }
- })
+})
