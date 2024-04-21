@@ -28,9 +28,7 @@ header {
     z-index: 1000; 
 }
 
-
-
-.container {
+.container-navbar {
     max-width: 1200px; 
     margin: 0 auto; 
     display: flex; 
@@ -60,8 +58,8 @@ header {
     margin-left: 20px; 
 }
 .nav-item.active a {
-    color: #ff0000; /* Define a cor do texto para vermelho */
-    font-weight: bold; /* Deixa o texto em negrito */
+    color: #ff0000; 
+    font-weight: bold; 
 }
 
 
@@ -75,106 +73,136 @@ header {
 .nav-item a:hover {
     color: #ff9100; 
 }
-
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
+/* Estilos para dispositivos móveis */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none; 
+        flex-direction: column; 
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ff3900; 
+        padding: 10px; 
+        z-index: 1000; 
     }
-    .card {
-        width: calc(50% - 30px);
+
+    .nav-menu.show {
+        display: flex; 
+    }
+
+    .nav-item {
+        margin: 10px 0; 
     }
 }
 
-@media (max-width: 426px) {
-    .container {
-        padding: 0 10px;
-    }
-    .card {
-        width: calc(100% - 20px);
+/* Esconder botão hamburguer em dispositivos maiores que tablet */
+@media (min-width: 992px) {
+    .hamburger {
+        display: none;
     }
 }
 
 
+/* estilo do main e cards receitas */
 
-
+.controle-conteudo {
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    margin-left: 40px; 
+    margin-right: 40px; 
+    padding: 40px; 
+  } 
+  
 .receitas-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
-.coluna {
-    flex: 0 1 30%;
-    margin-bottom: 20px;
-}
-
-.receita {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
- .receita img {
-    width: 100%;
+    justify-content: space-between; 
+    margin: 0 -10px; 
+  }
+  
+  .card {
+    width: calc(33.33% - 20px); 
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box; 
+  }
+  
+  .card img {
+    max-width: 100%;
     height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.receita h2 {
-    margin: 10px;
-    font-size: 1.2rem;
-}
-
-.toggle-button {
-    background-color: #ff3909;
-    border: none;
-    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .card button {
+    background-color: #ff9100;
+    color: #fff;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
+    border: none;
     cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  /* Adicionando efeito hover nos botões */
+  .card button:hover {
+    background-color: #ff3909;
+  }
+  .conteudo {
+    display: none; /* Inicialmente oculta o conteúdo */
 }
 
-.conteudo {
-    padding: 10px;
-    display: none;
+.card.open .conteudo {
+    display: block; /* Exibe o conteúdo quando a classe 'open' está presente */
 }
 
- .conteudo p, main .conteudo ul, main .conteudo ol {
+.conteudo p {
+    font-size: 16px;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
-
-.conteudo ul, main .conteudo ol {
-    padding-left: 20px;
+.conteudo ul,
+.conteudo ol {
+    margin-bottom: 10px;
 }
 
-
-.conteudo li {
-    margin-bottom: 5px;
+.conteudo ul li,
+.conteudo ol li {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
+.conteudo ol {
+    list-style-type: decimal;
+} 
 
 
-@media screen and (max-width: 768px) {
-    main .coluna {
-        flex: 0 1 45%;
+  @media screen and (max-width: 1024px) {
+    .card {
+      width: calc(50% - 20px); /* 50% para cada card em telas de tamanho médio */
     }
-}
-
-@media screen and (max-width: 426px) {
-    main .coluna {
-        flex: 0 1 100%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: calc(100% - 20px); /
     }
-}
+  }
+  
+
 
 
 footer {

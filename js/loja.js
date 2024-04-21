@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    });
+  });
+  
+
+
+
 // Variáveis globais para armazenar a quantidade total e o valor total da compra
 let quantidadeTotal = 0;
 let valorTotal = 0;

@@ -24,7 +24,7 @@ header {
 }
 
 
-.container {
+.container-navbar {
     max-width: 1200px; 
     margin: 0 auto; 
     display: flex; 
@@ -69,25 +69,46 @@ header {
 .nav-item a:hover {
     color: #ff9100; 
 }
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
+/* Estilos para dispositivos móveis */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none; /* Esconde o menu de navegação por padrão */
+        flex-direction: column; /* Altera a direção do flex para uma coluna vertical */
+        position: fixed; /* Fixa o menu na parte superior */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ff3900; /* Cor de fundo do menu */
+        padding: 10px; /* Espaçamento interno do menu */
+        z-index: 1000; /* Garante que o menu fique sobre os outros elementos */
     }
-    .card {
-        width: calc(50% - 30px);
+
+    .nav-menu.show {
+        display: flex; /* Exibe o menu de navegação quando a classe show é adicionada */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adiciona espaçamento entre os itens do menu */
     }
 }
 
-@media (max-width: 576px) {
-    .container {
-        padding: 0 10px;
-    }
-    .card {
-        width: calc(100% - 20px);
+/* Esconder botão hamburguer em dispositivos maiores que tablet */
+@media (min-width: 992px) {
+    .hamburger {
+        display: none;
     }
 }
+
 /*css dos itens da loja*/
-.container {
+
+.controle-livros {
+    margin-top: 40px; /* Margem superior em relação ao header */
+    margin-bottom: 40px; /* Margem inferior em relação ao footer */
+    margin-left: 40px; /* Margem esquerda */
+    margin-right: 40px; /* Margem direita */
+    padding: 40px; /* Preenchimento interno */
+  } 
+.container-livros {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

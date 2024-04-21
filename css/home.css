@@ -23,8 +23,7 @@ header {
     top: 0;
     z-index: 1000;
 }
-
-.container {
+.container-navbar {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -98,6 +97,13 @@ header {
     }
 }
 
+.principal {
+    margin-top: 20px; /* Margem superior em relação ao header */
+    margin-bottom: 10px; /* Margem inferior em relação ao footer */
+    margin-left: 10px; /* Margem esquerda */
+    margin-right: 20px; /* Margem direita */
+    padding: 20px; /* Preenchimento interno */
+  } 
 /*css do carrossel*/
 
 .carousel {
