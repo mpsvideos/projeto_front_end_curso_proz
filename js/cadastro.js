@@ -39,7 +39,7 @@ nomeInput.addEventListener("blur", (e) => {
 
     if (valorNome.length < 15) {
         // adicionar estilos dinâmicos se o valor tiver menos de 15 caracteres
-        nomeHelper.innerText = "Favor inserir seu nome completo"
+        nomeHelper.innerText = "Digite seu nome e sobrenome"
         estilizarInputIncorreto(nomeInput, nomeHelper);
         inputsCadastroCorretos.nome = false;
     } else {
@@ -49,17 +49,59 @@ nomeInput.addEventListener("blur", (e) => {
     }
 });
 
-// capturando elementos no DOM
-// genero
-// let generoInput = document.getElementById("genero-form");
-// let generoLabel = document.querySelector('label[for="genero"]');
-// let generoHelper = document.getElementById("genero-helper");
+// -------------------------------------   REVER ESSA PARTE   -------------------------------------
+// Funções de Estilo para o campo de gênero
+function estilizarInputCorretoGenero(input, helper) {
+    // Função que insere a cor verde caso o input esteja correto
+    helper.classList.remove("visible");
+    input.classList.remove("error");
+    input.classList.add("correct");
+}
 
-// console.log(generoInput)
-// console.log(generoLabel)
-// console.log(generoHelper)
+function estilizarInputIncorretoGenero(input, helper) {
+    // Função que insere a cor vermelha caso o input esteja incorreto
+    helper.classList.add("visible");
+    input.classList.add("error");
+    input.classList.remove("correct");
+}
 
-// togglePopup(generoInput, generoLabel);
+// Função para mostrar/ocultar popup de campo obrigatório para o campo de gênero
+function togglePopupGenero(input, label) {
+    // Mostrar popup de campo obrigatório
+    input.addEventListener("focus", () => {
+        label.classList.add("required-popup");
+    });
+
+    // Ocultar popup de campo obrigatório
+    input.addEventListener("blur", () => {
+        label.classList.remove("required-popup");
+    });
+}
+
+// Capturando elementos no DOM para o campo de gênero
+let generoMascInput = document.getElementById("masculino");
+let generoFemInput = document.getElementById("feminino");
+let generoLabel = document.querySelector('label[for="genero"]');
+let generoHelper = document.getElementById("genero-helper");
+
+togglePopupGenero(generoMascInput, generoLabel);
+
+generoMascInput.addEventListener("blur", (e) => {
+    let valorGeneroMasc = e.target.value;
+
+    if (valorGeneroMasc == "") {
+        // Adicionar estilos dinâmicos se o valor for nulo
+        generoHelper.innerText = "O preenchimento desse campo é obrigatório";
+        estilizarInputIncorretoGenero(generoMascInput, generoHelper);
+        inputsCadastroCorretos.genero = false;
+    } else {
+        // Adicionar estilo dinâmico se o valor estiver correto
+        estilizarInputCorretoGenero(generoMascInput, generoHelper);
+        inputsCadastroCorretos.genero = true;
+    }
+});
+
+// -------------------------------------   REVER ESSA PARTE   -------------------------------------
 
 // capturando elementos no DOM
 // email
@@ -79,7 +121,7 @@ emailInput.addEventListener("blur", (e) => {
         inputsCadastroCorretos.email = true;
     } else {       
         // adicionar estilos dinâmicos se o valor tiver menos de 3 caracteres
-        emailHelper.innerText = "Favor inserir um email válido"
+        emailHelper.innerText = "Digite um email válido"
         estilizarInputIncorreto(emailInput, emailHelper);
         inputsCadastroCorretos.email = false;
     }
@@ -99,7 +141,7 @@ telInput.addEventListener("blur", (e) => {
 
     if (valorTelefone.length < 14) {
         // adicionar estilos dinâmicos se o valor tiver menos de 14 caracteres
-        telHelper.innerText = "Favor inserir um número de telefone válido. Exemplo: +5531999998877"
+        telHelper.innerText = "Digite um número de telefone válido. Exemplo: +5531999998877"
         estilizarInputIncorreto(telInput, telHelper);
         inputsCadastroCorretos.tel = false;
     } else {
@@ -123,7 +165,7 @@ enderecoInput.addEventListener("blur", (e) => {
 
     if (valorEndereco == "") {
         // adicionar estilos dinâmicos se o valor for nulo
-        enderecoHelper.innerText = "O preenchimento desse campo é obrigatório"
+        enderecoHelper.innerText = "Digite seu endereço completo, inclusive com o CEP"
         estilizarInputIncorreto(enderecoInput, enderecoHelper);
         inputsCadastroCorretos.endereco = false;
     } else {
@@ -165,7 +207,7 @@ let contraSenhaCadastroHelper = document.getElementById("contra-senha-helper");
 
 togglePopup(contraSenhaCadastroInput, contraSenhaCadastroLabel);
 
-// // validar valor do input contra-senha
+// validar valor do input contra-senha
 contraSenhaCadastroInput.addEventListener("blur", (e) => {
     let valorContraSenha = e.target.value;
     let valorSenha = senhaCadastroInput.value;
@@ -191,7 +233,7 @@ contraSenhaCadastroInput.addEventListener("blur", (e) => {
 let btnCadastrar = document.querySelector('input[type="submit"]');
 let inputsCadastroCorretos = {
     nome: false,
-    // genero: false,
+    genero: false,
     email: false,
     tel: false,
     endereco: false,
@@ -202,7 +244,7 @@ let inputsCadastroCorretos = {
 // // botão cadastrar
 btnCadastrar.addEventListener("click", (e) => {
     if (inputsCadastroCorretos.nome == false ||
-        // inputsCadastroCorretos.genero == false ||
+        inputsCadastroCorretos.genero == false ||
         inputsCadastroCorretos.email == false ||
         inputsCadastroCorretos.tel == false ||
         inputsCadastroCorretos.endereco == false ||

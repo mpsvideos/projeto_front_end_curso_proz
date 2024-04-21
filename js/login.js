@@ -37,15 +37,15 @@ function estilizarInputIncorreto(input, helper) {
 usuarioInput.addEventListener("blur", (e) => {
     let valorUsuario = e.target.value;
 
-    if (valorUsuario.length < 6) {
+    if (valorUsuario.length < 6 || valorUsuario == "") {
         // adicionar estilos dinâmicos se o valor tiver menos de 6 caracteres
-        usuarioHelper.innerText = "O nome de usuário precisa ter no mínimo 6 caracteres"
+        usuarioHelper.innerText = "Digite o nome de usuário com no mínimo 6 caracteres"
         estilizarInputIncorreto(usuarioInput, usuarioHelper);
-        inputsCadastroCorretos.usuario = false;
+        inputsCorretos.usuario = false;
     } else {
         // adicionar estilo dinâmico se o valor estiver correto
         estilizarInputCorreto(usuarioInput, usuarioHelper);
-        inputsCadastroCorretos.usuario = true;
+        inputsCorretos.usuario = true;
     }
 });
 
@@ -61,13 +61,13 @@ togglePopup(senhaInput, senhaLabel);
 senhaInput.addEventListener("blur", (e) => {
     let valorSenha = e.target.value;
 
-    if (valorSenha.length < 6) {
+    if (valorSenha.length < 6 || valorSenha == "") {
         senhaHelper.innerText = "Digite uma senha válida, ela deve ter no mínimo seis caracteres"
         estilizarInputIncorreto(senhaInput, senhaHelper);
-        inputsCadastroCorretos.senha = false;
+        inputsCorretos.senha = false;
     } else {
         estilizarInputCorreto(senhaInput, senhaHelper);
-        inputsCadastroCorretos.senha = true;
+        inputsCorretos.senha = true;
     };
 });
 
@@ -80,11 +80,11 @@ let inputsCorretos = {
 
 // botão login
 btnSubmit.addEventListener("click", (e) => {
-    if (inputsCadastroCorretos.usuario == false ||
-         inputsCadastroCorretos.senha == false) {
-         e.preventDefault();
-         alert("Favor preencher todos os campos!");
+    if (inputsCorretos.usuario == false ||
+        inputsCorretos.senha == false) {
+        e.preventDefault();
+        alert("Favor preencher todos os campos!");
     } else {
-         alert("Login realizado com sucesso!");
+        alert("Login realizado com sucesso!");
     }
 })
