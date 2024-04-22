@@ -153,13 +153,13 @@ input[type="submit"]:hover {
 /* estilos dinâmicos */
 .required-popup::after {
     content: "*Campo obrigatório";
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     color: #DFDFDF;
     font-size: .65rem;
     padding: .2rem .3rem;
-    width: auto;
+    width: 30%;
     display: block;
     background-color: #202020;
   }
