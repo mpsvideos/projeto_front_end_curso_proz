@@ -254,7 +254,7 @@ let inputsCadastroCorretos = {
     contrasenha: false
 };
 
-// // botão cadastrar
+// evento do botão cadastrar
 btnCadastrar.addEventListener("click", (e) => {
     if (inputsCadastroCorretos.nome == false ||
         inputsCadastroCorretos.genero == false ||
