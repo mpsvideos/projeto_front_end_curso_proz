@@ -4,10 +4,13 @@ let usuarioInput = document.getElementById("usuario");
 let usuarioLabel = document.querySelector('label[for="usuario"]');
 let usuarioHelper = document.getElementById("usuario-helper");
 
+<<<<<<< HEAD
 console.log(usuarioInput)
 console.log(usuarioLabel)
 console.log(usuarioHelper)
 
+=======
+>>>>>>> marley_paranhos
 // funções gerais
 function togglePopup(input, label) {
     // mostrar popup de campo obrigatório
@@ -38,12 +41,21 @@ function estilizarInputIncorreto(input, helper) {
 };
 
 // validar valor do input usuário
+<<<<<<< HEAD
 usuarioInput.addEventListener("change", (e) => {
     let valorUsuario = e.target.value;
 
     if (valorUsuario.length < 6) {
         // adicionar estilos dinâmicos se o valor tiver menos de 6 caracteres
         usuarioHelper.innerText = "O nome de usuário precisa ter no mínimo 6 caracteres"
+=======
+usuarioInput.addEventListener("blur", (e) => {
+    let valorUsuario = e.target.value;
+
+    if (valorUsuario.length < 6 || valorUsuario == "") {
+        // adicionar estilos dinâmicos se o valor tiver menos de 6 caracteres
+        usuarioHelper.innerText = "Digite o nome de usuário com no mínimo 6 caracteres"
+>>>>>>> marley_paranhos
         estilizarInputIncorreto(usuarioInput, usuarioHelper);
         inputsCorretos.usuario = false;
     } else {
@@ -65,7 +77,11 @@ togglePopup(senhaInput, senhaLabel);
 senhaInput.addEventListener("blur", (e) => {
     let valorSenha = e.target.value;
 
+<<<<<<< HEAD
     if (valorSenha.length < 6) {
+=======
+    if (valorSenha.length < 6 || valorSenha == "") {
+>>>>>>> marley_paranhos
         senhaHelper.innerText = "Digite uma senha válida, ela deve ter no mínimo seis caracteres"
         estilizarInputIncorreto(senhaInput, senhaHelper);
         inputsCorretos.senha = false;
@@ -84,6 +100,7 @@ let inputsCorretos = {
 
 // botão login
 btnSubmit.addEventListener("click", (e) => {
+<<<<<<< HEAD
     if (inputsCorretos.username == false ||
          inputsCorretos.senha == false) {
          e.preventDefault();
@@ -92,3 +109,13 @@ btnSubmit.addEventListener("click", (e) => {
          alert("Login realizado com sucesso!");
      }
  })
+=======
+    if (inputsCorretos.usuario == false ||
+        inputsCorretos.senha == false) {
+        e.preventDefault();
+        alert("Favor preencher todos os campos!");
+    } else {
+        alert("Login realizado com sucesso!");
+    }
+})
+>>>>>>> marley_paranhos

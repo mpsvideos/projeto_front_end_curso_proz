@@ -9,7 +9,10 @@
 - Hiago Santos
 - Marley Paranhos
 - Agda Cavalcante
+<<<<<<< HEAD
 
+=======
+>>>>>>> marley_paranhos
 
   # Tecnologias Utilizadas :
 
