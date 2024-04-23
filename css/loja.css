@@ -54,8 +54,8 @@ header {
     margin-left: 20px; 
 }
 .nav-item.active a {
-    color: #ff0000; /* Define a cor do texto para vermelho */
-    font-weight: bold; /* Deixa o texto em negrito */
+    color: #0f0f0f; 
+    font-weight: bold; 
 }
 
 
@@ -72,23 +72,23 @@ header {
 /* Estilos para dispositivos móveis */
 @media (max-width: 992px) {
     .nav-menu {
-        display: none; /* Esconde o menu de navegação por padrão */
-        flex-direction: column; /* Altera a direção do flex para uma coluna vertical */
-        position: fixed; /* Fixa o menu na parte superior */
+        display: none;
+        flex-direction: column; 
+        position: fixed; 
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #ff3900; /* Cor de fundo do menu */
-        padding: 10px; /* Espaçamento interno do menu */
-        z-index: 1000; /* Garante que o menu fique sobre os outros elementos */
+        background-color: #ff3900; 
+        padding: 10px; 
+        z-index: 1000; 
     }
 
     .nav-menu.show {
-        display: flex; /* Exibe o menu de navegação quando a classe show é adicionada */
+        display: flex; 
     }
 
     .nav-item {
-        margin: 10px 0; /* Adiciona espaçamento entre os itens do menu */
+        margin: 10px 0; 
     }
 }
 
@@ -101,12 +101,12 @@ header {
 
 /*css dos itens da loja*/
 
-.controle-livros {
-    margin-top: 40px; /* Margem superior em relação ao header */
-    margin-bottom: 40px; /* Margem inferior em relação ao footer */
-    margin-left: 40px; /* Margem esquerda */
-    margin-right: 40px; /* Margem direita */
-    padding: 40px; /* Preenchimento interno */
+.controle {
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    margin-left: 40px; 
+    margin-right: 40px; 
+    padding: 40px; 
   } 
 .container-livros {
     display: flex;
@@ -124,7 +124,7 @@ header {
     margin: 10px;
     padding: 20px;
     text-align: center;
-    width: calc(33.33% - 20px); /* 3 produtos por linha */
+    width: calc(33.33% - 20px); 
 }
 
 .product h2 {
@@ -136,10 +136,10 @@ header {
     margin: 5px 0;
 }
 .product img {
-    width: 100px; /* Define a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
-    margin-bottom: 10px; /* Adiciona um espaçamento inferior */
+    width: 100px; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
 }
 
 #resumo{
@@ -165,14 +165,14 @@ button:hover {
 /* Estilos para tablets (até 768px) */
 @media (max-width: 768px) {
     .product {
-        width: calc(50% - 20px); /* 2 produtos por linha */
+        width: calc(50% - 20px); 
     }
 }
 
 /* Estilos para dispositivos móveis (até 576px) */
 @media (max-width: 576px) {
     .product {
-        width: calc(100% - 20px); /* 1 produto por linha */
+        width: calc(100% - 20px); 
     }
 }
 

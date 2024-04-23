@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+/*Estilo da header e navbar*/
 
 header {
     background-color: #ff3900;
@@ -28,6 +29,7 @@ header {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    border: solid 0;
 }
 
 .logo img {
@@ -38,6 +40,7 @@ header {
 
 .navbar {
     flex-grow: 1;
+    border: none;
 }
 
 .nav-menu {
@@ -46,14 +49,16 @@ header {
     padding: 0;
     display: flex;
     justify-content: flex-end;
+    border: none;
 }
 
 .nav-item {
     margin-left: 20px;
+    border-bottom: none;
 }
 
 .nav-item.active a {
-    color: #ff0000;
+    color: #0f0f0f;
     font-weight: bold;
 }
 
@@ -63,22 +68,24 @@ header {
     font-weight: bold;
 }
 
+
 .nav-item a:hover {
-    color: #ff9100;
+    color:#e76949;
+   
 }
 
-/* Estilos para dispositivos móveis */
+
 @media (max-width: 992px) {
     .nav-menu {
-        display: none; /* Esconde o menu de navegação por padrão */
-        flex-direction: column; /* Altera a direção do flex para uma coluna vertical */
-        position: fixed; /* Fixa o menu na parte superior */
+        display: none; 
+        flex-direction: column; 
+        position: fixed; 
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #ff3900; /* Cor de fundo do menu */
-        padding: 10px; /* Espaçamento interno do menu */
-        z-index: 1000; /* Garante que o menu fique sobre os outros elementos */
+        background-color: #ff3900; 
+        padding: 10px; 
+        z-index: 1000; 
     }
 
     .nav-menu.show {
@@ -90,91 +97,105 @@ header {
     }
 }
 
-/* Esconder botão hamburguer em dispositivos maiores que tablet */
+
 @media (min-width: 992px) {
     .hamburger {
         display: none;
     }
 }
+/* Estilo para a main */
 
 .principal {
-    margin-top: 20px; /* Margem superior em relação ao header */
-    margin-bottom: 10px; /* Margem inferior em relação ao footer */
-    margin-left: 10px; /* Margem esquerda */
-    margin-right: 20px; /* Margem direita */
-    padding: 20px; /* Preenchimento interno */
-  } 
-/*css do carrossel*/
+    width: 100%;
+    padding:20px 0;
+    display: flex;
+    justify-content: center; 
+   
+   
+}
 
+
+/* Estilo para o carrossel de largura total */
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    margin: 20px auto; /* Centralizando o carrossel */
+    margin: 20px auto;
     overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .carousel-container {
-    display: flex;
-    width: 300%; 
-    transition: transform 0.5s ease; 
-  }
-  
-  .carousel-slide {
-    width: 33.33%; 
-    flex-shrink: 0; 
-    position: relative; 
-  }
-  
-  .carousel-slide img {
+    height:auto ;
+    padding: 0;
+}
+
+.carousel .carousel-container {
+    width: 100vw; 
+    overflow: hidden; 
+    display: flex; 
+}
+
+.carousel .carousel-slide {
     width: 100%; 
-    height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  .carousel-text {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
+    flex-shrink: 0; 
+}
+
+.carousel .carousel-slide img {
     width: 100%;
+    height: auto;
+   display: block;
+   border-radius:10px;
+}
+
+/* Estilo para o texto dentro do carrossel */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 800px;
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     text-align: center;
     color: white;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     transition: opacity 0.5s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
     
-  }
-  
-  
-  .carousel-text h2 {
+}
+
+
+.carousel-text h2 {
     font-size: 36px;
     margin-bottom: 5px;
-  }
-  
-  .carousel-text p {
+}
+
+.carousel-text p {
     font-size: 16px;
     margin-bottom: 10px;
-  }
-  
-  .carousel-text a {
+}
+
+.carousel-text a {
     display: inline-block;
     padding: 8px 16px;
     background-color: #ff3909;
     color: white;
     text-decoration: none;
     border-radius: 3px;
-  }
-  
-  .carousel-text a:hover {
+}
+
+.carousel-text a:hover {
     background-color: #e68b4f;
-  }
-  
+}
+@media screen and (max-width: 768px) {
+    .carousel {
+        max-width: 90%; /* Reduz a largura máxima do carrossel para telas menores */
+    }
+} 
+@media (max-width: 768px) {
+    .carousel-text {
+        bottom: 0; /* Redefine a distância do texto em relação ao fundo */
+    }
+}
  
-/*css cards*/
+/*Estilo dos cards*/
 
 .receitas-visitada{
     background-color: #f3dccd;
@@ -187,7 +208,7 @@ header {
   padding: 1rem;
   
   }
-.container {
+.container-cards {
     max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
@@ -272,15 +293,15 @@ header {
   }
   
 
-/*css do artigo*/
+/*Estilo do artigo e video*/
 
-/* Estilos para a seção */
+
 section {
     padding: 20px;
     background-color: #f2f2f2;
   }
   
-  /* Estilos para o conteúdo dentro da seção */
+  
   .conteudo {
     display: flex;
     flex-wrap: wrap;
@@ -306,10 +327,29 @@ section {
   
   /* Estilos para o texto do artigo */
   .conteudo article p {
-    color: #666;
+    color: #333;
     font-size: 16px;
+    margin-bottom: 10px;
   }
   
+article ul {
+    margin-bottom: 10px;
+}
+
+article ul li {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+article a {
+    color: #ff3900;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
   /* Estilos para o vídeo de receita */
   .conteudo .video-container {
     flex: 1;
@@ -323,22 +363,25 @@ section {
   }
   
   /* Estilos para o botão */
-  #toggleButton {
-    padding: 10px 20px;
-    background-color: #ff3909;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #toggleButton:hover {
+ 
+  .button {
+    display: inline-block;
     background-color: #ff3900;
-  }
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #f56c47;
+}
   
-  /* Estilos para tornar o layout responsivo */
-  @media screen and (max-width: 768px) {
+  
+
+ @media screen and (max-width: 768px) {
     .conteudo {
         flex-direction: column;
     }
@@ -347,6 +390,7 @@ section {
     }
   }
   
+/*Estilo do footer*/
 
 footer {
     width: 100%;

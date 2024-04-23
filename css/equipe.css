@@ -54,7 +54,7 @@ header {
 }
 
 .nav-item.active a {
-    color: #ff0000;
+    color: #0f0f0f;
     font-weight: bold;
 }
 
@@ -198,26 +198,63 @@ header {
         font-size: 13px;
     }
 }
+.equipe-cozinha {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.equipe-cozinha div {
+    flex: 1;
+}
+
+.equipe-cozinha h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .equipe-cozinha div {
+        flex: none;
+        width: 100%;
+    }
+}
+
+
+/* estilo da section equipe*/
 
 .about-team {
     text-align: center;
     padding: 20px;
     background-color: #f8f8f8;
-    margin-top: 20px; 
-    
+    margin-top: 40px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
-.about-img{
-width:800px;
-height: 400px;
-margin: 10px;
-padding: 10px;
 
+.about-img {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.about-img img {
+    width: 100%; 
+    height: auto; 
+}
+
+.about-text {
+    flex: 1; 
 }
 
 .about-team h2 {
     text-align: center;
-    font-size: 36px;
+    font-size: 24px;
     color: #333;
     margin-bottom: 20px;
 }
@@ -226,36 +263,19 @@ padding: 10px;
     font-size: 16px;
     color: #666;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 20px; 
 }
 
 @media only screen and (max-width: 768px) {
-    .about-team {
-        padding: 15px;
-    }
-
-    .about-team h2 {
-        font-size: 36px;
-    }
-
-    .about-team p {
-        font-size: 14px;
+    .about-img,
+    .about-text {
+        flex: none; 
+        width: 100%; 
+        margin-bottom: 20px; 
     }
 }
 
-@media only screen and (max-width: 576px) {
-    .about-team {
-        padding: 10px;
-    }
 
-    .about-team h2 {
-        font-size: 20px;
-    }
-
-    .about-team p {
-        font-size: 13px;
-    }
-}
 
 
 footer {

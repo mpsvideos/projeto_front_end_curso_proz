@@ -1,7 +1,5 @@
-
-//interatividade na navebar//
-
-document.addEventListener('DOMContentLoaded', function () {
+  //interatividade na navebar//
+ document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
   
@@ -10,3 +8,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+
+

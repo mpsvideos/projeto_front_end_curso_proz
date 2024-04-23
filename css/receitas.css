@@ -58,7 +58,7 @@ header {
     margin-left: 20px; 
 }
 .nav-item.active a {
-    color: #ff0000; 
+    color: #0f0f0f; 
     font-weight: bold; 
 }
 
@@ -122,21 +122,30 @@ header {
   }
   
   .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: calc(33.33% - 20px); 
     margin: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box; 
+    text-align: center;
   }
   
   .card img {
+    display: block;
     max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+    margin:0 auto;
+    padding: 10px;
   }
   
   .card h2 {
+   
     font-size: 18px;
     margin-bottom: 10px;
   }
@@ -147,46 +156,49 @@ header {
   }
   
   .card button {
-    background-color: #ff9100;
+    background-color: #ff3009;
     color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
-  }
+    margin-top: 10px;
+}
   
   /* Adicionando efeito hover nos botões */
   .card button:hover {
-    background-color: #ff3909;
+    background-color: #ff9100;
   }
   .conteudo {
-    display: none; /* Inicialmente oculta o conteúdo */
+    display: none; 
 }
 
 .card.open .conteudo {
-    display: block; /* Exibe o conteúdo quando a classe 'open' está presente */
+    display: block;
 }
 
 .conteudo p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .conteudo ul,
 .conteudo ol {
     margin-bottom: 10px;
+    
 }
 
 .conteudo ul li,
 .conteudo ol li {
-    list-style-type: disc;
-    margin-left: 20px;
+  list-style:none;
+  margin-left: 20px;
 }
 
 .conteudo ol {
-    list-style-type: decimal;
+list-style-type: decimal;
 } 
 
 
