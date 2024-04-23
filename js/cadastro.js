@@ -50,7 +50,7 @@ nomeInput.addEventListener("blur", (e) => {
 });
 
 // -------------------------------------   REVER ESSA PARTE   -------------------------------------
-// Funções de Estilo para o campo de gênero
+// funções de Estilo para o campo de gênero
 function estilizarInputCorretoGenero(input, helper) {
     // Função que insere a cor verde caso o input esteja correto
     helper.classList.remove("visible");
@@ -59,20 +59,20 @@ function estilizarInputCorretoGenero(input, helper) {
 }
 
 function estilizarInputIncorretoGenero(input, helper) {
-    // Função que insere a cor vermelha caso o input esteja incorreto
+    // função que insere a cor vermelha caso o input esteja incorreto
     helper.classList.add("visible");
     input.classList.add("error");
     input.classList.remove("correct");
 }
 
-// Função para mostrar/ocultar popup de campo obrigatório para o campo de gênero
+// função para mostrar/ocultar popup de campo obrigatório para o campo de gênero
 function togglePopupGenero(input, label) {
-    // Mostrar popup de campo obrigatório
+    // mostrar popup de campo obrigatório
     input.addEventListener("focus", () => {
         label.classList.add("required-popup");
     });
 
-    // Ocultar popup de campo obrigatório
+    // ocultar popup de campo obrigatório
     input.addEventListener("blur", () => {
         label.classList.remove("required-popup");
     });
@@ -86,22 +86,35 @@ let generoHelper = document.getElementById("genero-helper");
 
 togglePopupGenero(generoMascInput, generoLabel);
 
-generoMascInput.addEventListener("blur", (e) => {
-    let valorGeneroMasc = e.target.value;
-
-    if (valorGeneroMasc == "") {
-        // Adicionar estilos dinâmicos se o valor for nulo
-        generoHelper.innerText = "O preenchimento desse campo é obrigatório";
+// validar valor do gênero masculino
+generoMascInput.addEventListener("blur", () => {
+    if (!generoMascInput.checked && !generoFemInput.checked) {
+        // adicionar estilos dinâmicos se nenhum dos radio buttons foi selecionado
+        generoHelper.innerText = "Clique para selecionar seu gênero";
         estilizarInputIncorretoGenero(generoMascInput, generoHelper);
         inputsCadastroCorretos.genero = false;
     } else {
-        // Adicionar estilo dinâmico se o valor estiver correto
+        // adicionar estilo dinâmico se pelo menos um dos radio buttons foi selecionado
         estilizarInputCorretoGenero(generoMascInput, generoHelper);
         inputsCadastroCorretos.genero = true;
     }
 });
 
-// -------------------------------------   REVER ESSA PARTE   -------------------------------------
+togglePopupGenero(generoFemInput, generoLabel);
+
+// validar valor do gênero feminino
+generoFemInput.addEventListener("blur", () => {
+    if (!generoMascInput.checked && !generoFemInput.checked) {
+        // adicionar estilos dinâmicos se nenhum dos radio buttons foi selecionado
+        generoHelper.innerText = "Clique para selecionar seu gênero";
+        estilizarInputIncorretoGenero(generoFemInput, generoHelper);
+        inputsCadastroCorretos.genero = false;
+    } else {
+        // adicionar estilo dinâmico se pelo menos um dos radio buttons foi selecionado
+        estilizarInputCorretoGenero(generoFemInput, generoHelper);
+        inputsCadastroCorretos.genero = true;
+    }
+});
 
 // capturando elementos no DOM
 // email
