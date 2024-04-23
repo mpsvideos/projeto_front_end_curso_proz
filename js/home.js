@@ -25,5 +25,21 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Altera a imagem a cada 2 segundos (2000 milissegundos)
+  setTimeout(showSlides, 2000); 
+}
+
+//botão voltar ao topo//
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btnTopo").style.display = "block";
+  } else {
+    document.getElementById("btnTopo").style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

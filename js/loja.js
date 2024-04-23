@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Variáveis globais para armazenar a quantidade total e o valor total da compra
+//  para armazenar a quantidade total e o valor total da compra
 let quantidadeTotal = 0;
 let valorTotal = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtém todos os botões de compra e adiciona um ouvinte de evento a cada um
+    // todos os botões de compra e adiciona um ouvinte de evento a cada um
     document.querySelectorAll('.comprar-btn').forEach(function(botao) {
         botao.addEventListener('click', function() {
             let preco = parseFloat(this.getAttribute('data-preco'));
@@ -36,8 +36,8 @@ function comprarLivro(preco, nomeLivro, inputId) {
     if (isNaN(quantidade) || quantidade <= 0) {
         alert("Por favor, insira uma quantidade válida.");
     } else {
-        quantidadeTotal += quantidade; // Adiciona a quantidade atual à quantidade total
-        valorTotal += preco * quantidade; // Calcula o valor total da compra
+        quantidadeTotal += quantidade; 
+        valorTotal += preco * quantidade; 
 
         alert("Compra realizada com sucesso!\n" + 
               "Livro: " + nomeLivro + "\n" +
@@ -61,10 +61,28 @@ function atualizarResumo() {
 }
 
 function limparHistorico() {
-    // Reseta as variáveis de quantidadeTotal e valorTotal para zero
+    // Reseta  quantidadeTotal e valorTotal para zero
     quantidadeTotal = 0;
     valorTotal = 0;
 
     // Atualiza o resumo da compra para refletir as alterações
     atualizarResumo();
 }
+
+
+//botão voltar ao topo//
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btnTopo").style.display = "block";
+  } else {
+    document.getElementById("btnTopo").style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+

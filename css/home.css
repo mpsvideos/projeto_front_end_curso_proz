@@ -14,8 +14,8 @@ body {
     display: flex;
     flex-direction: column;
 }
-/*Estilo da header e navbar*/
 
+/* Estilos da header e navbar */
 header {
     background-color: #ff3900;
     padding: 10px 0;
@@ -24,12 +24,12 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 .container-navbar {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    border: solid 0;
 }
 
 .logo img {
@@ -40,7 +40,6 @@ header {
 
 .navbar {
     flex-grow: 1;
-    border: none;
 }
 
 .nav-menu {
@@ -49,12 +48,10 @@ header {
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    border: none;
 }
 
 .nav-item {
     margin-left: 20px;
-    border-bottom: none;
 }
 
 .nav-item.active a {
@@ -68,33 +65,43 @@ header {
     font-weight: bold;
 }
 
-
 .nav-item a:hover {
-    color:#e76949;
-   
+    color: #ff9100;
 }
-
 
 @media (max-width: 992px) {
     .nav-menu {
-        display: none; 
-        flex-direction: column; 
-        position: fixed; 
+        display: none;
+        flex-direction: column;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #ff3900; 
-        padding: 10px; 
-        z-index: 1000; 
+        background-color: #ff3900;
+        padding: 10px;
+        z-index: 1000;
     }
 
     .nav-menu.show {
-        display: flex; /* Exibe o menu de navegação quando a classe show é adicionada */
+        display: flex;
     }
 
     .nav-item {
-        margin: 10px 0; /* Adiciona espaçamento entre os itens do menu */
+        margin: 10px 0;
     }
+}
+.hamburger {
+    display: flex;
+    justify-content: space-between; 
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    order: 2;
+}
+.hamburger:hover {
+    color: #e76949;
 }
 
 
@@ -103,17 +110,6 @@ header {
         display: none;
     }
 }
-/* Estilo para a main */
-
-.principal {
-    width: 100%;
-    padding:20px 0;
-    display: flex;
-    justify-content: center; 
-   
-   
-}
-
 
 /* Estilo para o carrossel de largura total */
 .carousel {
@@ -527,3 +523,28 @@ footer {
         padding: 3rem 2rem;
     }
 }
+/*botão voltar ao topo*/
+
+#btnTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #0f0f0f;
+    color: white;
+    border: none;
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    padding: 0; 
+    font-size: 20px; 
+    line-height: 50px; 
+    text-align: center; 
+    cursor: pointer;
+}
+
+#btnTopo::before {
+    content: '\25B2'; 
+}
+

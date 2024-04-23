@@ -85,21 +85,33 @@ header {
     }
 
     .nav-menu.show {
-        display: flex; /* Exibe o menu de navegação quando a classe show é adicionada */
+        display: flex; 
     }
 
     .nav-item {
-        margin: 10px 0; /* Adiciona espaçamento entre os itens do menu */
+        margin: 10px 0; 
     }
 }
 
+.hamburger {
+    display: flex;
+    justify-content: space-between; 
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    order: 2;
+}
+.hamburger:hover {
+    color: #e76949; 
+}
 /* Esconder botão hamburguer em dispositivos maiores que tablet */
 @media (min-width: 992px) {
     .hamburger {
         display: none;
     }
 }
-
 /*css form*/
 .form {
     max-width: 600px;

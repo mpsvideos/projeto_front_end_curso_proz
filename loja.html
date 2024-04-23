@@ -40,6 +40,7 @@
                 <p>R$20,00</p>
                 <input type="number" id="quantity1" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="20" data-nome="Produto 1" data-input="quantity1">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/16 delícias á mesa.png" alt="Capa do Livro">
@@ -48,6 +49,7 @@
                 <p>R$25,00</p>
                 <input type="number" id="quantity2" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="25" data-nome="Produto 2" data-input="quantity2">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/3secreto das especiarias.png" alt="Capa do Livro">
@@ -56,6 +58,8 @@
                 <p>Preço: R$30,00</p>
                 <input type="number" id="quantity3" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="30" data-nome="Produto 3" data-input="quantity3">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
+
             </div>
             <div class="product">
                 <img src="./img/livros/4 a magia dos temperos.png" alt="Capa do Livro">
@@ -64,6 +68,7 @@
                 <p>R$35,00</p>
                 <input type="number" id="quantity4" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="35" data-nome="Produto 4" data-input="quantity4">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/5 cozinhando com amor.png" alt="Capa do Livro">
@@ -88,6 +93,7 @@
                 <p>R$50,00</p>
                 <input type="number" id="quantity7" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="50" data-nome="Produto 7" data-input="quantity7">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/8 sabor do tempo.png" alt="Capa do Livro">
@@ -96,6 +102,7 @@
                 <p>R$55,00</p>
                 <input type="number" id="quantity8" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="55" data-nome="Produto 8" data-input="quantity8">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/9cozinhando com amor2.png" alt="Capa do Livro">
@@ -104,6 +111,7 @@
                 <p>R$60,00</p>
                 <input type="number" id="quantity9" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="60" data-nome="Produto 9" data-input="quantity9">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/13 sobremesas sem fronteiras.png" alt="Capa do Livro">
@@ -112,6 +120,7 @@
                 <p>R$65,00</p>
                 <input type="number" id="quantity10" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="65" data-nome="Produto 10" data-input="quantity10">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/11 cozinha criativa.png" alt="Capa do Livro">
@@ -120,6 +129,7 @@
                 <p>R$70,00</p>
                 <input type="number" id="quantity11" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="70" data-nome="Produto 11" data-input="quantity11">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="product">
                 <img src="./img/livros/12 sabores do mundo.png" alt="Capa do Livro">
@@ -128,6 +138,7 @@
                 <p>R$75,00</p>
                 <input type="number" id="quantity12" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="75" data-nome="Produto 12" data-input="quantity12">Comprar</button>
+                <button class="carrinho-btn" onclick="adicionarAoCarrinho('Secreto das especiarias', 30)"><i class="fas fa-shopping-cart"></i></button>
             </div>
         </div>
     
@@ -209,7 +220,8 @@
         <div id="footer_copyright">
             @2024 Direitos reservados ao grupo3
         </div>
-    </footer>               
+    </footer>
+    <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao Topo"></button>               
     <script src="./js/loja.js"></script>
 </body>
 </html>
