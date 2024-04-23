@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 
 body {
     background-color: #e7dec4;
-    font-family: "Open Sans", sans-serif;
+    font-family: "poppins", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,7 +24,7 @@ header {
 }
 
 
-.container {
+.container-navbar {
     max-width: 1200px; 
     margin: 0 auto; 
     display: flex; 
@@ -52,6 +54,11 @@ header {
     margin-left: 20px; 
 }
 
+.nav-item.active a {
+    color: #ff0000; /* Define a cor do texto para vermelho */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
 
 .nav-item a {
     text-decoration: none; 
@@ -63,23 +70,36 @@ header {
 .nav-item a:hover {
     color: #ff9100; 
 }
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
+/* Estilos para dispositivos móveis */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none; /* Esconde o menu de navegação por padrão */
+        flex-direction: column; /* Altera a direção do flex para uma coluna vertical */
+        position: fixed; /* Fixa o menu na parte superior */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ff3900; /* Cor de fundo do menu */
+        padding: 10px; /* Espaçamento interno do menu */
+        z-index: 1000; /* Garante que o menu fique sobre os outros elementos */
     }
-    .card {
-        width: calc(50% - 30px);
+
+    .nav-menu.show {
+        display: flex; /* Exibe o menu de navegação quando a classe show é adicionada */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adiciona espaçamento entre os itens do menu */
     }
 }
 
-@media (max-width: 576px) {
-    .container {
-        padding: 0 10px;
-    }
-    .card {
-        width: calc(100% - 20px);
+/* Esconder botão hamburguer em dispositivos maiores que tablet */
+@media (min-width: 992px) {
+    .hamburger {
+        display: none;
     }
 }
+
 /*css form*/
 .form {
     max-width: 600px;
