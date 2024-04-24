@@ -9,7 +9,6 @@
 - Hiago Santos
 - Marley Paranhos
 - Agda Cavalcante
-- Gabriel Vieira
 
   # Tecnologias Utilizadas :
 
