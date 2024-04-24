@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
 
-
 //  para armazenar a quantidade total e o valor total da compra
 let quantidadeTotal = 0;
 let valorTotal = 0;
