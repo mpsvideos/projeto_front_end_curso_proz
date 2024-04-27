@@ -101,7 +101,7 @@ header {
     order: 2;
 }
 .hamburger:hover {
-    color: #e76949;
+    color: #ff9100;
 }
 
 
@@ -150,7 +150,7 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     text-align: center;
-    color: white;
+    color:#fff;
     transition: opacity 0.5s ease;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px
@@ -256,7 +256,7 @@ header {
 }
 
 .card a:hover {
-    background-color: #f56c47;
+    background-color:#ff9100;
 }
 
 @media (max-width: 768px) {
@@ -372,7 +372,7 @@ article a {
 }
 
 .button:hover {
-    background-color: #f56c47;
+    background-color: #ff9100;
 }
   
   
@@ -390,7 +390,7 @@ article a {
 
 footer {
     width: 100%;
-    color: #ffffff;
+    color: #fff;
     justify-content: center;
 }
 
@@ -454,12 +454,12 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: #ffffff;
+    color: #fff;
     transition: all 0.4s;
 }
 
 .footer-list .footer-link:hover {
-    color: #e76949;
+    color: #ff9100;
 }
 
 #footer_subscribe {
@@ -469,13 +469,13 @@ footer {
 }
 
 #footer_subscribe p {
-    color:#ffffff;
+    color:#fff;
 }
 
 #input_group {
     display: flex;
     align-items: center;
-    background-color:#ffffff;
+    background-color:#fff;
     border-radius: 4px;
 }
 
@@ -488,7 +488,7 @@ footer {
 #input_group button {
     background-color: #0f0f0f;
     border: none;
-    color: #ffffff;
+    color: #fff;
     padding: 0px 1.25rem;
     font-size: 1.125rem;
     height: 100%;
@@ -532,7 +532,7 @@ footer {
     right: 20px;
     z-index: 99;
     background-color: #0f0f0f;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 50%; 
     width: 50px; 

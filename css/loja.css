@@ -103,7 +103,7 @@ header {
     order: 2;
 }
 .hamburger:hover {
-    color: #e76949; 
+    color: #ff9100; 
 }
 /* Esconder botão hamburguer em dispositivos maiores que tablet */
 @media (min-width: 992px) {
@@ -160,10 +160,10 @@ header {
     padding: 10px;
 }
 button {
-    background-color: #ff3909;
+    background-color: #ff3900;
     border: none;
     border-radius: 3px;
-    color: white;
+    color: #fff;
     cursor: pointer;
     font-size: 16px;
     padding: 8px 15px;
@@ -171,7 +171,7 @@ button {
 }
 
 button:hover {
-    background-color: #eca695;
+    background-color: #ff9100;
 }
 /*carrinho*/
 .carrinho-btn i {
@@ -207,7 +207,7 @@ footer {
 }
 
 #footer_content {
-    background-color:#ff3909;
+    background-color:#ff3900;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -262,12 +262,12 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: #ffffff;
+    color: #fff;
     transition: all 0.4s;
 }
 
 .footer-list .footer-link:hover {
-    color: #e76949;
+    color: #ff9100;
 }
 
 #footer_subscribe {
@@ -277,13 +277,13 @@ footer {
 }
 
 #footer_subscribe p {
-    color:#ffffff;
+    color:#fff;
 }
 
 #input_group {
     display: flex;
     align-items: center;
-    background-color:#ffffff;
+    background-color:#fff;
     border-radius: 4px;
 }
 
@@ -296,7 +296,7 @@ footer {
 #input_group button {
     background-color: #0f0f0f;
     border: none;
-    color: #ffffff;
+    color: #fff;
     padding: 0px 1.25rem;
     font-size: 1.125rem;
     height: 100%;
@@ -341,7 +341,7 @@ footer {
     right: 20px;
     z-index: 99;
     background-color: #0f0f0f;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 50%; 
     width: 50px; 

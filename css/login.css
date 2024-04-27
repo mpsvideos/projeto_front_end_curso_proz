@@ -60,7 +60,7 @@ header {
 }
 
 .nav-item.active a {
-    color: #ff0000; /* Define a cor do texto para vermelho */
+    color: #0f0f0f; 
     font-weight: bold; /* Deixa o texto em negrito */
 }
 
@@ -109,7 +109,7 @@ header {
     order: 2;
 }
 .hamburger:hover {
-    color: #e76949; 
+    color: #ff9100; 
 }
 /* Esconder botão hamburguer em dispositivos maiores que tablet */
 @media (min-width: 992px) {
@@ -416,11 +416,12 @@ input[type="submit"]:hover {
     }
 }
 
-/*css do footer*/
+/*Estilo do footer*/
 
 footer {
     width: 100%;
-    color: #ffffff;
+    color: #fff;
+    justify-content: center;
 }
 
 .footer-link {
@@ -483,12 +484,12 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: #ffffff;
+    color: #fff;
     transition: all 0.4s;
 }
 
 .footer-list .footer-link:hover {
-    color: #e76949;
+    color: #ff9100;
 }
 
 #footer_subscribe {
@@ -498,13 +499,13 @@ footer {
 }
 
 #footer_subscribe p {
-    color:#ffffff;
+    color:#fff;
 }
 
 #input_group {
     display: flex;
     align-items: center;
-    background-color:#ffffff;
+    background-color:#fff;
     border-radius: 4px;
 }
 
@@ -517,7 +518,7 @@ footer {
 #input_group button {
     background-color: #0f0f0f;
     border: none;
-    color: #ffffff;
+    color: #fff;
     padding: 0px 1.25rem;
     font-size: 1.125rem;
     height: 100%;
@@ -552,3 +553,28 @@ footer {
         padding: 3rem 2rem;
     }
 }
+/*botão voltar ao topo*/
+
+#btnTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #0f0f0f;
+    color: #fff;
+    border: none;
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    padding: 0; 
+    font-size: 20px; 
+    line-height: 50px; 
+    text-align: center; 
+    cursor: pointer;
+}
+
+#btnTopo::before {
+    content: '\25B2'; 
+}
+

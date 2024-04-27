@@ -102,7 +102,7 @@ header {
 
 
 .hamburger:hover {
-    color: #e76949; 
+    color: #ff9100; 
 }
 /* Esconder botão hamburguer em dispositivos maiores que tablet */
 @media (min-width: 992px) {
@@ -292,7 +292,7 @@ header {
 
 footer {
     width: 100%;
-    color: #ffffff;
+    color: #fff;
     justify-content: center;
 }
 
@@ -361,7 +361,7 @@ footer {
 }
 
 .footer-list .footer-link:hover {
-    color: #e76949;
+    color: #ff9100;
 }
 
 #footer_subscribe {
@@ -371,13 +371,13 @@ footer {
 }
 
 #footer_subscribe p {
-    color:#ffffff;
+    color:#fff;
 }
 
 #input_group {
     display: flex;
     align-items: center;
-    background-color:#ffffff;
+    background-color:#fff;
     border-radius: 4px;
 }
 
@@ -435,7 +435,7 @@ footer {
     right: 20px;
     z-index: 99;
     background-color: #0f0f0f;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 50%; 
     width: 50px; 
