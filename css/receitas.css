@@ -135,18 +135,14 @@ header {
   }
   
   .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: calc(33.33% - 20px); 
-    margin: 10px;
+    flex: 0 0 calc(33.33% - 20px); /* Definindo o tamanho fixo para as três colunas */
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     padding: 10px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     text-align: center;
-  }
+    margin-bottom: 20px; /* Espaçamento entre as linhas de cards */
+} 
   
   .card img {
     display: block;
@@ -215,19 +211,19 @@ list-style-type: decimal;
 } 
 
 
+
+
 @media screen and (max-width: 1024px) {
     .card {
-      width: calc(50% - 20px); /* 50% para cada card em telas de tamanho médio */
+        flex: 0 0 calc(50% - 20px); /* 50% para cada card em telas de tamanho médio */
     }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .card {
-      width: calc(100% - 20px); /* Correção: removi a barra */
-    }
-  }
-  
+}
 
+@media screen and (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(100% - 20px); /* 100% de largura para cada card em dispositivos menores */
+    }
+}
 
 
 footer {
@@ -240,7 +236,7 @@ footer {
 }
 
 #footer_content {
-    background-color:#ff3909;
+    background-color:#ff3900;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
