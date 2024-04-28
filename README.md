@@ -9,12 +9,13 @@
 - Hiago Santos
 - Marley Paranhos
 - Agda Cavalcante
-- Gabriel Vieira
+
 
   # Tecnologias Utilizadas :
 
 
   - HTML
   - CSS
+  -JAVASCRIPT
   - GIT
   - GITHUB
