@@ -173,11 +173,6 @@ button {
 button:hover {
     background-color: #ff9100;
 }
-/*carrinho*/
-.carrinho-btn i {
-    margin-right: 5px;
-    font-size: 18px; 
-}
 
 
 /* Estilos para tablets (até 768px) */

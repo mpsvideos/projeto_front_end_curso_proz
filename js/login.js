@@ -102,7 +102,6 @@ btnSubmit.addEventListener("click", (e) => {
     }
 })
 
-
 //botão voltar ao topo//
 window.onscroll = function() {scrollFunction()};
 

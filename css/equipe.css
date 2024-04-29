@@ -288,8 +288,6 @@ header {
 }
 
 
-
-
 footer {
     width: 100%;
     color: #fff;
@@ -445,6 +443,28 @@ footer {
     line-height: 50px; 
     text-align: center; 
     cursor: pointer;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0 1em 0 0;
+}
+
+.descricao img {
+    width: 0.90em;
+    height: 0.90em;
+    align-items: center;
+}
+
+.descricao h4 {
+    font-size: 1em;
+}
+
+.descricao p {
+    align-items: stretch;
 }
 
 #btnTopo::before {

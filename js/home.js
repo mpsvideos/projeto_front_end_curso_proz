@@ -28,6 +28,8 @@ function showSlides() {
   setTimeout(showSlides, 2000); 
 }
 
+
+
 //botão voltar ao topo//
 window.onscroll = function() {scrollFunction()};
 
@@ -43,3 +45,4 @@ function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+

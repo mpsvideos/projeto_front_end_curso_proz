@@ -461,7 +461,6 @@ footer {
 .footer-list .footer-link:hover {
     color: #ff9100;
 }
-
 #footer_subscribe {
     display: flex;
     flex-direction: column;
@@ -488,7 +487,7 @@ footer {
 #input_group button {
     background-color: #0f0f0f;
     border: none;
-    color: #fff;
+    color: #ffffff;
     padding: 0px 1.25rem;
     font-size: 1.125rem;
     height: 100%;
@@ -500,6 +499,7 @@ footer {
 #input_group button:hover {
     opacity: 0.8;
 }
+
 
 #footer_copyright {
     display: flex;
@@ -523,6 +523,7 @@ footer {
         padding: 3rem 2rem;
     }
 }
+
 /*botão voltar ao topo*/
 
 #btnTopo {
@@ -544,7 +545,28 @@ footer {
     cursor: pointer;
 }
 
+.descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0 1em 0 0;
+}
+
+.descricao img {
+    width: 0.90em;
+    height: 0.90em;
+    align-items: center;
+}
+
+.descricao h4 {
+    font-size: 1em;
+}
+
+.descricao p {
+    align-items: stretch;
+}
+
 #btnTopo::before {
     content: '\25B2'; 
 }
-
