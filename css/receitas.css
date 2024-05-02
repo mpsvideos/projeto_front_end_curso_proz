@@ -10,14 +10,14 @@
 }
 
 
-
 body {
     background-color: #e7dec4;
-    font-family: "Open Sans", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
+
 
 header {
     background-color: #ff3900; 
@@ -138,7 +138,7 @@ header {
     flex: 0 0 calc(33.33% - 20px); /* Definindo o tamanho fixo para as três colunas */
     background-color: #f0f0f0;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 20px; /* Espaçamento entre as linhas de cards */
@@ -182,7 +182,9 @@ header {
   .conteudo {
     display: none; 
 }
-
+.card.active .conteudo {
+    display: block; 
+}
 .card.open .conteudo {
     display: block;
 }
@@ -273,14 +275,17 @@ footer {
 
 #instagram {
     background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    color: #fff; 
 }
 
 #facebook {
     background-color: #4267b3;
+    color: #fff; 
 }
 
 #whatsapp {
     background-color: #25d366;
+    color: #fff; 
 }
 
 .footer-list {
@@ -383,27 +388,6 @@ footer {
     cursor: pointer;
 }
 
-.descricao {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    margin: 0 1em 0 0;
-}
-
-.descricao img {
-    width: 0.90em;
-    height: 0.90em;
-    align-items: center;
-}
-
-.descricao h4 {
-    font-size: 1em;
-}
-
-.descricao p {
-    align-items: stretch;
-}
 
 #btnTopo::before {
     content: '\25B2'; 

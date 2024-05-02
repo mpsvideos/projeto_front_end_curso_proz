@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
   });
+
   
   
   // Botão de voltar ao topo
