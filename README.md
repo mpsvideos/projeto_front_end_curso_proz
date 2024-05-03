@@ -8,14 +8,17 @@
 - Tatiane Souza
 - Hiago Santos
 - Marley Paranhos
-- Agda Cavalcante
+  
 
 
-  # Tecnologias Utilizadas :
+  # Tecnologias e ferramentas utilizadas :
 
-
+  - Canva
+  - google sites
   - HTML
   - CSS
-  -JAVASCRIPT
+  - JAVASCRIPT
+  - Sql Online
+  - BR Modelo
   - GIT
   - GITHUB
