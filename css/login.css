@@ -12,109 +12,131 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    background-image: url("/img/login/bg_1.jpg"); /* imagem de fundo */
+    background-image: url("/img/login/fundlog.jpg"); /* imagem de fundo */
     background-repeat: no-repeat; /* para evitar repetição */
     background-size: cover; /* para cobrir todo o corpo */
     background-position: center ; /* para centralizar a imagem */
 }
 
+/* Estilos para o cabeçalho */
 header {
-    background-color: #ff3900; 
-    padding: 10px 0; 
-    position: fixed;
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
+    background-color: #ff3900; /* Cor de fundo */
+    padding: 10px 0; /* Preenchimento (topo e inferior) */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Largura total */
+    top: 0; /* Distância do topo */
+    z-index: 1000; /* Camada de sobreposição */
 }
 
-
+/* Define estilos para o contêiner da barra de navegação */
 .container-navbar {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex; 
-    align-items: center; 
-}
-.logo img {
-    height: 5rem; 
-    width: auto; 
-    margin-right: 10px;
-}
-
-.navbar {
-    flex-grow: 1; 
-}
-
-
-.nav-menu {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    justify-content: flex-end; 
-}
-
-
-.nav-item {
-    margin-left: 20px; 
-}
-
-.nav-item.active a {
-    color: #0f0f0f; 
-    font-weight: bold; /* Deixa o texto em negrito */
-}
-
-
-.nav-item a {
-    text-decoration: none; 
-    color: #fff; 
-    font-weight: bold; 
-}
-
-
-.nav-item a:hover {
-    color: #ff9100; 
-}
-/* Estilos para dispositivos móveis */
-@media (max-width: 992px) {
-    .nav-menu {
-        display: none; /* Esconde o menu de navegação por padrão */
-        flex-direction: column; /* Altera a direção do flex para uma coluna vertical */
-        position: fixed; /* Fixa o menu na parte superior */
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #ff3900; /* Cor de fundo do menu */
-        padding: 10px; /* Espaçamento interno do menu */
-        z-index: 1000; /* Garante que o menu fique sobre os outros elementos */
-    }
-
-    .nav-menu.show {
-        display: flex; 
-    }
-
-    .nav-item {
-        margin: 10px 0; 
-    }
-}
-
+    justify-content: space-between;
+     display: flex; /* Usa flexbox para organizar os elementos filho */
+     align-items: center; /* Alinha os itens verticalmente ao centro */
+ }
+ 
+ /* Define estilos para o logotipo */
+ .logo img {
+     height: 5rem; /* Define a altura do logotipo como 5rem */
+     width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
+     margin-right: 10px; /* Adiciona margem à direita de 10px */
+ }
+ 
+ 
+ 
+ /* Define estilos para o menu de navegação */
+ .nav-menu {
+     list-style-type: none; /* Remove os marcadores de lista */
+     margin: 0; /* Remove as margens */
+     padding: 0; /* Remove o preenchimento */
+     display: flex; /* Usa flexbox para organizar os elementos filho */
+     justify-content: center; /* Alinha os itens à direita */
+ }
+ 
+ /* Define estilos para os itens do menu */
+ .nav-item {
+     margin-left: 20px; /* Adiciona margem à esquerda de 20px */
+ }
+ 
+ /* Define estilos para os itens do menu ativos */
+ .nav-item.active a {
+     color: #0f0f0f; /* Define a cor do texto como preto quando o item do menu está ativo */
+     font-weight: bold; /* Define a fonte como negrito */
+ }
+ 
+ /* Define estilos para os links dos itens do menu */
+ .nav-item a {
+     text-decoration: none; /* Remove a decoração de link padrão */
+     color: #fff; /* Define a cor do texto como branco */
+     font-weight: bold; /* Define a fonte como negrito */
+ }
+ 
+ /* Define estilos para os links dos itens do menu ao passar o mouse */
+ .nav-item a:hover {
+     color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
+ }
+ .login-item {
+     margin-right: auto; /* Move o botão "Entrar" para a extrema esquerda */
+ }
+ 
+ .login-btn {
+     /* Estilos do botão de login */
+     background-color: #0f0f0f;
+     border: none;
+     color: white;
+     padding: 10px 20px;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 20px;
+     cursor: pointer;
+ }
+ .login-btn:hover {
+     background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
+ }
+ 
+ 
+ /* Estilos para dispositivos móveis */
+ @media (max-width: 992px) {
+     .nav-menu {
+         display: none; /* Esconde o menu de navegação em telas menores que 992px */
+         flex-direction: column; /* Organiza os itens do menu em coluna */
+         position: fixed; /* Fixa o menu na parte superior da janela de visualização */
+         top: 0; /* Posiciona o menu no topo */
+         left: 0; /* Posiciona o menu à esquerda */
+         width: 100%; /* Define a largura como 100% */
+         background-color: #ff3900; /* Define a cor de fundo como laranja */
+         padding: 10px; /* Adiciona preenchimento de 10px */
+         z-index: 1000; /* Define a ordem de empilhamento para garantir que o menu esteja sempre acima de outros elementos */
+     }
+ 
+     .nav-menu.show {
+         display: flex; /* Exibe o menu de navegação quando a classe .show é adicionada */
+     }
+ 
+     .nav-item {
+         margin: 10px 0; /* Adiciona margem de 10px acima e abaixo dos itens do menu */
+     }
+ }
+ 
 .hamburger {
-    display: flex;
-    justify-content: space-between; 
-    cursor: pointer;
-    padding: 10px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    order: 2;
+    display: flex; /* Exibe o botão */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    cursor: pointer; /* Muda o cursor para um ponteiro ao passar por cima */
+    padding: 10px; /* Adiciona preenchimento interno ao botão */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    font-size: 20px; /* Define o tamanho da fonte */
+    order: 2; /* Reordena o elemento na flexbox */
 }
+
 .hamburger:hover {
-    color: #ff9100; 
+    color: #ff9100; /* Muda a cor do texto ao passar o mouse */
 }
+
 /* Esconder botão hamburguer em dispositivos maiores que tablet */
 @media (min-width: 992px) {
     .hamburger {
-        display: none;
+        display: none; /* Oculta o botão em dispositivos maiores que 992px */
     }
 }
 
@@ -219,54 +241,56 @@ input[type="submit"]:hover {
 }
 
 
-/*Estilo do footer*/
-
+/* Estilo para o footer */
 footer {
-    width: 100%;
-    color: #fff;
-    justify-content: center;
+    width: 100%; /* Ocupa toda a largura */
+    color: #fff; /* Cor do texto */
+    justify-content: center; /* Centraliza o conteúdo */
 }
 
+/* Estilo para os links no footer */
 .footer-link {
-    text-decoration: none;
+    text-decoration: none; /* Remove sublinhado */
 }
 
+/* Estilo para o conteúdo do footer */
 #footer_content {
-    background-color:#ff3900;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
+    background-color:#ff3909; /* Cor de fundo */
+    display: grid; /* Usa um layout de grade */
+    grid-template-columns: repeat(4, 1fr); /* Divide em 4 colunas */
+    padding: 3rem 3.5rem; /* Espaçamento interno */
 }
 
+/* Estilo para o título de contatos */
 #footer_contacts h1 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem; /* Espaçamento inferior */
 }
 
+/* Estilo para as redes sociais no footer */
 #footer_social_media {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-} 
+    display: flex; /* Usa um layout de flexbox */
+    gap: 2rem; /* Espaço entre os itens */
+    margin-top: 1.5rem; /* Espaçamento superior */
+}
 
+/* Estilo para os ícones das redes sociais */
 #footer_social_media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color:#ffffff;
-    border-radius: 50%;
-    transition: all 0.4s;
+    display: flex; /* Usa um layout de flexbox */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    height: 2.5rem; /* Altura */
+    width: 2.5rem; /* Largura */
+    color:#ffffff; /* Cor do ícone */
+    border-radius: 50%; /* Borda circular */
+    transition: all 0.4s; /* Transição suave */
 }
 
-#footer_social_media .footer-link i {
-    font-size: 1.25rem;    
-}
-
+/* Estilo para os ícones das redes sociais ao passar o mouse */
 #footer_social_media .footer-link:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Reduz a opacidade */
 }
 
+/* Estilos para as redes sociais específicas */
 #instagram {
     background: linear-gradient(#7f37c9, #ff2992, #ff9807);
     color: #fff; 
@@ -282,108 +306,119 @@ footer {
     color: #fff; 
 }
 
-
+/* Estilo para as listas no footer */
 .footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
+    display: flex; /* Usa um layout de flexbox */
+    flex-direction: column; /* Direção da lista */
+    gap: 0.75rem; /* Espaço entre os itens */
+    list-style: none; /* Remove marcadores */
 }
 
+/* Estilo para os links nas listas do footer */
 .footer-list .footer-link {
-    color: #fff;
-    transition: all 0.4s;
+    color: #ffffff; /* Cor do texto */
+    transition: all 0.4s; /* Transição suave */
 }
 
+/* Estilo para os links nas listas do footer ao passar o mouse */
 .footer-list .footer-link:hover {
-    color: #ff9100;
+    color: #ff9100; /* Cor do texto ao passar o mouse */
 }
 
+/* Estilo para o formulário de inscrição */
 #footer_subscribe {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: flex; /* Usa um layout de flexbox */
+    flex-direction: column; /* Direção do conteúdo */
+    gap: 1.5rem; /* Espaço entre os elementos */
 }
 
+/* Estilo para o texto no formulário de inscrição */
 #footer_subscribe p {
-    color:#fff;
+    color:#fff; /* Cor do texto */
 }
 
+/* Estilo para o grupo de entrada no formulário de inscrição */
 #input_group {
-    display: flex;
-    align-items: center;
-    background-color:#fff;
-    border-radius: 4px;
+    display: flex; /* Usa um layout de flexbox */
+    align-items: center; /* Alinha verticalmente */
+    background-color:#fff; /* Cor de fundo */
+    border-radius: 4px; /* Borda arredondada */
 }
 
+/* Estilo para o campo de entrada no formulário de inscrição */
 #input_group input {
-    all: unset;
-    padding: 0.75rem;
-    width: 100%;
+    all: unset; /* Remove estilos padrão */
+    padding: 0.75rem; /* Espaçamento interno */
+    width: 100%; /* Largura total */
 }
 
+/* Estilo para o botão no formulário de inscrição */
 #input_group button {
-    background-color: #0f0f0f;
-    border: none;
-    color: #ffffff;
-    padding: 0px 1.25rem;
-    font-size: 1.125rem;
-    height: 100%;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-    transition: all 0.4s;
+    background-color: #0f0f0f; /* Cor de fundo */
+    border: none; /* Remove a borda */
+    color: #ffffff; /* Cor do texto */
+    padding: 0px 1.25rem; /* Espaçamento interno */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    height: 100%; /* Altura total */
+    border-radius: 0px 4px 4px 0px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de mão */
+    transition: all 0.4s; /* Transição suave */
 }
 
+/* Estilo para o botão no formulário de inscrição ao passar o mouse */
 #input_group button:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Reduz a opacidade */
 }
 
-
+/* Estilo para o texto de direitos autorais */
 #footer_copyright {
-    display: flex;
-    justify-content: center;
-    background-color:#0f0f0f;
-    font-size: 0.9rem;
-    padding: 1.5rem;
-    font-weight: 100;
+    display: flex; /* Usa um layout de flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color:#0f0f0f; /* Cor de fundo */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    padding: 1.5rem; /* Espaçamento interno */
+    font-weight: 100; /* Peso da fonte */
 }
 
+/* Media queries para telas menores */
 @media screen and (max-width: 768px) {
     #footer_content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 2rem; /* Espaço entre as colunas */
     }
 }
 
 @media screen and (max-width: 426px) {
     #footer_content {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 3rem 2rem;
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+        padding: 3rem 2rem; /* Espaçamento interno */
     }
 }
-/*botão voltar ao topo*/
 
+/* Estilo para o botão "Voltar ao topo" */
 #btnTopo {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    background-color: #0f0f0f;
-    color: #fff;
-    border: none;
-    border-radius: 50%; 
-    width: 50px; 
-    height: 50px; 
-    padding: 0; 
-    font-size: 20px; 
-    line-height: 50px; 
-    text-align: center; 
-    cursor: pointer;
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixado na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    z-index: 99; /* Sobreposto a outros elementos */
+    background-color: #0f0f0f; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 50%; /* Borda circular */
+    width: 50px; /* Largura */
+    height: 50px; /* Altura */
+    padding: 0; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 50px; /* Alinhamento vertical */
+    text-align: center; /* Alinhamento horizontal */
+    cursor: pointer; /* Cursor de mão */
 }
 
-
-
+/* Estilo para o ícone "Voltar ao topo" */
 #btnTopo::before {
-    content: '\25B2'; 
+    content: '\25B2'; /* Seta para cima */
 }
+
+
+
