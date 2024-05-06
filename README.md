@@ -7,7 +7,7 @@
 
 - Tatiane Souza
 - Hiago Santos
-- Marley Paranhos- Agda Cavalcante
+- Marley Paranhos
 
   # Tecnologias Utilizadas :
 
