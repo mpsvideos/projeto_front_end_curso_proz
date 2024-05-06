@@ -36,12 +36,23 @@ header {
 }
 
 /* Define estilos para o logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
     height: 5rem; /* Define a altura do logotipo como 5rem */
     width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
     margin-right: 10px; /* Adiciona margem à direita de 10px */
 }
 
+.logo h2 {
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff;      /* Define a cor do texto como branco*/
+    
+}
 
 
 /* Define estilos para o menu de navegação */
@@ -60,8 +71,10 @@ header {
 
 /* Define estilos para os itens do menu ativos */
 .nav-item.active a {
-    color: #0f0f0f; /* Define a cor do texto como preto quando o item do menu está ativo */
+    color: #f1c6b2; /* Define a cor do texto transparente quando o item do menu está ativo */
     font-weight: bold; /* Define a fonte como negrito */
+    
+    
 }
 
 /* Define estilos para os links dos itens do menu */
@@ -83,7 +96,7 @@ header {
     /* Estilos do botão de login */
     background-color: #0f0f0f;
     border: none;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -325,65 +338,7 @@ header {
     }
 }
 
-/* Estilo para a seção do artigo */
-#about-cozinha20 {
-    background-color: #e7dec4; /* Cor de fundo */
-    padding: 20px; /* Preenchimento interno */
-    border-radius: 10px; /* Borda arredondada */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-}
 
-/* Estilo para os títulos */
-#about-cozinha20 h2, 
-#about-cozinha20 h3 {
-    color: #333; /* Cor do texto */
-}
-
-/* Estilo para os parágrafos */
-#about-cozinha20 p {
-    margin-bottom: 10px; /* Espaçamento inferior */
-}
-
-/* Estilo para as listas */
-#about-cozinha20 ul {
-    list-style-type: none; /* Remover marcadores */
-    padding: 0; /* Remover espaçamento */
-}
-
-/* Estilo para os links na lista */
-#about-cozinha20 ul li a {
-    color: #ff3900; /* Cor do link */
-    text-decoration: none; /* Remover sublinhado */
-}
-
-/* Estilo para o formulário */
-#about-cozinha20 form {
-    margin-top: 20px; /* Espaçamento superior */
-}
-
-/* Estilo para o campo de entrada */
-#about-cozinha20 input[type="email"] {
-    width: 50%; /* Largura total */
-    padding: 10px; /* Preenchimento interno */
-    margin-bottom: 10px; /* Espaçamento inferior */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
-}
-
-/* Estilo para o botão de envio */
-#about-cozinha20 button[type="submit"] {
-    background-color: #ff3900; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    padding: 10px 20px; /* Preenchimento interno */
-    border: none; /* Remover borda */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Cursor de mão */
-}
-
-/* Estilo para o botão de envio ao passar o mouse */
-#about-cozinha20 button[type="submit"]:hover {
-    background-color: #ff9100; /* Cor de fundo ao passar o mouse */
-}
 
 /* Estilo para o footer */
 footer {

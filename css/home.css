@@ -36,12 +36,22 @@ header {
 }
 
 /* Define estilos para o logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
     height: 5rem; /* Define a altura do logotipo como 5rem */
     width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
     margin-right: 10px; /* Adiciona margem à direita de 10px */
 }
-
+.logo h2 {
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff      /* Define a cor do texto como branco*/
+    
+}
 
 
 /* Define estilos para o menu de navegação */
@@ -60,7 +70,7 @@ header {
 
 /* Define estilos para os itens do menu ativos */
 .nav-item.active a {
-    color: #0f0f0f; /* Define a cor do texto como preto quando o item do menu está ativo */
+    color: #f1c6b2; /* Define a cor do texto transparente quando o item do menu está ativo */
     font-weight: bold; /* Define a fonte como negrito */
 }
 
@@ -83,7 +93,7 @@ header {
     /* Estilos do botão de login */
     background-color: #0f0f0f;
     border: none;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -149,7 +159,7 @@ header {
     margin: 20px auto; /* Define uma margem superior e inferior de 20px e margem lateral automática para centralizar */
     overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
     height: auto; /* Altura automática para se ajustar ao conteúdo do carrossel */
-    padding: 0; /* Remove o preenchimento interno */
+    padding: 0;  /* Remove o preenchimento interno */
 }
 
 /* Contêiner dos slides do carrossel */
@@ -161,6 +171,9 @@ header {
 
 /* Estilo dos slides individuais do carrossel */
 .carousel .carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%; /* Define a largura de cada slide como 100% da largura do contêiner de slides */
     flex-shrink: 0; /* Impede que os slides diminuam de tamanho */
 }
@@ -185,7 +198,7 @@ header {
     padding: 10px; /* Adiciona preenchimento interno ao texto */
     text-align: center; /* Alinha o texto centralmente */
     color: #fff; /* Define a cor do texto como branca */
-    transition: opacity 0.5s ease; /* Adiciona uma transição suave para a opacidade do texto */
+    transition:opacity 0.5s ease; /* Adiciona uma transição suave para a opacidade do texto */
     border-bottom-left-radius: 10px; /* Adiciona bordas arredondadas à parte inferior esquerda do texto */
     border-bottom-right-radius: 10px; /* Adiciona bordas arredondadas à parte inferior direita do texto */
 }
@@ -206,7 +219,7 @@ header {
 .carousel-text a {
     display: inline-block; /* Faz com que o link se comporte como um bloco */
     padding: 8px 16px; /* Adiciona preenchimento ao link */
-    background-color: #ff3909; /* Define a cor de fundo do link */
+    background-color: #ff3900; /* Define a cor de fundo do link */
     color: white; /* Define a cor do texto do link como branca */
     text-decoration: none; /* Remove a decoração de sublinhado do link */
     border-radius: 3px; /* Adiciona bordas arredondadas ao link */
@@ -214,7 +227,7 @@ header {
 
 /* Estilo para o link ao passar o mouse */
 .carousel-text a:hover {
-    background-color: #e68b4f; /* Define a cor de fundo do link ao passar o mouse */
+    background-color: #ff9100; /* Define a cor de fundo do link ao passar o mouse */
 }
 
 /* Estilos específicos para telas menores */

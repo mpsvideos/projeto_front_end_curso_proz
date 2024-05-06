@@ -39,13 +39,23 @@ header {
  }
  
  /* Define estilos para o logotipo */
+ .logo {
+    display: flex;
+    align-items: center;
+}
+
  .logo img {
      height: 5rem; /* Define a altura do logotipo como 5rem */
      width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
      margin-right: 10px; /* Adiciona margem à direita de 10px */
  }
- 
- 
+
+ .logo h2 {
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff;      /* Define a cor do texto como branco*/
+ }
+
  
  /* Define estilos para o menu de navegação */
  .nav-menu {
@@ -63,7 +73,7 @@ header {
  
  /* Define estilos para os itens do menu ativos */
  .nav-item.active a {
-     color: #0f0f0f; /* Define a cor do texto como preto quando o item do menu está ativo */
+     color: #f1c6b2; /* Define a cor do texto transparente quando o item do menu está ativo */
      font-weight: bold; /* Define a fonte como negrito */
  }
  
@@ -86,7 +96,7 @@ header {
      /* Estilos do botão de login */
      background-color: #0f0f0f;
      border: none;
-     color: white;
+     color: #fff;
      padding: 10px 20px;
      text-align: center;
      text-decoration: none;

@@ -19,105 +19,117 @@ body {
 }
 
 /* Estilos para o cabeçalho */
+
+/* Define estilos para o cabeçalho */
 header {
-    background-color: #ff3900; /* Cor de fundo */
-    padding: 10px 0; /* Preenchimento (topo e inferior) */
-    position: fixed; /* Fixa o cabeçalho no topo */
-    width: 100%; /* Largura total */
-    top: 0; /* Distância do topo */
-    z-index: 1000; /* Camada de sobreposição */
+    background-color: #ff3900; /* Define a cor de fundo como laranja */
+    padding: 10px 0; /* Adiciona preenchimento superior e inferior de 10px */
+    position: fixed; /* Fixa o cabeçalho no topo da janela de visualização */
+    width: 100%; /* Define a largura como 100% da largura da janela de visualização */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    z-index: 1000; /* Define a ordem de empilhamento para garantir que o cabeçalho esteja sempre acima de outros elementos */
 }
 
 /* Define estilos para o contêiner da barra de navegação */
 .container-navbar {
-    justify-content: space-between;
-     display: flex; /* Usa flexbox para organizar os elementos filho */
-     align-items: center; /* Alinha os itens verticalmente ao centro */
- }
- 
- /* Define estilos para o logotipo */
- .logo img {
-     height: 5rem; /* Define a altura do logotipo como 5rem */
-     width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
-     margin-right: 10px; /* Adiciona margem à direita de 10px */
- }
- 
- 
- 
- /* Define estilos para o menu de navegação */
- .nav-menu {
-     list-style-type: none; /* Remove os marcadores de lista */
-     margin: 0; /* Remove as margens */
-     padding: 0; /* Remove o preenchimento */
-     display: flex; /* Usa flexbox para organizar os elementos filho */
-     justify-content: center; /* Alinha os itens à direita */
- }
- 
- /* Define estilos para os itens do menu */
- .nav-item {
-     margin-left: 20px; /* Adiciona margem à esquerda de 20px */
- }
- 
- /* Define estilos para os itens do menu ativos */
- .nav-item.active a {
-     color: #0f0f0f; /* Define a cor do texto como preto quando o item do menu está ativo */
-     font-weight: bold; /* Define a fonte como negrito */
- }
- 
- /* Define estilos para os links dos itens do menu */
- .nav-item a {
-     text-decoration: none; /* Remove a decoração de link padrão */
-     color: #fff; /* Define a cor do texto como branco */
-     font-weight: bold; /* Define a fonte como negrito */
- }
- 
- /* Define estilos para os links dos itens do menu ao passar o mouse */
- .nav-item a:hover {
-     color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
- }
- .login-item {
-     margin-right: auto; /* Move o botão "Entrar" para a extrema esquerda */
- }
- 
- .login-btn {
-     /* Estilos do botão de login */
-     background-color: #0f0f0f;
-     border: none;
-     color: white;
-     padding: 10px 20px;
-     text-align: center;
-     text-decoration: none;
-     border-radius: 20px;
-     cursor: pointer;
- }
- .login-btn:hover {
-     background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
- }
- 
- 
- /* Estilos para dispositivos móveis */
- @media (max-width: 992px) {
-     .nav-menu {
-         display: none; /* Esconde o menu de navegação em telas menores que 992px */
-         flex-direction: column; /* Organiza os itens do menu em coluna */
-         position: fixed; /* Fixa o menu na parte superior da janela de visualização */
-         top: 0; /* Posiciona o menu no topo */
-         left: 0; /* Posiciona o menu à esquerda */
-         width: 100%; /* Define a largura como 100% */
-         background-color: #ff3900; /* Define a cor de fundo como laranja */
-         padding: 10px; /* Adiciona preenchimento de 10px */
-         z-index: 1000; /* Define a ordem de empilhamento para garantir que o menu esteja sempre acima de outros elementos */
-     }
- 
-     .nav-menu.show {
-         display: flex; /* Exibe o menu de navegação quando a classe .show é adicionada */
-     }
- 
-     .nav-item {
-         margin: 10px 0; /* Adiciona margem de 10px acima e abaixo dos itens do menu */
-     }
- }
- 
+   justify-content: space-between;
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Define estilos para o logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 5rem; /* Define a altura do logotipo como 5rem */
+    width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
+    margin-right: 10px; /* Adiciona margem à direita de 10px */
+}
+.logo h2 {
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff      /* Define a cor do texto como branco*/
+    
+}
+
+
+/* Define estilos para o menu de navegação */
+.nav-menu {
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove o preenchimento */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: center; /* Alinha os itens à direita */
+}
+
+/* Define estilos para os itens do menu */
+.nav-item {
+    margin-left: 20px; /* Adiciona margem à esquerda de 20px */
+}
+
+/* Define estilos para os itens do menu ativos */
+.nav-item.active a {
+    color: #f1c6b2; /* Define a cor do texto transparente quando o item do menu está ativo */
+    font-weight: bold; /* Define a fonte como negrito */
+}
+
+/* Define estilos para os links dos itens do menu */
+.nav-item a {
+    text-decoration: none; /* Remove a decoração de link padrão */
+    color: #fff; /* Define a cor do texto como branco */
+    font-weight: bold; /* Define a fonte como negrito */
+}
+
+/* Define estilos para os links dos itens do menu ao passar o mouse */
+.nav-item a:hover {
+    color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
+}
+.login-item {
+    margin-right: auto; /* Move o botão "Entrar" para a extrema esquerda */
+}
+
+.login-btn {
+    /* Estilos do botão de login */
+    background-color: #0f0f0f;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.login-btn:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none; /* Esconde o menu de navegação em telas menores que 992px */
+        flex-direction: column; /* Organiza os itens do menu em coluna */
+        position: fixed; /* Fixa o menu na parte superior da janela de visualização */
+        top: 0; /* Posiciona o menu no topo */
+        left: 0; /* Posiciona o menu à esquerda */
+        width: 100%; /* Define a largura como 100% */
+        background-color: #ff3900; /* Define a cor de fundo como laranja */
+        padding: 10px; /* Adiciona preenchimento de 10px */
+        z-index: 1000; /* Define a ordem de empilhamento para garantir que o menu esteja sempre acima de outros elementos */
+    }
+
+    .nav-menu.show {
+        display: flex; /* Exibe o menu de navegação quando a classe .show é adicionada */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adiciona margem de 10px acima e abaixo dos itens do menu */
+    }
+}
+
 .hamburger {
     display: flex; /* Exibe o botão */
     justify-content: space-between; /* Distribui o espaço entre os itens */
