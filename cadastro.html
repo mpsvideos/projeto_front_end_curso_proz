@@ -59,15 +59,25 @@
             <h2>Cadastro</h2>
             <form action="">
                 <div class="form-group">
-                    <label for="nome">*Nome Completo:</label>
+                    <label for="nome">*Nome:</label>
                     <input type="text" id="nome" name="nome" required>
                     <p id="nome-helper" class="helper-text">Mensagem de ajuda</p>
                 </div>
                 <div class="form-group">
+                    <label for="sobrenome">*Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" required>
+                    <p id="sobrenome-helper" class="helper-text">Mensagem de ajuda</p>
+                </div>
+                <div class="form-group">
+                    <label for="data-nascimento">*Data Nascimento:</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+                    <p id="data-nascimento-helper" class="helper-text">Mensagem de ajuda</p>
+                </div>
+                <div class="form-group">
                     <label for="genero">*Genero:</label>
-                    <input type="radio" name="genero" id="masculino" value="masculino">
+                    <input type="radio" name="genero" id="masculino" value="masculino" required>
                     <label for="masculino">Masculino</label>
-                    <input type="radio" name="genero" id="feminino" value="feminino">
+                    <input type="radio" name="genero" id="feminino" value="feminino" required>
                     <label for="feminino">Feminino</label>
                     <p id="genero-helper" class="helper-text">Mensagem de ajuda</p>
                 </div>
@@ -77,14 +87,19 @@
                     <p id="email-helper" class="helper-text">Mensagem de ajuda</p>
                 </div>
                 <div class="form-group">
-                    <label for="telefone">*Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required>
-                    <p id="tel-helper" class="helper-text">Mensagem de ajuda</p>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                    <!-- <p id="tel-helper" class="helper-text">Mensagem de ajuda</p> -->
                 </div>
                 <div class="form-group">
                     <label for="endereco">*Endereço:</label>
                     <input type="text" id="endereco" name="endereco" required>
                     <p id="endereco-helper" class="helper-text">Mensagem de ajuda</p>
+                </div>
+                <div class="form-group">
+                    <label for="usuario-cadastro">*Usuário:</label>
+                    <input type="text" id="usuario-cadastro" name="usuario-cadastro" required>
+                    <p id="usuario-cadastro-helper" class="helper-text">Mensagem de ajuda</p>
                 </div>
                 <div class="form-group">
                     <label for="senha">*Senha:</label>

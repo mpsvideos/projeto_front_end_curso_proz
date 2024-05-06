@@ -1,16 +1,3 @@
-//interatividade na navebar//
-
-document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-  
-    hamburger.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
-    });
-  });
-  
-  
-  
 // capturando elementos no DOM
 // usuario
 let usuarioInput = document.getElementById("usuario");
@@ -52,7 +39,7 @@ usuarioInput.addEventListener("blur", (e) => {
 
     if (valorUsuario.length < 6 || valorUsuario == "") {
         // adicionar estilos dinâmicos se o valor tiver menos de 6 caracteres
-        usuarioHelper.innerText = "Digite o nome de usuário com no mínimo seis caracteres"
+        usuarioHelper.innerText = "Digite um nome de usuário válido, ele deve conter no mínimo 6 caracteres"
         estilizarInputIncorreto(usuarioInput, usuarioHelper);
         inputsCorretos.usuario = false;
     } else {
@@ -75,7 +62,7 @@ senhaInput.addEventListener("blur", (e) => {
     let valorSenha = e.target.value;
 
     if (valorSenha.length < 6 || valorSenha == "") {
-        senhaHelper.innerText = "Digite uma senha válida, ela deve ter no mínimo seis caracteres"
+        senhaHelper.innerText = "Digite uma senha válida, ela deve conter no mínimo 6 caracteres"
         estilizarInputIncorreto(senhaInput, senhaHelper);
         inputsCorretos.senha = false;
     } else {
