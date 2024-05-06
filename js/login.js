@@ -52,7 +52,7 @@ usuarioInput.addEventListener("blur", (e) => {
 
     if (valorUsuario.length < 6 || valorUsuario == "") {
         // adicionar estilos dinâmicos se o valor tiver menos de 6 caracteres
-        usuarioHelper.innerText = "Digite o nome de usuário com no mínimo 6 caracteres"
+        usuarioHelper.innerText = "Digite o nome de usuário com no mínimo seis caracteres"
         estilizarInputIncorreto(usuarioInput, usuarioHelper);
         inputsCorretos.usuario = false;
     } else {
@@ -85,14 +85,14 @@ senhaInput.addEventListener("blur", (e) => {
 });
 
 // evitar envio do formulário
-let btnSubmit = document.querySelector('input[type="submit"]');
+let btnLogin = document.getElementById("botao_login");
 let inputsCorretos = {
     usuario: false,
     senha: false
 };
 
 // botão login
-btnSubmit.addEventListener("click", (e) => {
+btnLogin.addEventListener("click", (e) => {
     if (inputsCorretos.usuario == false ||
         inputsCorretos.senha == false) {
         e.preventDefault();
