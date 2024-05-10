@@ -8,7 +8,6 @@
 - Tatiane Souza
 - Hiago Santos
 - Marley Paranhos
-  
 
   # Tecnologias Utilizadas :
 
