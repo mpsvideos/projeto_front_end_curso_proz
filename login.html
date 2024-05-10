@@ -3,29 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/login.js" defer></script>
+    <!-- Define a codificação de caracteres para UTF-8, que suporta uma ampla gama de caracteres -->
+    <!-- Define a configuração de visualização inicial da página para o tamanho do dispositivo e escala inicial -->
     <title>Login</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+ rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
     <header>
+<<<<<<<<< Temporary merge branch 1
+        <div class="container-navbar">
+            <div class="logo">
+                <img src="./img/slide/logo1.png" alt="Logo cozinha20">
+            </div>
+            <button class="hamburger">&#9776;</button>
+=========
         <div class="container">
             <div class="logo">
                 <img src="./img/slide/logo1.png" alt="Logo cozinha20">
             </div>
+>>>>>>>>> Temporary merge branch 2
             <nav class="navbar">
+                <!-- Navegação principal -->
                 <ul class="nav-menu">
+                    <!-- Lista de itens do menu -->
                     <li class="nav-item"><a href="index.html">Home</a></li>
+                    <!-- Item do menu "Home" -->
                     <li class="nav-item"><a href="equipe.html">Equipe</a></li>
+                    <!-- Item do menu "Equipe" com uma classe para indicar que está ativo -->
                     <li class="nav-item"><a href="receitas.html">Receitas</a></li>
+                    <!-- Item do menu "Receitas" -->
                     <li class="nav-item"><a href="loja.html">Loja</a></li>
+<<<<<<<<< Temporary merge branch 1
+                    <li class="nav-item active"><a href="login.html">Entrar</a></li>
+=========
                     <li class="nav-item"><a href="login.html">Entrar</a></li>
+>>>>>>>>> Temporary merge branch 2
                 </ul>
             </nav>
         </div>
+        <!-- Fim do cabeçalho -->
     </header>
 <main>
     <section>
+        
         <div class="form">
             <h2>Login</h2>
             <form action="">
@@ -36,11 +62,11 @@
                 </div>
                 <div class="form-group">
                     <label for="senha">*Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
+                    <input type="password" id="senha" name="senha" required >
                     <p id="senha-helper" class="helper-text">Mensagem de ajuda</p>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Entrar</button>
+                    <button type="submit" id="botao_login">Entrar</button>
                 </div>
                 <div class="form-group">
                     <h5>Não tem cadastro?
@@ -54,12 +80,27 @@
     
 </main>
 <footer>
+    <!-- Conteúdo do rodapé -->
     <div id="footer_content">
+        <!-- Informações sobre "Cozinha20" -->
         <div id="footer_contacts">
             <h1>Cozinha20</h1>
             <p>As melhores receitas na sua mão.</p>
 
+            <!-- Links para redes sociais -->
             <div id="footer_social_media">
+<<<<<<<<< Temporary merge branch 1
+                <a href="https://www.instagram.com/" target="_blank" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://web.whatsapp.com/" target="_blank" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+=========
                 <a href="#" class="footer-link" id="instagram">
                     <i class="fa-brands fa-instagram">I</i>
                 </a>
@@ -70,15 +111,28 @@
 
                 <a href="#" class="footer-link" id="whatsapp">
                     <i class="fa-brands fa-whatsapp">W</i>
+>>>>>>>>> Temporary merge branch 2
                 </a>
             </div>
         </div>
         
+        <!-- Lista de links de contato -->
         <ul class="footer-list">
             <li>
                 <h3>Contatos</h3>
+                 <!-- Título da lista -->
+            </li>
+            <!-- Item da lista -->
+            <li>
+<<<<<<<<< Temporary merge branch 1
+                <a href="https://web.whatsapp.com/" target="_blank" class="footer-link">whatsapp</a>
             </li>
             <li>
+                <a href="https://www.facebook.com/" target="_blank" class="footer-link">Facebook</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
+=========
                 <a href="#" class="footer-link">whatsapp</a>
             </li>
             <li>
@@ -86,14 +140,28 @@
             </li>
             <li>
                 <a href="#" class="footer-link">Instagram</a>
+>>>>>>>>> Temporary merge branch 2
             </li>
         </ul>
 
+        <!-- Lista de serviços -->
         <ul class="footer-list">
+            <!-- Lista de links -->
             <li>
                 <h3>Serviços</h3>
+               <!-- Título da lista --> 
+            </li>
+            <!-- Item da lista -->
+            <li>
+<<<<<<<<< Temporary merge branch 1
+                <a href="receitas.html" class="footer-link">Receitas</a>
             </li>
             <li>
+                <a href="loja.html" class="footer-link">Loja</a>
+            </li>
+            <li>
+                <a href="cadastro.html" class="footer-link">Trabalhe conosco</a>
+=========
                 <a href="#" class="footer-link">Receitas</a>
             </li>
             <li>
@@ -101,11 +169,17 @@
             </li>
             <li>
                 <a href="#" class="footer-link">Diversos</a>
+>>>>>>>>> Temporary merge branch 2
             </li>
         </ul>
+        <!-- Fim da lista de serviços -->
 
         <div id="footer_subscribe">
+<<<<<<<<< Temporary merge branch 1
+            <h3>inscreva-se!</h3>
+=========
             <h3>Subscribe</h3>
+>>>>>>>>> Temporary merge branch 2
 
             <p>
                 Deixe seu e-mail para receber atualizações.
@@ -117,13 +191,21 @@
                     <i class="fa-regular fa-envelope"></i>
                 </button>
             </div>
-        </div>
+         <!-- Fim do formulário de inscrição --> 
     </div>
+<!-- Fim do conteúdo do rodapé -->
 
+    <!-- Direitos autorais -->
     <div id="footer_copyright">
         @2024 Direitos reservados ao grupo3
     </div>
-</footer>                    
+      <!-- Fim dos direitos autorais -->
+</footer> 
+
+<button onclick="scrollToTop()" id="btnTopo" title="Voltar ao Topo"></button>
+<!-- Botão para voltar ao topo -->
+
+<script src="./js/login.js"></script>
+<!-- Script JavaScript -->    
 </body>
 </html>
-

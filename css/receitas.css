@@ -1,353 +1,434 @@
+/* Importa a fonte "Poppins" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+/* Define estilos gerais para todos os elementos */
 * {
-    font-family: 'poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1px;
+    font-family: 'poppins', sans-serif; /* Define a fonte padrão para 'Poppins' */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove preenchimento interno */
+    box-sizing: border-box; /* Garante que o preenchimento e a borda não afetem o tamanho total do elemento */
+    letter-spacing: 1px; /* Define o espaçamento entre letras */
 }
 
-
-
+/* Define estilos para o corpo do documento */
 body {
-    background-color: #e7dec4;
-    font-family: "Open Sans", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #e7dec4; /* Define a cor de fundo como um tom de bege */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da janela de visualização */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    flex-direction: column; /* Organiza os elementos filho em coluna */
 }
 
+/* Define estilos para o cabeçalho */
 header {
-    background-color: #ff3900; 
-    padding: 10px 0; 
-    position: fixed;
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
+    background-color: #ff3900; /* Define a cor de fundo como laranja */
+    padding: 10px 0; /* Adiciona preenchimento superior e inferior de 10px */
+    position: fixed; /* Fixa o cabeçalho no topo da janela de visualização */
+    width: 100%; /* Define a largura como 100% da largura da janela de visualização */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    z-index: 1000; /* Define a ordem de empilhamento para garantir que o cabeçalho esteja sempre acima de outros elementos */
 }
 
+/* Define estilos para o contêiner da barra de navegação */
 .container-navbar {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex; 
-    align-items: center; 
+   justify-content: space-between;
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Define estilos para o logotipo */
+.logo {
+    display: flex;
+    align-items: center;
 }
 .logo img {
-    height: 5rem; 
-    width: auto; 
-    margin-right: 10px;
+    height: 5rem; /* Define a altura do logotipo como 5rem */
+    width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
+    margin-right: 10px; /* Adiciona margem à direita de 10px */
+}
+/* Estilos para o texto do logotipo */
+.logo h2 {
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff;      /* Define a cor do texto como branco*/
+    
 }
 
-.navbar {
-    flex-grow: 1; 
-}
-
-
+/* Define estilos para o menu de navegação */
 .nav-menu {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    justify-content: flex-end; 
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove o preenchimento */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: center; /* Alinha os itens à direita */
 }
 
-
+/* Define estilos para os itens do menu */
 .nav-item {
-    margin-left: 20px; 
+    margin-left: 20px; /* Adiciona margem à esquerda de 20px */
 }
+
+/* Define estilos para os itens do menu ativos */
 .nav-item.active a {
-    color: #0f0f0f; 
-    font-weight: bold; 
+    color: #f1c6b2; /* Define a cor do texto transparente quando o item do menu está ativo */
+    font-weight: bold; /* Define a fonte como negrito */
 }
 
-
+/* Define estilos para os links dos itens do menu */
 .nav-item a {
-    text-decoration: none; 
-    color: #fff; 
-    font-weight: bold; 
+    text-decoration: none; /* Remove a decoração de link padrão */
+    color: #fff; /* Define a cor do texto como branco */
+    font-weight: bold; /* Define a fonte como negrito */
 }
 
-
+/* Define estilos para os links dos itens do menu ao passar o mouse */
 .nav-item a:hover {
-    color: #ff9100; 
+    color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
 }
+.login-item {
+    margin-right: auto; /* Move o botão "Entrar" para a extrema esquerda */
+}
+
+.login-btn {
+    /* Estilos do botão de login */
+    background-color: #0f0f0f;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.login-btn:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
+}
+
+
 /* Estilos para dispositivos móveis */
 @media (max-width: 992px) {
     .nav-menu {
-        display: none; 
-        flex-direction: column; 
-        position: fixed; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #ff3900; 
-        padding: 10px; 
-        z-index: 1000; 
+        display: none; /* Esconde o menu de navegação em telas menores que 992px */
+        flex-direction: column; /* Organiza os itens do menu em coluna */
+        position: fixed; /* Fixa o menu na parte superior da janela de visualização */
+        top: 0; /* Posiciona o menu no topo */
+        left: 0; /* Posiciona o menu à esquerda */
+        width: 100%; /* Define a largura como 100% */
+        background-color: #ff3900; /* Define a cor de fundo como laranja */
+        padding: 10px; /* Adiciona preenchimento de 10px */
+        z-index: 1000; /* Define a ordem de empilhamento para garantir que o menu esteja sempre acima de outros elementos */
     }
 
     .nav-menu.show {
-        display: flex; 
+        display: flex; /* Exibe o menu de navegação quando a classe .show é adicionada */
     }
 
     .nav-item {
-        margin: 10px 0; 
+        margin: 10px 0; /* Adiciona margem de 10px acima e abaixo dos itens do menu */
     }
+}
+
+/* Estilos para o ícone do menu hamburguer */
+.hamburger {
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    padding: 10px; /* Adiciona preenchimento de 10px */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    font-size: 20px; /* Define o tamanho da fonte como 20px */
+    order: 2; /* Define a ordem de exibição */
+}
+
+/* Estilos para o ícone do menu hamburguer ao passar o mouse */
+.hamburger:hover {
+    color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
 }
 
 /* Esconder botão hamburguer em dispositivos maiores que tablet */
 @media (min-width: 992px) {
     .hamburger {
-        display: none;
+        display: none; /* Esconde o ícone do menu hamburguer em telas maiores que 992px */
     }
 }
 
-
-/* estilo do main e cards receitas */
-
+/* Estilo para o conteúdo principal e os cards de receitas */
 .controle-conteudo {
-    margin-top: 40px; 
-    margin-bottom: 40px; 
-    margin-left: 40px; 
-    margin-right: 40px; 
-    padding: 40px; 
-  } 
-  
-.receitas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    margin: 0 -10px; 
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: calc(33.33% - 20px); 
-    margin: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box; 
-    text-align: center;
-  }
-  
-  .card img {
-    display: block;
-    max-width: 100%;
-    width: 300px;
-    height: 300px;
-    margin:0 auto;
-    padding: 10px;
-  }
-  
-  .card h2 {
-   
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .card button {
-    background-color: #ff3009;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-  
-  /* Adicionando efeito hover nos botões */
-  .card button:hover {
-    background-color: #ff9100;
-  }
-  .conteudo {
-    display: none; 
+    margin-top: 80px; /* Adiciona margem superior de 80px */
+    margin-bottom: 40px; /* Adiciona margem inferior de 40px */
+    margin-left: 40px; /* Adiciona margem à esquerda de 40px */
+    margin-right: 40px; /* Adiciona margem à direita de 40px */
+    padding: 40px; /* Adiciona preenchimento de 40px */
 }
 
+/* Estilo para o contêiner dos cards de receitas */
+.receitas-container {
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    flex-wrap: wrap; /* Permite que os elementos filho quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal */
+    margin: 0 -10px; /* Adiciona margem negativa para compensar a margem nos itens filho */
+}
+
+/* Estilo para os cards de receitas */
+.card {
+    flex: 0 0 calc(33.33% - 20px);  /* Define o tamanho fixo para os cards de receitas */
+    background-color: #f0f0f0; /* Define a cor de fundo como cinza claro */
+    border: 1px solid #ccc; /* Adiciona uma borda de 1px sólida cinza */
+    padding: 20px; /* Adiciona preenchimento de 20px */
+    box-sizing: border-box; /* Garante que o preenchimento e a borda não afetem o tamanho total do elemento */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 20px; /* Adiciona margem inferior de 20px */
+}
+
+/* Estilos para as imagens dentro dos cards */
+.card img {
+    display: block; /* Define a imagem como um elemento de bloco */
+    max-width: 100%; /* Define a largura máxima como 100% */
+    width: 300px; /* Define a largura fixa como 300px */
+    height: 300px; /* Define a altura fixa como 300px */
+    margin:0 auto; /* Centraliza a imagem horizontalmente */
+    padding: 10px; /* Adiciona preenchimento de 10px */
+}
+
+/* Estilos para os títulos dos cards */
+.card h2 {
+    font-size: 18px; /* Define o tamanho da fonte como 18px */
+    margin-bottom: 10px; /* Adiciona margem inferior de 10px */
+}
+
+/* Estilos para os parágrafos dentro dos cards */
+.card p {
+    font-size: 14px; /* Define o tamanho da fonte como 14px */
+    margin-bottom: 10px; /* Adiciona margem inferior de 10px */
+}
+
+/* Estilos para os botões dentro dos cards */
+.card button {
+    background-color: #ff3900; /* Define a cor de fundo como laranja */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 10px 20px; /* Adiciona preenchimento de 10px na vertical e 20px na horizontal */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    font-size: 14px; /* Define o tamanho da fonte como 14px */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    margin-top: 10px; /* Adiciona margem superior de 10px */
+}
+
+/* Adicionando efeito hover nos botões */
+.card button:hover {
+    background-color: #ff9100; /* Define a cor de fundo como laranja claro ao passar o mouse */
+}
+
+/* Estilos para o conteúdo dentro dos cards */
+.conteudo {
+    display: none; /* Esconde o conteúdo */
+}
+
+/* Mostra o conteúdo quando a classe .active é adicionada */
+.card.active .conteudo {
+    display: block; 
+}
+
+/* Mostra o conteúdo quando a classe .open é adicionada */
 .card.open .conteudo {
     display: block;
 }
 
+/* Estilos para os parágrafos dentro do conteúdo */
 .conteudo p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-decoration: none;
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+    line-height: 1.5; /* Define a altura da linha como 1.5 */
+    margin-bottom: 10px; /* Adiciona margem inferior de 10px */
+    text-decoration: none; /* Remove a decoração de texto */
 }
 
+/* Estilos para as listas não ordenadas e ordenadas dentro do conteúdo */
 .conteudo ul,
 .conteudo ol {
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px; /* Adiciona margem inferior de 10px */
 }
 
+/* Estilos para os itens das listas não ordenadas e ordenadas dentro do conteúdo */
 .conteudo ul li,
 .conteudo ol li {
-  list-style:none;
-  margin-left: 20px;
+    list-style:none; /* Remove os marcadores da lista */
+    margin-left: 20px; /* Adiciona margem à esquerda de 20px */
 }
 
+/* Estilos específicos para listas ordenadas */
 .conteudo ol {
-list-style-type: decimal;
-} 
+    list-style-type: decimal; /* Define o tipo de marcador como números */
+}
 
-
-  @media screen and (max-width: 1024px) {
+/* Estilos responsivos para ajustar a quantidade de colunas em diferentes tamanhos de tela */
+@media screen and (max-width: 1024px) {
     .card {
-      width: calc(50% - 20px); /* 50% para cada card em telas de tamanho médio */
+        flex: 0 0 calc(50% - 20px); /* Divide em 2 colunas com espaçamento entre elas */
     }
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
     .card {
-      width: calc(100% - 20px); /
+        flex: 0 0 calc(100% - 20px); /* Define como 100% de largura para ocupar toda a largura */
     }
-  }
+}
   
-
-
-
 footer {
-    width: 100%;
-    color: #ffffff;
+    width: 100%; /* Define a largura do rodapé como 100% */
+    color: #fff; /* Define a cor do texto como branco */
 }
 
 .footer-link {
-    text-decoration: none;
+    text-decoration: none; /* Remove a decoração padrão dos links */
 }
 
 #footer_content {
-    background-color:#ff3909;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
+    background-color:#ff3900; /* Define a cor de fundo do conteúdo do rodapé */
+    display: grid; /* Usa um layout de grid para organizar o conteúdo */
+    grid-template-columns: repeat(4, 1fr); /* Divide o conteúdo em quatro colunas de largura igual */
+    padding: 3rem 3.5rem; /* Adiciona preenchimento interno */
 }
 
-#footer_contacts h1 {
-    margin-bottom: 0.75rem;
-}
-
+/* Estilos para os ícones das redes sociais */
 #footer_social_media {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
+    display: flex; /* Usa um layout flexível para os ícones */
+    gap: 2rem; /* Define o espaçamento entre os ícones */
+    margin-top: 1.5rem; /* Adiciona margem superior */
 } 
 
+/* Estilos para os ícones das redes sociais */
 #footer_social_media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color:#ffffff;
-    border-radius: 50%;
-    transition: all 0.4s;
+    display: flex; /* Usa um layout flexível */
+    align-items: center; /* Alinha os ícones verticalmente */
+    justify-content: center; /* Alinha os ícones horizontalmente */
+    height: 2.5rem; /* Define a altura */
+    width: 2.5rem; /* Define a largura */
+    color:#fff; /* Define a cor do texto como branco */
+    border-radius: 50%; /* Adiciona bordas arredondadas */
+    transition: all 0.4s; /* Adiciona uma transição suave */
 }
 
-#footer_social_media .footer-link i {
-    font-size: 1.25rem;    
-}
-
+/* Estilos para os ícones das redes sociais ao passar o mouse */
 #footer_social_media .footer-link:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Reduz a opacidade ao passar o mouse */
 }
-
+/* Estilos para as redes sociais específicas */
 #instagram {
     background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    color: #fff; 
 }
 
 #facebook {
     background-color: #4267b3;
+    color: #fff; 
 }
 
 #whatsapp {
     background-color: #25d366;
+    color: #fff; 
 }
 
+/* Estilos para a lista de links no rodapé */
 .footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
+    display: flex; /* Usa um layout flexível para a lista */
+    flex-direction: column; /* Define a direção da lista como coluna */
+    gap: 0.75rem; /* Define o espaçamento entre os itens da lista */
+    list-style: none; /* Remove os marcadores de lista */
 }
 
+/* Estilos para os links na lista do rodapé */
 .footer-list .footer-link {
-    color: #ffffff;
-    transition: all 0.4s;
+    color: #fff; /* Define a cor do texto como branco */
+    transition: all 0.4s; /* Adiciona uma transição suave */
 }
 
+/* Estilos para os links na lista do rodapé ao passar o mouse */
 .footer-list .footer-link:hover {
-    color: #e76949;
+    color: #ff9100; /* Altera a cor do texto para laranja ao passar o mouse */
 }
 
 #footer_subscribe {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: flex; /* Usa um layout flexível para a seção de assinatura */
+    flex-direction: column; /* Define a direção como coluna */
+    gap: 1.5rem; /* Define o espaçamento entre os elementos */
 }
 
 #footer_subscribe p {
-    color:#ffffff;
+    color:#fff; /* Define a cor do texto como branco */
 }
 
 #input_group {
-    display: flex;
-    align-items: center;
-    background-color:#ffffff;
-    border-radius: 4px;
+    display: flex; /* Usa um layout flexível para o grupo de entrada de texto */
+    align-items: center; /* Alinha os itens verticalmente */
+    background-color:#fff; /* Define a cor de fundo como branco */
+    border-radius: 4px; /* Adiciona bordas arredondadas */
 }
 
 #input_group input {
-    all: unset;
-    padding: 0.75rem;
-    width: 100%;
+    all: unset; /* Remove todos os estilos padrão */
+    padding: 0.75rem; /* Adiciona preenchimento */
+    width: 100%; /* Define a largura como 100% */
 }
 
 #input_group button {
-    background-color: #0f0f0f;
-    border: none;
-    color: #ffffff;
-    padding: 0px 1.25rem;
-    font-size: 1.125rem;
-    height: 100%;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-    transition: all 0.4s;
+    background-color: #0f0f0f; /* Define a cor de fundo como preto */
+    border: none; /* Remove a borda */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 0px 1.25rem; /* Adiciona preenchimento */
+    font-size: 1.125rem; /* Define o tamanho da fonte */
+    height: 100%; /* Define a altura como 100% */
+    border-radius: 0px 4px 4px 0px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: all 0.4s; /* Adiciona uma transição suave */
 }
 
 #input_group button:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Reduz a opacidade ao passar o mouse */
 }
 
 #footer_copyright {
-    display: flex;
-    justify-content: center;
-    background-color:#0f0f0f;
-    font-size: 0.9rem;
-    padding: 1.5rem;
-    font-weight: 100;
+    display: flex; /* Usa um layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color:#0f0f0f; /* Define a cor de fundo como preto */
+    font-size: 0.9rem; /* Define o tamanho da fonte */
+    padding: 1.5rem; /* Adiciona preenchimento */
+    font-weight: 100; /* Define o peso da fonte */
 }
 
 @media screen and (max-width: 768px) {
     #footer_content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr); /* Altera para duas colunas em telas menores */
+        gap: 2rem; /* Define o espaçamento entre as colunas */
     }
 }
 
 @media screen and (max-width: 426px) {
     #footer_content {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 3rem 2rem;
+        grid-template-columns: repeat(1, 1fr); /* Altera para uma coluna em telas muito pequenas */
+        padding: 3rem 2rem; /* Adiciona preenchimento */
     }
+}
+
+/* Estilos para o botão "Voltar ao Topo" */
+#btnTopo {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da borda direita da tela */
+    z-index: 99; /* Define a ordem de empilhamento */
+    background-color: #0f0f0f; /* Cor de fundo preta */
+    color: #fff; /* Cor do texto branca */
+    border: none; /* Remove a borda */
+    border-radius: 50%; /* Borda arredondada */
+    width: 50px; /* Largura */
+    height: 50px; /* Altura */
+    padding: 0; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 50px; /* Alinhamento vertical */
+    text-align: center; /* Alinhamento horizontal */
+    cursor: pointer; /* Cursor de mão */
+}
+
+/* Estilo para o ícone "Voltar ao topo" */
+#btnTopo::before {
+    content: '\25B2'; /* Seta para cima */
 }

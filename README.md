@@ -10,6 +10,8 @@
 - Marley Paranhos
   
 
+  # Tecnologias Utilizadas :
+
 
   # Tecnologias e ferramentas utilizadas :
 
@@ -17,8 +19,11 @@
   - google sites
   - HTML
   - CSS
-  - JAVASCRIPT
-  - Sql Online
-  - BR Modelo
+  - JavascripS
+  - VSCODE
   - GIT
   - GITHUB
+  - SQL LITE ONLINE
+  - BR MODELO WEB
+  - CANVAS
+  - GOOGLE SITE

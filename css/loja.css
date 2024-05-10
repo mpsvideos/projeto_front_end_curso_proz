@@ -1,316 +1,426 @@
+/* Importa a fonte "Poppins" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Define estilos gerais para todos os elementos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'poppins', sans-serif; /* Define a fonte padrão para 'Poppins' */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove preenchimento interno */
+    box-sizing: border-box; /* Garante que o preenchimento e a borda não afetem o tamanho total do elemento */
+    letter-spacing: 1px; /* Define o espaçamento entre letras */
 }
 
+/* Define estilos para o corpo do documento */
 body {
-    background-color: #e7dec4;
-    font-family: "poppins", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #e7dec4; /* Define a cor de fundo como um tom de bege */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da janela de visualização */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    flex-direction: column; /* Organiza os elementos filho em coluna */
 }
 
+/* Define estilos para o cabeçalho */
 header {
-    background-color: #ff3900; 
-    padding: 10px 0; 
-    position: fixed;
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
+    background-color: #ff3900; /* Define a cor de fundo como laranja */
+    padding: 10px 0; /* Adiciona preenchimento superior e inferior de 10px */
+    position: fixed; /* Fixa o cabeçalho no topo da janela de visualização */
+    width: 100%; /* Define a largura como 100% da largura da janela de visualização */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    z-index: 1000; /* Define a ordem de empilhamento para garantir que o cabeçalho esteja sempre acima de outros elementos */
 }
 
-
+/* Define estilos para o contêiner da barra de navegação */
 .container-navbar {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex; 
-    align-items: center; 
+   justify-content: space-between;
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
+
+/* Define estilos para o logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
-    height: 5rem; 
-    width: auto; 
-    margin-right: 10px;
+    height: 5rem; /* Define a altura do logotipo como 5rem */
+    width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
+    margin-right: 10px; /* Adiciona margem à direita de 10px */
 }
 
-.navbar {
-    flex-grow: 1; 
+.logo h2 {
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff;      /* Define a cor do texto como branco*/
+    
 }
 
 
+/* Define estilos para o menu de navegação */
 .nav-menu {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    justify-content: flex-end; 
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove o preenchimento */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: center; /* Alinha os itens à direita */
 }
 
-
+/* Define estilos para os itens do menu */
 .nav-item {
-    margin-left: 20px; 
+    margin-left: 20px; /* Adiciona margem à esquerda de 20px */
 }
+
+/* Define estilos para os itens do menu ativos */
 .nav-item.active a {
-    color: #0f0f0f; 
-    font-weight: bold; 
+    color: #f1c6b2; /* Define a cor do texto transparente quando o item do menu está ativo */
+    font-weight: bold; /* Define a fonte como negrito */
 }
 
-
+/* Define estilos para os links dos itens do menu */
 .nav-item a {
-    text-decoration: none; 
-    color: #fff; 
-    font-weight: bold; 
+    text-decoration: none; /* Remove a decoração de link padrão */
+    color: #fff; /* Define a cor do texto como branco */
+    font-weight: bold; /* Define a fonte como negrito */
 }
 
-
+/* Define estilos para os links dos itens do menu ao passar o mouse */
 .nav-item a:hover {
-    color: #ff9100; 
+    color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
 }
+.login-item {
+    margin-right: auto; /* Move o botão "Entrar" para a extrema esquerda */
+}
+
+.login-btn {
+    /* Estilos do botão de login */
+    background-color: #0f0f0f;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.login-btn:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
+}
+
+
 /* Estilos para dispositivos móveis */
 @media (max-width: 992px) {
     .nav-menu {
-        display: none;
-        flex-direction: column; 
-        position: fixed; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #ff3900; 
-        padding: 10px; 
-        z-index: 1000; 
+        display: none; /* Esconde o menu de navegação em telas menores que 992px */
+        flex-direction: column; /* Organiza os itens do menu em coluna */
+        position: fixed; /* Fixa o menu na parte superior da janela de visualização */
+        top: 0; /* Posiciona o menu no topo */
+        left: 0; /* Posiciona o menu à esquerda */
+        width: 100%; /* Define a largura como 100% */
+        background-color: #ff3900; /* Define a cor de fundo como laranja */
+        padding: 10px; /* Adiciona preenchimento de 10px */
+        z-index: 1000; /* Define a ordem de empilhamento para garantir que o menu esteja sempre acima de outros elementos */
     }
 
     .nav-menu.show {
-        display: flex; 
+        display: flex; /* Exibe o menu de navegação quando a classe .show é adicionada */
     }
 
     .nav-item {
-        margin: 10px 0; 
+        margin: 10px 0; /* Adiciona margem de 10px acima e abaixo dos itens do menu */
     }
+}
+
+/* Estilos para o ícone do menu hamburguer */
+.hamburger {
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    padding: 10px; /* Adiciona preenchimento de 10px */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    font-size: 20px; /* Define o tamanho da fonte como 20px */
+    order: 2; /* Define a ordem de exibição */
+}
+
+/* Estilos para o ícone do menu hamburguer ao passar o mouse */
+.hamburger:hover {
+    color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
 }
 
 /* Esconder botão hamburguer em dispositivos maiores que tablet */
 @media (min-width: 992px) {
     .hamburger {
-        display: none;
+        display: none; /* Esconde o ícone do menu hamburguer em telas maiores que 992px */
     }
 }
 
-/*css dos itens da loja*/
-
+/* Definições de estilo para a seção de controle, que envolve os itens da loja */
 .controle {
-    margin-top: 40px; 
-    margin-bottom: 40px; 
-    margin-left: 40px; 
-    margin-right: 40px; 
-    padding: 40px; 
-  } 
+    margin-top: 40px;  /* Margem superior de 40 pixels */
+    margin-bottom: 40px;  /* Margem inferior de 40 pixels */
+    margin-left: 40px;  /* Margem esquerda de 40 pixels */
+    margin-right: 40px;  /* Margem direita de 40 pixels */
+    padding: 40px;  /* Preenchimento interno de 40 pixels */
+} 
+
+/* Estilo para o container dos livros na loja */
 .container-livros {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    display: flex;  /* Usa o modelo flexível de layout */
+    flex-wrap: wrap;  /* Os itens quebram para a próxima linha conforme necessário */
+    justify-content: center;  /* Alinha os itens ao centro no eixo principal */
+    align-items: center;  /* Alinha os itens ao centro no eixo secundário */
+    margin-top: 20px;  /* Margem superior de 20 pixels */
 }
-
+/* Estilo para os produtos na loja */
 .product {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    width: calc(33.33% - 20px); 
+    background-color: #f9f9f9;  /* Cor de fundo do produto */
+    border: 1px solid #ddd;  /* Borda do produto */
+    border-radius: 5px;  /* Borda arredondada do produto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra do produto */
+    margin: 10px;  /* Margem ao redor do produto */
+    padding: 20px;  /* Preenchimento interno do produto */
+    text-align: center;  /* Alinhamento do texto dentro do produto */
+    width: calc(33.33% - 20px);  /* Largura do produto, com base em 33.33% do espaço disponível menos 20 pixels de margem */
 }
 
+/* Estilo para o título do produto */
 .product h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 20px;  /* Tamanho da fonte do título do produto */
+    margin-bottom: 10px;  /* Margem inferior do título do produto */
 }
 
+/* Estilo para os parágrafos dentro do produto */
 .product p {
-    margin: 5px 0;
+    margin: 5px 0;  /* Margem entre os parágrafos dentro do produto */
 }
+
+/* Estilo para a imagem do produto */
 .product img {
-    width: 100px; 
-    height: auto; 
-    border-radius: 5px; 
-    margin-bottom: 10px; 
+    width: 100px;  /* Largura da imagem do produto */
+    height: auto;  /* Altura automática da imagem do produto */
+    border-radius: 5px;  /* Borda arredondada da imagem do produto */
+    margin-bottom: 10px;  /* Margem inferior da imagem do produto */
 }
 
-#resumo{
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
+/* Estilo para o resumo */
+#resumo {
+    text-align: center;  /* Alinhamento do texto centralizado */
+    margin: 10px;  /* Margem ao redor do resumo */
+    padding: 10px;  /* Preenchimento interno do resumo */
 }
+
+/* Estilo para todos os botões */
 button {
-    background-color: #ff3909;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease;
+    background-color: #ff3900;  /* Cor de fundo do botão */
+    border: none;  /* Nenhuma borda ao redor do botão */
+    border-radius: 3px;  /* Borda arredondada do botão */
+    color: #fff;  /* Cor do texto do botão */
+    cursor: pointer;  /* Cursor do mouse ao pairar sobre o botão */
+    font-size: 16px;  /* Tamanho da fonte do botão */
+    padding: 8px 15px;  /* Preenchimento interno do botão */
+    transition: background-color 0.3s ease;  /* Transição suave da cor de fundo do botão */
 }
 
+/* Estilo de hover para os botões */
 button:hover {
-    background-color: #eca695;
+    background-color: #ff9100;  /* Cor de fundo do botão ao passar o mouse sobre ele */
 }
 
 /* Estilos para tablets (até 768px) */
 @media (max-width: 768px) {
     .product {
-        width: calc(50% - 20px); 
+        width: calc(50% - 20px);  /* Largura dos produtos, ocupando 50% do espaço disponível */
     }
 }
 
 /* Estilos para dispositivos móveis (até 576px) */
 @media (max-width: 576px) {
     .product {
-        width: calc(100% - 20px); 
+        width: calc(100% - 20px);  /* Largura dos produtos, ocupando 100% do espaço disponível */
     }
 }
 
 
-/*css do footer*/
 
+/* Estilo para o footer */
 footer {
-    width: 100%;
-    color: #ffffff;
+    width: 100%; /* Ocupa toda a largura */
+    color: #fff; /* Cor do texto */
+    justify-content: center; /* Centraliza o conteúdo */
 }
 
+/* Estilo para os links no footer */
 .footer-link {
-    text-decoration: none;
+    text-decoration: none; /* Remove sublinhado */
 }
 
+/* Estilo para o conteúdo do footer */
 #footer_content {
-    background-color:#ff3909;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
+    background-color:#ff3909; /* Cor de fundo */
+    display: grid; /* Usa um layout de grade */
+    grid-template-columns: repeat(4, 1fr); /* Divide em 4 colunas */
+    padding: 3rem 3.5rem; /* Espaçamento interno */
 }
 
+/* Estilo para o título de contatos */
 #footer_contacts h1 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem; /* Espaçamento inferior */
 }
 
+/* Estilo para as redes sociais no footer */
 #footer_social_media {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-} 
+    display: flex; /* Usa um layout de flexbox */
+    gap: 2rem; /* Espaço entre os itens */
+    margin-top: 1.5rem; /* Espaçamento superior */
+}
 
+/* Estilo para os ícones das redes sociais */
 #footer_social_media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color:#ffffff;
-    border-radius: 50%;
-    transition: all 0.4s;
+    display: flex; /* Usa um layout de flexbox */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    height: 2.5rem; /* Altura */
+    width: 2.5rem; /* Largura */
+    color:#ffffff; /* Cor do ícone */
+    border-radius: 50%; /* Borda circular */
+    transition: all 0.4s; /* Transição suave */
 }
 
-#footer_social_media .footer-link i {
-    font-size: 1.25rem;    
-}
-
+/* Estilo para os ícones das redes sociais ao passar o mouse */
 #footer_social_media .footer-link:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Reduz a opacidade */
 }
 
+/* Estilos para as redes sociais específicas */
 #instagram {
     background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    color: #fff; 
 }
 
 #facebook {
     background-color: #4267b3;
+    color: #fff; 
 }
 
 #whatsapp {
     background-color: #25d366;
+    color: #fff; 
 }
 
+/* Estilo para as listas no footer */
 .footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
+    display: flex; /* Usa um layout de flexbox */
+    flex-direction: column; /* Direção da lista */
+    gap: 0.75rem; /* Espaço entre os itens */
+    list-style: none; /* Remove marcadores */
 }
 
+/* Estilo para os links nas listas do footer */
 .footer-list .footer-link {
-    color: #ffffff;
-    transition: all 0.4s;
+    color: #ffffff; /* Cor do texto */
+    transition: all 0.4s; /* Transição suave */
 }
 
+/* Estilo para os links nas listas do footer ao passar o mouse */
 .footer-list .footer-link:hover {
-    color: #e76949;
+    color: #ff9100; /* Cor do texto ao passar o mouse */
 }
 
+/* Estilo para o formulário de inscrição */
 #footer_subscribe {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: flex; /* Usa um layout de flexbox */
+    flex-direction: column; /* Direção do conteúdo */
+    gap: 1.5rem; /* Espaço entre os elementos */
 }
 
+/* Estilo para o texto no formulário de inscrição */
 #footer_subscribe p {
-    color:#ffffff;
+    color:#fff; /* Cor do texto */
 }
 
+/* Estilo para o grupo de entrada no formulário de inscrição */
 #input_group {
-    display: flex;
-    align-items: center;
-    background-color:#ffffff;
-    border-radius: 4px;
+    display: flex; /* Usa um layout de flexbox */
+    align-items: center; /* Alinha verticalmente */
+    background-color:#fff; /* Cor de fundo */
+    border-radius: 4px; /* Borda arredondada */
 }
 
+/* Estilo para o campo de entrada no formulário de inscrição */
 #input_group input {
-    all: unset;
-    padding: 0.75rem;
-    width: 100%;
+    all: unset; /* Remove estilos padrão */
+    padding: 0.75rem; /* Espaçamento interno */
+    width: 100%; /* Largura total */
 }
 
+/* Estilo para o botão no formulário de inscrição */
 #input_group button {
-    background-color: #0f0f0f;
-    border: none;
-    color: #ffffff;
-    padding: 0px 1.25rem;
-    font-size: 1.125rem;
-    height: 100%;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-    transition: all 0.4s;
+    background-color: #0f0f0f; /* Cor de fundo */
+    border: none; /* Remove a borda */
+    color: #ffffff; /* Cor do texto */
+    padding: 0px 1.25rem; /* Espaçamento interno */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    height: 100%; /* Altura total */
+    border-radius: 0px 4px 4px 0px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de mão */
+    transition: all 0.4s; /* Transição suave */
 }
 
+/* Estilo para o botão no formulário de inscrição ao passar o mouse */
 #input_group button:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Reduz a opacidade */
 }
 
+/* Estilo para o texto de direitos autorais */
 #footer_copyright {
-    display: flex;
-    justify-content: center;
-    background-color:#0f0f0f;
-    font-size: 0.9rem;
-    padding: 1.5rem;
-    font-weight: 100;
+    display: flex; /* Usa um layout de flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color:#0f0f0f; /* Cor de fundo */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    padding: 1.5rem; /* Espaçamento interno */
+    font-weight: 100; /* Peso da fonte */
 }
 
+/* Media queries para telas menores */
 @media screen and (max-width: 768px) {
     #footer_content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 2rem; /* Espaço entre as colunas */
     }
 }
 
 @media screen and (max-width: 426px) {
     #footer_content {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 3rem 2rem;
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+        padding: 3rem 2rem; /* Espaçamento interno */
     }
 }
+
+/* Estilo para o botão "Voltar ao topo" */
+#btnTopo {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixado na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    z-index: 99; /* Sobreposto a outros elementos */
+    background-color: #0f0f0f; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 50%; /* Borda circular */
+    width: 50px; /* Largura */
+    height: 50px; /* Altura */
+    padding: 0; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 50px; /* Alinhamento vertical */
+    text-align: center; /* Alinhamento horizontal */
+    cursor: pointer; /* Cursor de mão */
+}
+
+/* Estilo para o ícone "Voltar ao topo" */
+#btnTopo::before {
+    content: '\25B2'; /* Seta para cima */
+}
+
+
+
+
 

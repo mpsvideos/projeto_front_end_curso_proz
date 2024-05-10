@@ -39,7 +39,7 @@ usuarioInput.addEventListener("blur", (e) => {
 
     if (valorUsuario.length < 6 || valorUsuario == "") {
         // adicionar estilos dinâmicos se o valor tiver menos de 6 caracteres
-        usuarioHelper.innerText = "Digite o nome de usuário com no mínimo 6 caracteres"
+        usuarioHelper.innerText = "Digite um nome de usuário válido, ele deve conter no mínimo 6 caracteres"
         estilizarInputIncorreto(usuarioInput, usuarioHelper);
         inputsCorretos.usuario = false;
     } else {
@@ -62,7 +62,7 @@ senhaInput.addEventListener("blur", (e) => {
     let valorSenha = e.target.value;
 
     if (valorSenha.length < 6 || valorSenha == "") {
-        senhaHelper.innerText = "Digite uma senha válida, ela deve ter no mínimo seis caracteres"
+        senhaHelper.innerText = "Digite uma senha válida, ela deve conter no mínimo 6 caracteres"
         estilizarInputIncorreto(senhaInput, senhaHelper);
         inputsCorretos.senha = false;
     } else {
@@ -72,14 +72,18 @@ senhaInput.addEventListener("blur", (e) => {
 });
 
 // evitar envio do formulário
+<<<<<<< HEAD
 let btnSubmit = document.querySelector('button[type="submit"]');
+=======
+let btnLogin = document.getElementById("botao_login");
+>>>>>>> tatiane-souza
 let inputsCorretos = {
     usuario: false,
     senha: false
 };
 
 // botão login
-btnSubmit.addEventListener("click", (e) => {
+btnLogin.addEventListener("click", (e) => {
     if (inputsCorretos.usuario == false ||
         inputsCorretos.senha == false) {
         e.preventDefault();
@@ -88,3 +92,31 @@ btnSubmit.addEventListener("click", (e) => {
         alert("Login realizado com sucesso!");
     }
 })
+
+// Botão voltar ao topo //
+  
+  // Define uma função chamada scrollFunction que é chamada sempre que ocorre um evento de rolagem
+  window.onscroll = function() {
+    scrollFunction();
+  };
+  
+  // Função para mostrar ou ocultar o botão de voltar ao topo, dependendo da posição de rolagem
+  function scrollFunction() {
+    // Verifica se a posição de rolagem vertical do corpo do documento é maior que 20 pixels
+    // ou se a posição de rolagem vertical do elemento raiz (html) é maior que 20 pixels
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      // Se a posição de rolagem for maior que 20 pixels, o botão de voltar ao topo é exibido
+      document.getElementById("btnTopo").style.display = "block";
+    } else {
+      // Caso contrário, o botão de voltar ao topo é ocultado
+      document.getElementById("btnTopo").style.display = "none";
+    }
+  }
+  
+  // Função para rolar a página de volta ao topo quando o botão de voltar ao topo é clicado
+  function scrollToTop() {
+    // Define a posição de rolagem vertical do corpo do documento como 0, levando a página de volta ao topo
+    document.body.scrollTop = 0;
+    // Define a posição de rolagem vertical do elemento raiz (html) como 0, levando a página de volta ao topo
+    document.documentElement.scrollTop = 0;
+  }

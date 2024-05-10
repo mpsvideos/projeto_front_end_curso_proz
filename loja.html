@@ -1,34 +1,57 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a codificação de caracteres para UTF-8, que suporta uma ampla gama de caracteres -->
+    <!-- Define a configuração de visualização inicial da página para o tamanho do dispositivo e escala inicial -->
     <title>Nossa loja</title>
+    <!-- Define o título da página como "Nossa Equipe" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
- rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="./css/loja.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconecta-se ao serviço do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+    <!-- Importa a fonte Poppins do Google Fonts com diferentes pesos e estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Importa o arquivo CSS do Font Awesome para utilizar ícones -->
+    <link rel="stylesheet" href="./css/loja.css">
+    <!-- Importa um arquivo CSS local chamado equipe.css -->
 </head>
 <body>
    
     <header>
+        <!-- Início do cabeçalho -->
         <div class="container-navbar">
+            <!-- Um contêiner para a barra de navegação -->
             <div class="logo">
+                <!-- Logotipo da página -->
                 <img src="./img/slide/logo1.png" alt="Logo cozinha20">
+                <!-- Imagem do logotipo com um texto alternativo -->
+                <h2>Cozinha20</h2>
             </div>
             <button class="hamburger">&#9776;</button>
+            <!-- Um botão para a versão mobile do menu -->
             <nav class="navbar">
+                <!-- Navegação principal -->
                 <ul class="nav-menu">
+                    <!-- Lista de itens do menu -->
                     <li class="nav-item"><a href="index.html">Home</a></li>
+                    <!-- Item do menu "Home" -->
                     <li class="nav-item"><a href="equipe.html">Equipe</a></li>
+                    <!-- Item do menu "Equipe" com uma classe para indicar que está ativo -->
                     <li class="nav-item"><a href="receitas.html">Receitas</a></li>
+                    <!-- Item do menu "Receitas" -->
                     <li class="nav-item active"><a href="loja.html">Loja</a></li>
-                    <li class="nav-item"><a href="login.html">Entrar</a></li>
+                    <!-- Item do menu "Loja" -->
+                    <li class="nav-item login-item"><a href="login.html" class="login-btn">Entrar</a></li>
+
+                    <!-- Item do menu "Entrar" -->
                 </ul>
             </nav>
         </div>
+        <!-- Fim do cabeçalho -->
     </header>
     <main class="controle">
 
@@ -36,181 +59,231 @@
             <div class="product">
                 <img src="./img/livros/1 segredos da cozinha.png" alt="Capa do Livro">
                 <h2>Segredos da cozinha</h2>
-                <p>Descrição do Produto 1</p>
-                <p>R$20,00</p>
+                <p>Explore os mistérios culinários com este guia abrangente, repleto de dicas e truques de chefs renomados para elevar suas habilidades na cozinha.</p>
+                <p>R$50,00</p>
                 <input type="number" id="quantity1" placeholder="Quantidade">
-                <button class="comprar-btn" data-preco="20" data-nome="Produto 1" data-input="quantity1">Comprar</button>
+                <button class="comprar-btn" data-preco="50" data-nome="Produto 1" data-input="quantity1">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/16 delícias á mesa.png" alt="Capa do Livro">
                 <h2>Delicías á mesa</h2>
-                <p>Descrição do Produto 2</p>
-                <p>R$25,00</p>
+                <p> Descubra uma variedade de pratos irresistíveis neste livro que combina técnicas tradicionais, garantindo momentos memoráveis à mesa no seu dia a dia.</p>
+                <p>R$75,00</p>
                 <input type="number" id="quantity2" placeholder="Quantidade">
-                <button class="comprar-btn" data-preco="25" data-nome="Produto 2" data-input="quantity2">Comprar</button>
+                <button class="comprar-btn" data-preco="75" data-nome="Produto 2" data-input="quantity2">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/3secreto das especiarias.png" alt="Capa do Livro">
                 <h2>Secreto das especiarias</h2>
-                <p>Descrição do Produto 3</p>
-                <p>Preço: R$30,00</p>
+                <p>Desvende os segredos por trás das especiarias mais exóticas do mundo e aprenda como utilizá-las para criar pratos que encantam todos os sentidos.</p>
+                <p>Preço: R$60,00</p>
                 <input type="number" id="quantity3" placeholder="Quantidade">
-                <button class="comprar-btn" data-preco="30" data-nome="Produto 3" data-input="quantity3">Comprar</button>
+                <button class="comprar-btn" data-preco="60" data-nome="Produto 3" data-input="quantity3">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/4 a magia dos temperos.png" alt="Capa do Livro">
                 <h2>A magia dos temperos</h2>
-                <p>Descrição do Produto 4</p>
+                <p> Transforme suas refeições cotidianas em experiências extraordinárias com este livro que revela o poder dos temperos na culinária.</p>
                 <p>R$35,00</p>
                 <input type="number" id="quantity4" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="35" data-nome="Produto 4" data-input="quantity4">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/5 cozinhando com amor.png" alt="Capa do Livro">
                 <h2>cozinhando com amor</h2>
-                <p>Descrição do Produto 5</p>
+                <p>Explore o amor como ingrediente principal em cada receita deste livro, onde cada prato é preparado com cuidado e dedicação pra você se deliciar.</p>
                 <p>R$40,00</p>
                 <input type="number" id="quantity5" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="40" data-nome="Produto 5" data-input="quantity5">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/6aroma &sabor.png" alt="Capa do Livro">
                 <h2>Aroma & Sabor</h2>
-                <p>Descrição do Produto 6</p>
+                <p> Deixe-se envolver pelos aromas e sabores incríveis apresentados neste livro, que celebra a diversidade culinária ao redor do mundo.</p>
                 <p>R$45,00</p>
                 <input type="number" id="quantity6" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="45" data-nome="Produto 6" data-input="quantity6">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/17 cozinha simples.png" alt="Capa do Livro">
                 <h2>Cozinha Simples</h2>
-                <p>Descrição do Produto 7</p>
+                <p>Simplifique sua vida na cozinha com este livro repleto de receitas práticas e deliciosas, perfeito para iniciantes e chefs experientes.</p>
                 <p>R$50,00</p>
                 <input type="number" id="quantity7" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="50" data-nome="Produto 7" data-input="quantity7">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/8 sabor do tempo.png" alt="Capa do Livro">
                 <h2>Sabor do Tempo</h2>
-                <p>Descrição do Produto 8</p>
+                <p> Viaje através do tempo e saboreie as tradições culinárias de diversas culturas, capturadas nas páginas deste livro inspirador.</p>
                 <p>R$55,00</p>
                 <input type="number" id="quantity8" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="55" data-nome="Produto 8" data-input="quantity8">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/9cozinhando com amor2.png" alt="Capa do Livro">
                 <h2>Cozinhando com amor2</h2>
-                <p>Descrição do Produto 9</p>
+                <p> Uma continuação do sucesso anterior, este livro apresenta novas receitas repletas de amor e paixão pela culinária moderna.</p>
                 <p>R$60,00</p>
                 <input type="number" id="quantity9" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="60" data-nome="Produto 9" data-input="quantity9">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/13 sobremesas sem fronteiras.png" alt="Capa do Livro">
                 <h2>Sobremesas sem Fronteiras</h2>
-                <p>Descrição do Produto 10</p>
+                <p>Explore um mundo de sobremesas deliciosas e sem limites, garantindo um final doce para qualquer refeição. Este livro é uma jornada culinária através do reino das sobremesas.</p>
                 <p>R$65,00</p>
                 <input type="number" id="quantity10" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="65" data-nome="Produto 10" data-input="quantity10">Comprar</button>
+              
             </div>
             <div class="product">
                 <img src="./img/livros/11 cozinha criativa.png" alt="Capa do Livro">
                 <h2>Cozinha Criativa</h2>
-                <p>Descrição do Produto 11</p>
+                <p> Liberte sua criatividade na cozinha com este livro que desafia convenções e oferece novas perspectivas sobre a arte de cozinhar,com receitas inovadoras e técnicas revolucionárias.</p>
                 <p>R$70,00</p>
                 <input type="number" id="quantity11" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="70" data-nome="Produto 11" data-input="quantity11">Comprar</button>
+                
             </div>
             <div class="product">
                 <img src="./img/livros/12 sabores do mundo.png" alt="Capa do Livro">
                 <h2>Sabores do Mundo</h2>
-                <p>Descrição do Produto 12</p>
+                <p>Embarque em uma jornada gastronômica global com este livro que apresenta uma variedade de pratos autênticos tradicionais e conteporâneos, de diferentes países e culturas.</p>
                 <p>R$75,00</p>
                 <input type="number" id="quantity12" placeholder="Quantidade">
                 <button class="comprar-btn" data-preco="75" data-nome="Produto 12" data-input="quantity12">Comprar</button>
+                
             </div>
+     
+          </div>
+          <div id="resumo"> <!-- Div que contém o resumo da compra -->
+            <h3>Resumo da Compra</h3> <!-- Título do resumo -->
+            <p>Quantidade Total: <span id="quantidadeTotal">0</span></p> <!-- Parágrafo que mostra a quantidade total de itens -->
+            <p>Valor Total: R$<span id="valorTotal">0.00</span></p> <!-- Parágrafo que mostra o valor total da compra -->
+            <button id="limparHistorico">Limpar Histórico</button> <!-- Botão para limpar o histórico de compras -->
         </div>
-    
-        <div id="resumo">
-            <h3>Resumo da Compra</h3>
-            <p>Quantidade Total: <span id="quantidadeTotal">0</span></p>
-            <p>Valor Total: R$<span id="valorTotal">0.00</span></p>
-            <button id="limparHistorico">Limpar Histórico</button>
-        </div>
-      
+          
     </main>
     <footer>
+        <!-- Conteúdo do rodapé -->
         <div id="footer_content">
+            <!-- Informações sobre "Cozinha20" -->
             <div id="footer_contacts">
                 <h1>Cozinha20</h1>
                 <p>As melhores receitas na sua mão.</p>
-
+    
+                <!-- Links para redes sociais -->
                 <div id="footer_social_media">
                     <a href="https://www.instagram.com/" target="_blank" class="footer-link" id="instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-
-                    <a href="https://www.facebook.com/" target="_blank" class="footer-link" id="facebook">
+    
+                    <a href="https://www.facebook.com/" target="_blank"  class="footer-link" id="facebook">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
-
+    
                     <a href="https://web.whatsapp.com/" target="_blank" class="footer-link" id="whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
             
+            <!-- Lista de links de contato -->
             <ul class="footer-list">
                 <li>
                     <h3>Contatos</h3>
+                     <!-- Título da lista -->
                 </li>
+                <!-- Item da lista -->
                 <li>
-                    <a href="https://web.whatsapp.com/"  target="_blank" class="footer-link">Whatsapp</a>
+                    <a href="https://web.whatsapp.com/" target="_blank" class="footer-link">whatsapp</a>
+                     <!-- Link para o WhatsApp -->
                 </li>
+
                 <li>
                     <a href="https://www.facebook.com/" target="_blank" class="footer-link">Facebook</a>
+                   <!-- Link para o Facebook --> 
                 </li>
                 <li>
                     <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
+                    <!-- Link para o Instagram -->
                 </li>
             </ul>
-
+    
+            <!-- Lista de serviços -->
             <ul class="footer-list">
+                <!-- Lista de links -->
                 <li>
                     <h3>Serviços</h3>
+                   <!-- Título da lista --> 
                 </li>
+                <!-- Item da lista -->
                 <li>
                     <a href="receitas.html" class="footer-link">Receitas</a>
+                   <!-- Link para a página de receitas --> 
                 </li>
+                 <!-- Item da lista -->
                 <li>
                     <a href="loja.html" class="footer-link">Loja</a>
+                  <!-- Link para a página da loja -->  
                 </li>
+                 <!-- Item da lista -->
                 <li>
                     <a href="cadastro.html" class="footer-link">Trabalhe conosco</a>
+                    <!-- Link para a página de cadastro para trabalhar -->
                 </li>
+               <!-- Item da lista --> 
             </ul>
+            <!-- Fim da lista de serviços -->
 
+            <!-- Formulário de inscrição -->
             <div id="footer_subscribe">
                 <h3>Inscreva-se!</h3>
+            <!-- Título -->
 
                 <p>
                     Deixe seu e-mail para receber atualizações.
                 </p>
-
+            <!-- Descrição -->
                 <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-regular fa-envelope"></i>
+                    <!-- Grupo de entrada -->
+                    <label for="email"></label>
+                     <!-- Rótulo para o campo de e-mail -->
+                    <input type="email" id="email" name="email" required>
+                    <!-- Campo de e-mail -->
+                    <button type="submit">
+                        <i class="fas fa-envelope"></i>
                     </button>
+                    <!-- Botão de envio -->
                 </div>
+               <!-- Fim do grupo de entrada --> 
             </div>
+         <!-- Fim do formulário de inscrição --> 
         </div>
+    <!-- Fim do conteúdo do rodapé -->
 
+        <!-- Direitos autorais -->
         <div id="footer_copyright">
             @2024 Direitos reservados ao grupo3
         </div>
-    </footer>               
+          <!-- Fim dos direitos autorais -->
+</footer> 
+    
+    <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao Topo"></button>
+    <!-- Botão para voltar ao topo -->
+    
     <script src="./js/loja.js"></script>
+    <!-- Script JavaScript -->
 </body>
 </html>
 
