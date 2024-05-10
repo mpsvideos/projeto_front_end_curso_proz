@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 
 body {
     background-color: #e7dec4;
-    font-family: "Open Sans", sans-serif;
+    font-family: "poppins", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,75 +22,6 @@ body {
 
 /* Define estilos para o cabeçalho */
 header {
-<<<<<<< HEAD
-    background-color: #ff3900; 
-    padding: 10px 0; 
-    position: fixed;
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
-}
-
-
-.container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex; 
-    align-items: center; 
-}
-.logo img {
-    height: 5rem; 
-    width: auto; 
-    margin-right: 10px;
-}
-
-.navbar {
-    flex-grow: 1; 
-}
-
-
-.nav-menu {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    justify-content: flex-end; 
-}
-
-
-.nav-item {
-    margin-left: 20px; 
-}
-
-
-.nav-item a {
-    text-decoration: none; 
-    color: #fff; 
-    font-weight: bold; 
-}
-
-
-.nav-item a:hover {
-    color: #ff9100; 
-}
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-    }
-    .card {
-        width: calc(50% - 30px);
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        padding: 0 10px;
-    }
-    .card {
-        width: calc(100% - 20px);
-    }
-}
-=======
     background-color: #ff3900; /* Define a cor de fundo como laranja */
     padding: 10px 0; /* Adiciona preenchimento superior e inferior de 10px */
     position: fixed; /* Fixa o cabeçalho no topo da janela de visualização */
@@ -116,12 +49,10 @@ header {
     margin-right: 10px; /* Adiciona margem à direita de 10px */
 }
 .logo h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 0; /* Remove margens padrão */
-    display: flex; /* Ativa flexbox para alinhamento */
-    align-items: center; /* Centraliza verticalmente */
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff      /* Define a cor do texto como branco*/
+    
 }
 
 
@@ -221,7 +152,6 @@ header {
     }
 }
 
->>>>>>> tatiane-souza
 /*css form*/
 .form {
     max-width: 400px;
@@ -323,10 +253,7 @@ input[type="submit"]:hover {
 }
 
 
-<<<<<<< HEAD
-=======
 /* Estilo para o footer */
->>>>>>> tatiane-souza
 footer {
     width: 100%; /* Ocupa toda a largura */
     color: #fff; /* Cor do texto */
@@ -480,8 +407,6 @@ footer {
     }
 }
 
-<<<<<<< HEAD
-=======
 /* Estilo para o botão "Voltar ao topo" */
 #btnTopo {
     display: none; /* Inicialmente oculto */
@@ -506,7 +431,3 @@ footer {
 #btnTopo::before {
     content: '\25B2'; /* Seta para cima */
 }
-
-
-
->>>>>>> tatiane-souza
