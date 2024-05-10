@@ -72,11 +72,7 @@ senhaInput.addEventListener("blur", (e) => {
 });
 
 // evitar envio do formulário
-<<<<<<< HEAD
-let btnSubmit = document.querySelector('button[type="submit"]');
-=======
 let btnLogin = document.getElementById("botao_login");
->>>>>>> tatiane-souza
 let inputsCorretos = {
     usuario: false,
     senha: false
