@@ -155,7 +155,7 @@ header {
 .carousel-container {
     max-width: 100%; /* Utiliza a largura máxima disponível */
     overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
-    padding-top: 6.5rem; /* ajusta o carrosel de modo que as imagens se posicionem abaixo do header*/
+    padding-top: 6.2rem; /* ajusta o carrosel de modo que o posicionamento das imagens se iniciam logo abaixo do header*/
 }
 
 /* Estilo para o carrossel de largura total */
