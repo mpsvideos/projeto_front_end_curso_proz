@@ -196,7 +196,7 @@ header {
     top: 50%; /* Alinha o texto verticalmente ao centro */
     left: 50%; /* Alinha o texto horizontalmente ao centro */
     width: 40%; /* Define a largura do texto como 50% do seu contêiner */
-    max-width: 700px; /* Define a largura máxima do texto */
+    max-width: 800px; /* Define a largura máxima do texto */
     transform: translate(-50%, -50%); /* Move o texto para o centro do slide */
     background-color: rgba(0, 0, 0, 0.5); /* Define uma cor de fundo semitransparente para o texto */
     padding: 10px; /* Adiciona preenchimento interno ao texto */
@@ -209,7 +209,7 @@ header {
 
 /* Estilo para o título dentro do texto do carrossel */
 .carousel-text h2 {
-    font-size: 36px; /* Define o tamanho da fonte do título */
+    font-size: 30px; /* Define o tamanho da fonte do título */
     margin-bottom: 5px; /* Adiciona uma margem inferior ao título */
 }
 
