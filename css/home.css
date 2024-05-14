@@ -195,7 +195,7 @@ header {
     position: absolute; /* Define a posição absoluta para o texto dentro dos slides */
     top: 50%; /* Alinha o texto verticalmente ao centro */
     left: 50%; /* Alinha o texto horizontalmente ao centro */
-    width: 40%; /* Define a largura do texto como 50% do seu contêiner */
+    width: 50%; /* Define a largura do texto como 50% do seu contêiner */
     max-width: 800px; /* Define a largura máxima do texto */
     transform: translate(-50%, -50%); /* Move o texto para o centro do slide */
     background-color: rgba(0, 0, 0, 0.5); /* Define uma cor de fundo semitransparente para o texto */
@@ -209,7 +209,7 @@ header {
 
 /* Estilo para o título dentro do texto do carrossel */
 .carousel-text h2 {
-    font-size: 30px; /* Define o tamanho da fonte do título */
+    font-size: 36px; /* Define o tamanho da fonte do título */
     margin-bottom: 5px; /* Adiciona uma margem inferior ao título */
 }
 
@@ -241,6 +241,7 @@ header {
         overflow-x: hidden; /* Esconde a rolagem horizontal */
         scroll-snap-type: y mandatory; /* Define o comportamento de rolagem para a direção vertical */
     }
+
     .carousel .carousel-slide {
         scroll-snap-align: start; /* Define como o carrossel deve "parar" durante a rolagem vertical */
     }
