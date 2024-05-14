@@ -30,7 +30,7 @@ header {
 
 /* Define estilos para o contêiner da barra de navegação */
 .container-navbar {
-   justify-content: space-between;
+    justify-content: space-between;
     display: flex; /* Usa flexbox para organizar os elementos filho */
     align-items: center; /* Alinha os itens verticalmente ao centro */
 }
@@ -155,6 +155,7 @@ header {
 .carousel-container {
     max-width: 100%; /* Utiliza a largura máxima disponível */
     overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
+    padding-top: 6rem; /* ajusta o carrosel de modo que as imagens se posicionem abaixo do header*/
 }
 
 /* Estilo para o carrossel de largura total */
