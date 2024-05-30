@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.comprar-btn').forEach(function(botao) {
         botao.addEventListener('click', function() {
             let preco = parseFloat(this.getAttribute('data-preco'));
-            let nomeLivro = this.getAttribute('data-nome');
+            let produtoDiv = this.closest(".product");
+            let nomeLivro = produtoDiv.querySelector("h2").textContent.trim();
             let inputId = this.getAttribute('data-input');
             comprarLivro(preco, nomeLivro, inputId);
         });
@@ -49,7 +50,7 @@ function comprarLivro(preco, nomeLivro, inputId) {
         alert("Compra realizada com sucesso!\n" + 
               "Livro: " + nomeLivro + "\n" +
               "Quantidade: " + quantidade + "\n" +
-              "Valor unidade: R$" + (preco * quantidade).toFixed(2) + "\n" +
+              "Valor da unidade: R$" + (preco * quantidade).toFixed(2) + "\n" +
               "Quantidade de pedidos: " + quantidadeTotal + "\n" +
               "Valor total: R$" + valorTotal.toFixed(2));
 
