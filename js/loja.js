@@ -49,8 +49,8 @@ function comprarLivro(preco, nomeLivro, inputId) {
         alert("Compra realizada com sucesso!\n" + 
               "Livro: " + nomeLivro + "\n" +
               "Quantidade: " + quantidade + "\n" +
-              "Total: R$" + (preco * quantidade).toFixed(2) + "\n" +
-              "Quantidade total: " + quantidadeTotal + "\n" +
+              "Valor unidade: R$" + (preco * quantidade).toFixed(2) + "\n" +
+              "Quantidade de pedidos: " + quantidadeTotal + "\n" +
               "Valor total: R$" + valorTotal.toFixed(2));
 
         // Atualiza o resumo da compra
